@@ -1,0 +1,885 @@
+{
+ "albantakis2023": {
+  "type": "article",
+  "authors": "Albantakis, L., Barbosa, L., Findlay, G., et al.",
+  "year": 2023,
+  "title": "Integrated information theory (IIT) 4.0: Formulating the properties of phenomenal existence in physical terms",
+  "venue": "PLOS Computational Biology",
+  "volume": "19",
+  "issue": "10",
+  "pages": "e1011465",
+  "doi": "10.1371/journal.pcbi.1011465"
+ },
+ "baars1988": {
+  "type": "book",
+  "authors": "Baars, B. J.",
+  "year": 1988,
+  "title": "A Cognitive Theory of Consciousness",
+  "publisher": "Cambridge University Press"
+ },
+ "baker2009": {
+  "type": "article",
+  "authors": "Baker, C. L., Saxe, R., & Tenenbaum, J. B.",
+  "year": 2009,
+  "title": "Action understanding as inverse planning",
+  "venue": "Cognition",
+  "volume": "113",
+  "issue": "3",
+  "pages": "329-349",
+  "doi": "10.1016/j.cognition.2009.07.005"
+ },
+ "benacerraf1967": {
+  "type": "article",
+  "authors": "Benacerraf, P.",
+  "year": 1967,
+  "title": "God, the devil, and Gödel",
+  "venue": "The Monist",
+  "volume": "51",
+  "issue": "1",
+  "pages": "9-32",
+  "doi": "10.5840/monist196751112"
+ },
+ "benderkoller2020": {
+  "type": "inproceedings",
+  "authors": "Bender, E. M., & Koller, A.",
+  "year": 2020,
+  "title": "Climbing towards NLU: On meaning, form, and understanding in the age of data",
+  "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+  "pages": "5185-5198",
+  "doi": "10.18653/v1/2020.acl-main.463"
+ },
+ "block1981": {
+  "type": "article",
+  "authors": "Block, N.",
+  "year": 1981,
+  "title": "Psychologism and behaviorism",
+  "venue": "The Philosophical Review",
+  "volume": "90",
+  "issue": "1",
+  "pages": "5-43",
+  "doi": "10.2307/2184371"
+ },
+ "block1995": {
+  "type": "article",
+  "authors": "Block, N.",
+  "year": 1995,
+  "title": "On a confusion about a function of consciousness",
+  "venue": "Behavioral and Brain Sciences",
+  "volume": "18",
+  "issue": "2",
+  "pages": "227-247",
+  "doi": "10.1017/S0140525X00038188"
+ },
+ "boden1998": {
+  "type": "article",
+  "authors": "Boden, M. A.",
+  "year": 1998,
+  "title": "Creativity and artificial intelligence",
+  "venue": "Artificial Intelligence",
+  "volume": "103",
+  "issue": "1-2",
+  "pages": "347-356",
+  "doi": "10.1016/S0004-3702(98)00055-1"
+ },
+ "boden2004": {
+  "type": "book",
+  "authors": "Boden, M. A.",
+  "year": 2004,
+  "title": "The Creative Mind: Myths and Mechanisms",
+  "edition": "2nd ed.",
+  "publisher": "Routledge"
+ },
+ "braitenberg1984": {
+  "type": "book",
+  "authors": "Braitenberg, V.",
+  "year": 1984,
+  "title": "Vehicles: Experiments in Synthetic Psychology",
+  "publisher": "MIT Press"
+ },
+ "brentano1874": {
+  "type": "book",
+  "authors": "Brentano, F.",
+  "year": 1874,
+  "title": "Psychologie vom empirischen Standpunkte [Psychology from an Empirical Standpoint]",
+  "publisher": "Duncker & Humblot"
+ },
+ "brooks1991": {
+  "type": "article",
+  "authors": "Brooks, R. A.",
+  "year": 1991,
+  "title": "Intelligence without representation",
+  "venue": "Artificial Intelligence",
+  "volume": "47",
+  "issue": "1-3",
+  "pages": "139-159",
+  "doi": "10.1016/0004-3702(91)90053-M"
+ },
+ "butlin2023": {
+  "type": "arxiv",
+  "authors": "Butlin, P., Long, R., Elmoznino, E., Bengio, Y., Birch, J., Constant, A., Deane, G., Fleming, S. M., Frith, C., Ji, X., Kanai, R., Klein, C., Lindsay, G., Michel, M., Mudrik, L., Peters, M. A. K., Schwitzgebel, E., Simon, J., & VanRullen, R.",
+  "year": 2023,
+  "title": "Consciousness in artificial intelligence: Insights from the science of consciousness",
+  "arxiv": "2308.08708",
+  "check": "web"
+ },
+ "chalmers1995": {
+  "type": "article",
+  "authors": "Chalmers, D. J.",
+  "year": 1995,
+  "title": "Facing up to the problem of consciousness",
+  "venue": "Journal of Consciousness Studies",
+  "volume": "2",
+  "issue": "3",
+  "pages": "200-219",
+  "check": "web"
+ },
+ "chalmers1996": {
+  "type": "book",
+  "authors": "Chalmers, D. J.",
+  "year": 1996,
+  "title": "The Conscious Mind: In Search of a Fundamental Theory",
+  "publisher": "Oxford University Press"
+ },
+ "chalmers2023": {
+  "type": "arxiv",
+  "authors": "Chalmers, D. J.",
+  "year": 2023,
+  "title": "Could a large language model be conscious?",
+  "arxiv": "2303.07103"
+ },
+ "chollet2019": {
+  "type": "arxiv",
+  "authors": "Chollet, F.",
+  "year": 2019,
+  "title": "On the measure of intelligence",
+  "arxiv": "1911.01547"
+ },
+ "church1936": {
+  "type": "article",
+  "authors": "Church, A.",
+  "year": 1936,
+  "title": "An unsolvable problem of elementary number theory",
+  "venue": "American Journal of Mathematics",
+  "volume": "58",
+  "issue": "2",
+  "pages": "345-363",
+  "doi": "10.2307/2371045"
+ },
+ "churchland1990": {
+  "type": "article",
+  "authors": "Churchland, P. M., & Churchland, P. S.",
+  "year": 1990,
+  "title": "Could a machine think?",
+  "venue": "Scientific American",
+  "volume": "262",
+  "issue": "1",
+  "pages": "32-37",
+  "doi": "10.1038/scientificamerican0190-32"
+ },
+ "clark1998": {
+  "type": "article",
+  "authors": "Clark, A., & Chalmers, D.",
+  "year": 1998,
+  "title": "The extended mind",
+  "venue": "Analysis",
+  "volume": "58",
+  "issue": "1",
+  "pages": "7-19",
+  "doi": "10.1093/analys/58.1.7"
+ },
+ "colton2012": {
+  "type": "inproceedings",
+  "authors": "Colton, S., & Wiggins, G. A.",
+  "year": 2012,
+  "title": "Computational creativity: The final frontier?",
+  "venue": "Proceedings of the 20th European Conference on Artificial Intelligence (ECAI 2012)",
+  "pages": "21-26",
+  "publisher": "IOS Press"
+ },
+ "davis2015": {
+  "type": "article",
+  "authors": "Davis, E., & Marcus, G.",
+  "year": 2015,
+  "title": "Commonsense reasoning and commonsense knowledge in artificial intelligence",
+  "venue": "Communications of the ACM",
+  "volume": "58",
+  "issue": "9",
+  "pages": "92-103",
+  "doi": "10.1145/2701413"
+ },
+ "dehaene2001": {
+  "type": "article",
+  "authors": "Dehaene, S., & Naccache, L.",
+  "year": 2001,
+  "title": "Towards a cognitive neuroscience of consciousness: Basic evidence and a workspace framework",
+  "venue": "Cognition",
+  "volume": "79",
+  "issue": "1-2",
+  "pages": "1-37",
+  "doi": "10.1016/S0010-0277(00)00123-2"
+ },
+ "dennett1984": {
+  "type": "chapter",
+  "authors": "Dennett, D. C.",
+  "year": 1984,
+  "title": "Cognitive wheels: The frame problem of AI",
+  "editors": "C. Hookway",
+  "venue": "Minds, Machines and Evolution",
+  "pages": "129-151",
+  "publisher": "Cambridge University Press"
+ },
+ "dennett1987": {
+  "type": "book",
+  "authors": "Dennett, D. C.",
+  "year": 1987,
+  "title": "The Intentional Stance",
+  "publisher": "MIT Press"
+ },
+ "dennett1991cons": {
+  "type": "book",
+  "authors": "Dennett, D. C.",
+  "year": 1991,
+  "title": "Consciousness Explained",
+  "publisher": "Little, Brown and Company"
+ },
+ "dennett1991real": {
+  "type": "article",
+  "authors": "Dennett, D. C.",
+  "year": 1991,
+  "title": "Real patterns",
+  "venue": "The Journal of Philosophy",
+  "volume": "88",
+  "issue": "1",
+  "pages": "27-51",
+  "doi": "10.2307/2027085"
+ },
+ "dreyfus1972": {
+  "type": "book",
+  "authors": "Dreyfus, H. L.",
+  "year": 1972,
+  "title": "What Computers Can't Do: A Critique of Artificial Reason",
+  "publisher": "Harper & Row"
+ },
+ "dreyfus1992": {
+  "type": "book",
+  "authors": "Dreyfus, H. L.",
+  "year": 1992,
+  "title": "What Computers Still Can't Do: A Critique of Artificial Reason",
+  "publisher": "MIT Press"
+ },
+ "dreyfus2007": {
+  "type": "article",
+  "authors": "Dreyfus, H. L.",
+  "year": 2007,
+  "title": "Why Heideggerian AI failed and how fixing it would require making it more Heideggerian",
+  "venue": "Philosophical Psychology",
+  "volume": "20",
+  "issue": "2",
+  "pages": "247-268",
+  "doi": "10.1080/09515080701239510"
+ },
+ "fikes1971": {
+  "type": "article",
+  "authors": "Fikes, R. E., & Nilsson, N. J.",
+  "year": 1971,
+  "title": "STRIPS: A new approach to the application of theorem proving to problem solving",
+  "venue": "Artificial Intelligence",
+  "volume": "2",
+  "issue": "3-4",
+  "pages": "189-208",
+  "doi": "10.1016/0004-3702(71)90010-5"
+ },
+ "floridi2020gpt3": {
+  "type": "article",
+  "authors": "Floridi, L., & Chiriatti, M.",
+  "year": 2020,
+  "title": "GPT-3: Its nature, scope, limits, and consequences",
+  "venue": "Minds and Machines",
+  "volume": "30",
+  "issue": "4",
+  "pages": "681-694",
+  "doi": "10.1007/s11023-020-09548-1"
+ },
+ "fodor1975": {
+  "type": "book",
+  "authors": "Fodor, J. A.",
+  "year": 1975,
+  "title": "The Language of Thought",
+  "publisher": "Thomas Y. Crowell"
+ },
+ "fodorpylyshyn1988": {
+  "type": "article",
+  "authors": "Fodor, J. A., & Pylyshyn, Z. W.",
+  "year": 1988,
+  "title": "Connectionism and cognitive architecture: A critical analysis",
+  "venue": "Cognition",
+  "volume": "28",
+  "issue": "1-2",
+  "pages": "3-71",
+  "doi": "10.1016/0010-0277(88)90031-5"
+ },
+ "french1990": {
+  "type": "article",
+  "authors": "French, R. M.",
+  "year": 1990,
+  "title": "Subcognition and the limits of the Turing test",
+  "venue": "Mind",
+  "volume": "99",
+  "issue": "393",
+  "pages": "53-65",
+  "doi": "10.1093/mind/XCIX.393.53"
+ },
+ "garcez2023": {
+  "type": "article",
+  "authors": "d'Avila Garcez, A., & Lamb, L. C.",
+  "year": 2023,
+  "title": "Neurosymbolic AI: The 3rd wave",
+  "venue": "Artificial Intelligence Review",
+  "volume": "56",
+  "issue": "11",
+  "pages": "12387-12406",
+  "doi": "10.1007/s10462-023-10448-w"
+ },
+ "godel1931": {
+  "type": "article",
+  "authors": "Gödel, K.",
+  "year": 1931,
+  "title": "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I",
+  "venue": "Monatshefte für Mathematik und Physik",
+  "volume": "38",
+  "issue": "1",
+  "pages": "173-198",
+  "doi": "10.1007/BF01700692"
+ },
+ "harnad1990": {
+  "type": "article",
+  "authors": "Harnad, S.",
+  "year": 1990,
+  "title": "The symbol grounding problem",
+  "venue": "Physica D: Nonlinear Phenomena",
+  "volume": "42",
+  "issue": "1-3",
+  "pages": "335-346",
+  "doi": "10.1016/0167-2789(90)90087-6"
+ },
+ "harris1954": {
+  "type": "article",
+  "authors": "Harris, Z. S.",
+  "year": 1954,
+  "title": "Distributional structure",
+  "venue": "Word",
+  "volume": "10",
+  "issue": "2-3",
+  "pages": "146-162",
+  "doi": "10.1080/00437956.1954.11659520"
+ },
+ "heider1944": {
+  "type": "article",
+  "authors": "Heider, F., & Simmel, M.",
+  "year": 1944,
+  "title": "An experimental study of apparent behavior",
+  "venue": "The American Journal of Psychology",
+  "volume": "57",
+  "issue": "2",
+  "pages": "243-259",
+  "doi": "10.2307/1416950"
+ },
+ "jackson1982": {
+  "type": "article",
+  "authors": "Jackson, F.",
+  "year": 1982,
+  "title": "Epiphenomenal qualia",
+  "venue": "The Philosophical Quarterly",
+  "volume": "32",
+  "issue": "127",
+  "pages": "127-136",
+  "doi": "10.2307/2960077"
+ },
+ "jones2025": {
+  "type": "arxiv",
+  "authors": "Jones, C. R., & Bergen, B. K.",
+  "year": 2025,
+  "title": "Large language models pass the Turing test",
+  "arxiv": "2503.23674",
+  "check": "web"
+ },
+ "kose2017selflearning": {
+  "type": "article",
+  "authors": "Kose, U., & Arslan, A.",
+  "year": 2017,
+  "title": "Optimization of self-learning in computer engineering courses: An intelligent software system supported by artificial neural network and vortex optimization algorithm",
+  "venue": "Computer Applications in Engineering Education",
+  "volume": "25",
+  "issue": "1",
+  "pages": "142-156",
+  "doi": "10.1002/cae.21787",
+  "check": "web"
+ },
+ "lake2018": {
+  "type": "inproceedings",
+  "authors": "Lake, B., & Baroni, M.",
+  "year": 2018,
+  "title": "Generalization without systematicity: On the compositional skills of sequence-to-sequence recurrent networks",
+  "venue": "Proceedings of the 35th International Conference on Machine Learning, PMLR 80",
+  "pages": "2873-2882",
+  "arxiv": "1711.00350"
+ },
+ "lake2023": {
+  "type": "article",
+  "authors": "Lake, B. M., & Baroni, M.",
+  "year": 2023,
+  "title": "Human-like systematic generalization through a meta-learning neural network",
+  "venue": "Nature",
+  "volume": "623",
+  "issue": "7985",
+  "pages": "115-121",
+  "doi": "10.1038/s41586-023-06668-3"
+ },
+ "lamme2006": {
+  "type": "article",
+  "authors": "Lamme, V. A. F.",
+  "year": 2006,
+  "title": "Towards a true neural stance on consciousness",
+  "venue": "Trends in Cognitive Sciences",
+  "volume": "10",
+  "issue": "11",
+  "pages": "494-501",
+  "doi": "10.1016/j.tics.2006.09.001"
+ },
+ "legg2007": {
+  "type": "article",
+  "authors": "Legg, S., & Hutter, M.",
+  "year": 2007,
+  "title": "Universal intelligence: A definition of machine intelligence",
+  "venue": "Minds and Machines",
+  "volume": "17",
+  "issue": "4",
+  "pages": "391-444",
+  "doi": "10.1007/s11023-007-9079-x"
+ },
+ "lehman2011": {
+  "type": "article",
+  "authors": "Lehman, J., & Stanley, K. O.",
+  "year": 2011,
+  "title": "Abandoning objectives: Evolution through the search for novelty alone",
+  "venue": "Evolutionary Computation",
+  "volume": "19",
+  "issue": "2",
+  "pages": "189-223",
+  "doi": "10.1162/EVCO_a_00025"
+ },
+ "levesque2012": {
+  "type": "inproceedings",
+  "authors": "Levesque, H. J., Davis, E., & Morgenstern, L.",
+  "year": 2012,
+  "title": "The Winograd schema challenge",
+  "venue": "Proceedings of the 13th International Conference on Principles of Knowledge Representation and Reasoning (KR 2012)",
+  "pages": "552-561",
+  "publisher": "AAAI Press"
+ },
+ "levine1983": {
+  "type": "article",
+  "authors": "Levine, J.",
+  "year": 1983,
+  "title": "Materialism and qualia: The explanatory gap",
+  "venue": "Pacific Philosophical Quarterly",
+  "volume": "64",
+  "issue": "4",
+  "pages": "354-361",
+  "doi": "10.1111/j.1468-0114.1983.tb00207.x"
+ },
+ "li2023": {
+  "type": "inproceedings",
+  "authors": "Li, K., Hopkins, A. K., Bau, D., Viégas, F., Pfister, H., & Wattenberg, M.",
+  "year": 2023,
+  "title": "Emergent world representations: Exploring a sequence model trained on a synthetic task",
+  "venue": "International Conference on Learning Representations (ICLR)",
+  "arxiv": "2210.13382"
+ },
+ "lindenmayer1968": {
+  "type": "article",
+  "authors": "Lindenmayer, A.",
+  "year": 1968,
+  "title": "Mathematical models for cellular interactions in development I. Filaments with one-sided inputs",
+  "venue": "Journal of Theoretical Biology",
+  "volume": "18",
+  "issue": "3",
+  "pages": "280-299",
+  "doi": "10.1016/0022-5193(68)90079-9"
+ },
+ "lovelace1843": {
+  "type": "article",
+  "authors": "Lovelace, A. A.",
+  "year": 1843,
+  "title": "Notes by the translator, in L. F. Menabrea, Sketch of the Analytical Engine invented by Charles Babbage",
+  "venue": "Scientific Memoirs",
+  "volume": "3",
+  "pages": "666-731"
+ },
+ "lucas1961": {
+  "type": "article",
+  "authors": "Lucas, J. R.",
+  "year": 1961,
+  "title": "Minds, machines and Gödel",
+  "venue": "Philosophy",
+  "volume": "36",
+  "issue": "137",
+  "pages": "112-127",
+  "doi": "10.1017/S0031819100057983"
+ },
+ "mahowald2024": {
+  "type": "article",
+  "authors": "Mahowald, K., Ivanova, A. A., Blank, I. A., Kanwisher, N., Tenenbaum, J. B., & Fedorenko, E.",
+  "year": 2024,
+  "title": "Dissociating language and thought in large language models",
+  "venue": "Trends in Cognitive Sciences",
+  "volume": "28",
+  "issue": "6",
+  "pages": "517-540",
+  "doi": "10.1016/j.tics.2024.01.011"
+ },
+ "marcus2018": {
+  "type": "arxiv",
+  "authors": "Marcus, G.",
+  "year": 2018,
+  "title": "Deep learning: A critical appraisal",
+  "arxiv": "1801.00631"
+ },
+ "mccarthy1969": {
+  "type": "chapter",
+  "authors": "McCarthy, J., & Hayes, P. J.",
+  "year": 1969,
+  "title": "Some philosophical problems from the standpoint of artificial intelligence",
+  "editors": "B. Meltzer & D. Michie",
+  "venue": "Machine Intelligence 4",
+  "pages": "463-502",
+  "publisher": "Edinburgh University Press"
+ },
+ "mccarthy2006": {
+  "type": "article",
+  "authors": "McCarthy, J., Minsky, M. L., Rochester, N., & Shannon, C. E.",
+  "year": 2006,
+  "title": "A proposal for the Dartmouth summer research project on artificial intelligence, August 31, 1955",
+  "venue": "AI Magazine",
+  "volume": "27",
+  "issue": "4",
+  "pages": "12-14",
+  "doi": "10.1609/aimag.v27i4.1904"
+ },
+ "mitchell2023": {
+  "type": "article",
+  "authors": "Mitchell, M., & Krakauer, D. C.",
+  "year": 2023,
+  "title": "The debate over understanding in AI's large language models",
+  "venue": "Proceedings of the National Academy of Sciences",
+  "volume": "120",
+  "issue": "13",
+  "pages": "e2215907120",
+  "doi": "10.1073/pnas.2215907120",
+  "check": "web"
+ },
+ "mollo2023": {
+  "type": "arxiv",
+  "authors": "Mollo, D. C., & Millière, R.",
+  "year": 2023,
+  "title": "The vector grounding problem",
+  "arxiv": "2304.01481"
+ },
+ "morallm2026": {
+  "type": "web",
+  "authors": "Kose, U.",
+  "year": 2026,
+  "title": "MoralLLM-Lab: An experimental framework on moral decision-making in large language models",
+  "url": "https://github.com/utkukose/MoralLLM-Lab"
+ },
+ "moravec1988": {
+  "type": "book",
+  "authors": "Moravec, H.",
+  "year": 1988,
+  "title": "Mind Children: The Future of Robot and Human Intelligence",
+  "publisher": "Harvard University Press"
+ },
+ "nagel1974": {
+  "type": "article",
+  "authors": "Nagel, T.",
+  "year": 1974,
+  "title": "What is it like to be a bat?",
+  "venue": "The Philosophical Review",
+  "volume": "83",
+  "issue": "4",
+  "pages": "435-450",
+  "doi": "10.2307/2183914"
+ },
+ "newellsimon1976": {
+  "type": "article",
+  "authors": "Newell, A., & Simon, H. A.",
+  "year": 1976,
+  "title": "Computer science as empirical inquiry: Symbols and search",
+  "venue": "Communications of the ACM",
+  "volume": "19",
+  "issue": "3",
+  "pages": "113-126",
+  "doi": "10.1145/360018.360022"
+ },
+ "penrose1989": {
+  "type": "book",
+  "authors": "Penrose, R.",
+  "year": 1989,
+  "title": "The Emperor's New Mind: Concerning Computers, Minds, and the Laws of Physics",
+  "publisher": "Oxford University Press"
+ },
+ "penrose1994": {
+  "type": "book",
+  "authors": "Penrose, R.",
+  "year": 1994,
+  "title": "Shadows of the Mind: A Search for the Missing Science of Consciousness",
+  "publisher": "Oxford University Press"
+ },
+ "pfeifer2006": {
+  "type": "book",
+  "authors": "Pfeifer, R., & Bongard, J.",
+  "year": 2006,
+  "title": "How the Body Shapes the Way We Think: A New View of Intelligence",
+  "publisher": "MIT Press"
+ },
+ "piantadosi2022": {
+  "type": "arxiv",
+  "authors": "Piantadosi, S. T., & Hill, F.",
+  "year": 2022,
+  "title": "Meaning without reference in large language models",
+  "arxiv": "2208.02957",
+  "check": "web"
+ },
+ "piccinini2015": {
+  "type": "book",
+  "authors": "Piccinini, G.",
+  "year": 2015,
+  "title": "Physical Computation: A Mechanistic Account",
+  "publisher": "Oxford University Press"
+ },
+ "preston2002": {
+  "type": "edited",
+  "authors": "Preston, J., & Bishop, M. (Eds.)",
+  "year": 2002,
+  "title": "Views into the Chinese Room: New Essays on Searle and Artificial Intelligence",
+  "publisher": "Clarendon Press"
+ },
+ "prusinkiewicz1990": {
+  "type": "book",
+  "authors": "Prusinkiewicz, P., & Lindenmayer, A.",
+  "year": 1990,
+  "title": "The Algorithmic Beauty of Plants",
+  "publisher": "Springer"
+ },
+ "putnam1960": {
+  "type": "chapter",
+  "authors": "Putnam, H.",
+  "year": 1960,
+  "title": "Minds and machines",
+  "editors": "S. Hook",
+  "venue": "Dimensions of Mind",
+  "pages": "138-164",
+  "publisher": "New York University Press"
+ },
+ "reiter2001": {
+  "type": "book",
+  "authors": "Reiter, R.",
+  "year": 2001,
+  "title": "Knowledge in Action: Logical Foundations for Specifying and Implementing Dynamical Systems",
+  "publisher": "MIT Press"
+ },
+ "ritchie2007": {
+  "type": "article",
+  "authors": "Ritchie, G.",
+  "year": 2007,
+  "title": "Some empirical criteria for attributing creativity to a computer program",
+  "venue": "Minds and Machines",
+  "volume": "17",
+  "issue": "1",
+  "pages": "67-99",
+  "doi": "10.1007/s11023-007-9066-2"
+ },
+ "rosenthal2005": {
+  "type": "book",
+  "authors": "Rosenthal, D. M.",
+  "year": 2005,
+  "title": "Consciousness and Mind",
+  "publisher": "Clarendon Press"
+ },
+ "rumelhart1986": {
+  "type": "edited",
+  "authors": "Rumelhart, D. E., McClelland, J. L., & the PDP Research Group",
+  "year": 1986,
+  "title": "Parallel Distributed Processing: Explorations in the Microstructure of Cognition, Volume 1: Foundations",
+  "publisher": "MIT Press"
+ },
+ "russellnorvig2021": {
+  "type": "book",
+  "authors": "Russell, S., & Norvig, P.",
+  "year": 2021,
+  "title": "Artificial Intelligence: A Modern Approach",
+  "edition": "4th ed.",
+  "publisher": "Pearson"
+ },
+ "saygin2000": {
+  "type": "article",
+  "authors": "Saygin, A. P., Cicekli, I., & Akman, V.",
+  "year": 2000,
+  "title": "Turing test: 50 years later",
+  "venue": "Minds and Machines",
+  "volume": "10",
+  "issue": "4",
+  "pages": "463-518",
+  "check": "web"
+ },
+ "searle1980": {
+  "type": "article",
+  "authors": "Searle, J. R.",
+  "year": 1980,
+  "title": "Minds, brains, and programs",
+  "venue": "Behavioral and Brain Sciences",
+  "volume": "3",
+  "issue": "3",
+  "pages": "417-424",
+  "doi": "10.1017/S0140525X00005756"
+ },
+ "searle1983": {
+  "type": "book",
+  "authors": "Searle, J. R.",
+  "year": 1983,
+  "title": "Intentionality: An Essay in the Philosophy of Mind",
+  "publisher": "Cambridge University Press"
+ },
+ "searle1990": {
+  "type": "article",
+  "authors": "Searle, J. R.",
+  "year": 1990,
+  "title": "Is the brain's mind a computer program?",
+  "venue": "Scientific American",
+  "volume": "262",
+  "issue": "1",
+  "pages": "26-31",
+  "doi": "10.1038/scientificamerican0190-26"
+ },
+ "seth2025": {
+  "type": "article",
+  "authors": "Seth, A. K.",
+  "year": 2025,
+  "title": "Conscious artificial intelligence and biological naturalism",
+  "venue": "Behavioral and Brain Sciences",
+  "doi": "10.1017/S0140525X25000032",
+  "note": "Published online 21 April 2025"
+ },
+ "shanahan1997": {
+  "type": "book",
+  "authors": "Shanahan, M.",
+  "year": 1997,
+  "title": "Solving the Frame Problem: A Mathematical Investigation of the Common Sense Law of Inertia",
+  "publisher": "MIT Press"
+ },
+ "shanahan2024": {
+  "type": "article",
+  "authors": "Shanahan, M.",
+  "year": 2024,
+  "title": "Talking about large language models",
+  "venue": "Communications of the ACM",
+  "volume": "67",
+  "issue": "2",
+  "pages": "68-79",
+  "doi": "10.1145/3624724"
+ },
+ "smolensky1988": {
+  "type": "article",
+  "authors": "Smolensky, P.",
+  "year": 1988,
+  "title": "On the proper treatment of connectionism",
+  "venue": "Behavioral and Brain Sciences",
+  "volume": "11",
+  "issue": "1",
+  "pages": "1-23",
+  "doi": "10.1017/S0140525X00052432"
+ },
+ "tononi2004": {
+  "type": "article",
+  "authors": "Tononi, G.",
+  "year": 2004,
+  "title": "An information integration theory of consciousness",
+  "venue": "BMC Neuroscience",
+  "volume": "5",
+  "pages": "42",
+  "doi": "10.1186/1471-2202-5-42"
+ },
+ "tononi2016": {
+  "type": "article",
+  "authors": "Tononi, G., Boly, M., Massimini, M., & Koch, C.",
+  "year": 2016,
+  "title": "Integrated information theory: From consciousness to its physical substrate",
+  "venue": "Nature Reviews Neuroscience",
+  "volume": "17",
+  "issue": "7",
+  "pages": "450-461",
+  "doi": "10.1038/nrn.2016.44"
+ },
+ "turing1936": {
+  "type": "article",
+  "authors": "Turing, A. M.",
+  "year": 1936,
+  "title": "On computable numbers, with an application to the Entscheidungsproblem",
+  "venue": "Proceedings of the London Mathematical Society",
+  "volume": "s2-42",
+  "issue": "1",
+  "pages": "230-265",
+  "doi": "10.1112/plms/s2-42.1.230"
+ },
+ "turing1950": {
+  "type": "article",
+  "authors": "Turing, A. M.",
+  "year": 1950,
+  "title": "Computing machinery and intelligence",
+  "venue": "Mind",
+  "volume": "59",
+  "issue": "236",
+  "pages": "433-460",
+  "doi": "10.1093/mind/LIX.236.433"
+ },
+ "varela1991": {
+  "type": "book",
+  "authors": "Varela, F. J., Thompson, E., & Rosch, E.",
+  "year": 1991,
+  "title": "The Embodied Mind: Cognitive Science and Human Experience",
+  "publisher": "MIT Press"
+ },
+ "weizenbaum1966": {
+  "type": "article",
+  "authors": "Weizenbaum, J.",
+  "year": 1966,
+  "title": "ELIZA: A computer program for the study of natural language communication between man and machine",
+  "venue": "Communications of the ACM",
+  "volume": "9",
+  "issue": "1",
+  "pages": "36-45",
+  "doi": "10.1145/365153.365168"
+ },
+ "wiggins2006": {
+  "type": "article",
+  "authors": "Wiggins, G. A.",
+  "year": 2006,
+  "title": "A preliminary framework for description, analysis and comparison of creative systems",
+  "venue": "Knowledge-Based Systems",
+  "volume": "19",
+  "issue": "7",
+  "pages": "449-458",
+  "doi": "10.1016/j.knosys.2006.04.009"
+ },
+ "zimmerman2002": {
+  "type": "article",
+  "authors": "Zimmerman, B. J.",
+  "year": 2002,
+  "title": "Becoming a self-regulated learner: An overview",
+  "venue": "Theory Into Practice",
+  "volume": "41",
+  "issue": "2",
+  "pages": "64-70",
+  "doi": "10.1207/s15430421tip4102_2"
+ }
+}
