@@ -1,0 +1,422 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Week 5: Symbol Grounding and Meaning | Philosophy of Artificial Intelligence</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet"><style>:root{
+  --ink:#15313D; --paper:#EEF3F4; --panel:#FFFFFF; --steel:#566A73; --line:#CCD8DC;
+  --signal:#B97813; --ok:#2B7553; --bad:#A33F39; --band:rgba(185,120,19,.10);
+  --c1:#1D5B78; --c2:#C0801A; --c3:#5F8A2E; --c4:#86497A;
+  --sans:'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --serif:'Literata',Georgia,'Times New Roman',serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --ink:#E2EBEE; --paper:#0E1A1F; --panel:#14242B; --steel:#9FB2BA; --line:#27404A;
+  --signal:#E0A340; --ok:#5DBB8C; --bad:#E07A72; --band:rgba(224,163,64,.14);
+  --c1:#6DB2D2; --c2:#E0A340; --c3:#9CC66A; --c4:#C98BBE;
+}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--sans)}
+a{color:var(--c1);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+.wrap{max-width:900px;margin:0 auto;padding:28px 20px 64px}
+header.top{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
+header.top .course{margin:0;color:var(--steel);font-size:.95rem}
+header.top h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.6rem,3.6vw,2.35rem);line-height:1.2;margin:.25rem 0 .4rem}
+header.top .who{margin:0;font-size:.9rem;color:var(--steel)}
+header.top nav a{margin-right:14px;font-size:.95rem}
+h2{font-family:var(--serif);font-weight:600;font-size:1.45rem;margin:1.6rem 0 .5rem}
+h3{font-size:1.08rem;margin:1.2rem 0 .4rem}
+.lead{max-width:70ch;color:var(--ink)}
+.small{font-size:.88rem;color:var(--steel)}
+.tabs{display:flex;gap:4px;border-bottom:2px solid var(--line);flex-wrap:wrap}
+.tabs button{font:inherit;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:10px 14px;color:var(--steel);cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--signal);font-weight:700}
+.instrument{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--signal);padding:18px 18px 12px;margin:14px 0 8px}
+.ctl{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 70px;align-items:center;gap:10px;margin:6px 0}
+.ctl label{font-size:.95rem}
+.ctl output{font-family:var(--mono);font-size:.9rem;text-align:right}
+.ctl select,.ctl input[type=range]{width:100%}
+.ctl.tog{grid-template-columns:auto 1fr}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.btn{font:inherit;font-weight:700;background:var(--c1);color:#fff;border:0;padding:9px 16px;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.ghost{background:transparent;color:var(--c1);border:1.5px solid var(--c1)}
+@media (prefers-color-scheme:dark){.btn{color:#0E1A1F}}
+select,input[type=text],textarea{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:6px 8px}
+textarea{width:100%;resize:vertical}
+svg.plot{width:100%;height:auto;display:block;margin:8px 0;background:
+  linear-gradient(var(--panel),var(--panel))}
+svg.plot .grid{stroke:var(--line);stroke-width:1}
+svg.plot .axis{stroke:var(--steel);stroke-width:1.2}
+svg.plot .mark{stroke:var(--signal);stroke-width:1.6;stroke-dasharray:5 4}
+svg.plot .band{fill:var(--band)}
+svg.plot text{fill:var(--steel);font:12px var(--sans)}
+svg.plot .lab{fill:var(--ink);font-size:13px}
+.result{font-weight:700;min-height:1.4em}
+.readout{font-family:var(--mono);font-size:.92rem;white-space:pre-wrap;background:var(--paper);border:1px solid var(--line);padding:10px;margin:8px 0}
+table.data{border-collapse:collapse;width:100%;font-size:.93rem;margin:8px 0}
+table.data th,table.data td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left}
+table.data td.num,table.data th.num{text-align:right;font-family:var(--mono)}
+fieldset.q{border:1px solid var(--line);background:var(--panel);margin:14px 0;padding:12px 16px}
+fieldset.q legend{font-weight:700;padding:0 6px;max-width:100%}
+fieldset.q.ok{border-color:var(--ok);box-shadow:inset 4px 0 0 var(--ok)}
+fieldset.q.bad{border-color:var(--bad);box-shadow:inset 4px 0 0 var(--bad)}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:4px 0;cursor:pointer}
+.opt input{margin-top:.35em}
+.conf{margin-top:8px}
+.fb{font-size:.93rem;margin-top:6px}
+.summary{font-weight:700;margin:12px 0;max-width:70ch}
+.sorter{display:grid;gap:8px;margin:10px 0}
+.srow{display:grid;grid-template-columns:1fr minmax(160px,240px);gap:10px;align-items:center;border:1px solid var(--line);background:var(--panel);padding:8px 10px}
+.srow .fb{grid-column:1 / -1;margin:0}
+.srow.ok{box-shadow:inset 4px 0 0 var(--ok)} .srow.bad{box-shadow:inset 4px 0 0 var(--bad)}
+.rf{margin:14px 0} .rf label{display:block;font-weight:700;margin-bottom:6px}
+.task{border-top:2px solid var(--line);margin-top:20px}
+.grid-canvas{display:grid;gap:2px;margin:10px 0;max-width:420px}
+.grid-canvas div{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:.8rem;border:1px solid var(--line);background:var(--panel)}
+footer.sig{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:.88rem;color:var(--steel)}
+/* Lecture pages */
+article.lecture{font-family:var(--serif);font-size:1.06rem;line-height:1.72}
+article.lecture p,article.lecture li{max-width:72ch}
+article.lecture blockquote{margin:1.2rem 0;padding:.4rem 1rem;border-left:4px solid var(--signal);background:var(--panel)}
+article.lecture img{max-width:100%;height:auto;border:1px solid var(--line);background:#fff}
+article.lecture table{border-collapse:collapse;font-family:var(--sans);font-size:.93rem}
+article.lecture th,article.lecture td{border-bottom:1px solid var(--line);padding:6px 10px;text-align:left}
+article.lecture pre.mermaid{background:var(--panel);border:1px solid var(--line);padding:12px;overflow-x:auto}
+article.lecture code{font-family:var(--mono);font-size:.9em}
+/* Dashboard */
+ol.weeks{list-style:none;padding:0;margin:0;counter-reset:w}
+ol.weeks li{display:grid;grid-template-columns:3.2rem 1fr;gap:4px 12px;padding:14px 0;border-bottom:1px solid var(--line)}
+ol.weeks .n{font-family:var(--serif);font-size:1.5rem;color:var(--signal);line-height:1.1}
+ol.weeks .t{font-weight:700}
+ol.weeks .links{grid-column:2;font-size:.95rem}
+ol.weeks .links a{margin-right:14px}
+ol.weeks .st{grid-column:2;font-size:.85rem;color:var(--steel)}
+@media (max-width:620px){.ctl{grid-template-columns:1fr 60px}.ctl label{grid-column:1 / -1}.srow{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* interactive reading */
+article.lecture img{max-width:100%;height:auto}
+.lec-tools{position:sticky;top:0;z-index:5;background:var(--paper, Canvas);padding:.45rem 0;border-bottom:1px solid rgba(128,128,128,.25);margin:0 0 1rem}
+.lec-prog{display:flex;align-items:center;gap:.7rem;font-size:.9rem}
+.lec-bar{flex:0 0 180px;height:8px;border-radius:4px;background:rgba(128,128,128,.25);overflow:hidden}
+.lec-bar i{display:block;height:100%;width:0;background:#1D5B78;transition:width .3s}
+.kc{border:1px solid rgba(29,91,120,.35);border-left:4px solid #1D5B78;border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0;background:rgba(29,91,120,.05)}
+.kc-tag{display:block;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:#1D5B78;font-weight:700;margin-bottom:.25rem}
+.kc-opts{display:grid;gap:.4rem;margin:.6rem 0}
+.kc-opt{text-align:left;padding:.5rem .75rem;border-radius:6px;border:1px solid rgba(128,128,128,.45);background:transparent;color:inherit;font:inherit;cursor:pointer}
+.kc-opt:hover:not(:disabled){border-color:#1D5B78;background:rgba(29,91,120,.06)}
+.kc-opt:disabled{cursor:default}
+.kc-opt.ok{border-color:#2e7d32;background:rgba(46,125,50,.14)}
+.kc-opt.no{border-color:#c62828;background:rgba(198,40,40,.12)}
+.kc-fb.good{color:#2e7d32;font-weight:600}.kc-fb.bad{color:#c62828;font-weight:600}
+.explore{border:1px dashed rgba(185,120,19,.65);border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0;background:rgba(185,120,19,.06)}
+.inline-lab iframe{width:100%;height:80vh;border:1px solid rgba(128,128,128,.4);border-radius:8px;margin-top:.6rem}
+body.study .wrap{margin-right:50vw;max-width:none}
+#study-pane{position:fixed;top:0;right:0;width:50vw;height:100vh;display:flex;flex-direction:column;border-left:2px solid #1D5B78;background:var(--paper, Canvas);z-index:20}
+#study-pane iframe{flex:1;border:0;width:100%}
+.study-bar{display:flex;justify-content:space-between;align-items:center;padding:.4rem .8rem;border-bottom:1px solid rgba(128,128,128,.3)}
+@media (max-width:1000px){.wide-only{display:none}body.study .wrap{margin-right:0}#study-pane{display:none}}
+.mstep{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:.4rem 0 1rem}
+.mstep-view{overflow-x:auto;margin-bottom:1rem}
+.cite{border-bottom:1px dotted currentColor;cursor:help}
+.cite-pop{display:block;font-size:.85rem;border:1px solid rgba(128,128,128,.4);border-radius:6px;padding:.5rem .7rem;margin:.3rem 0;background:rgba(128,128,128,.08);white-space:pre-line}
+.cards{border:1px solid rgba(128,128,128,.35);border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+.card{min-height:5.5rem;border-radius:8px;padding:1rem 1.1rem;background:rgba(29,91,120,.08);cursor:pointer;display:flex;align-items:center}
+.card.back{background:rgba(46,125,50,.12)}
+</style></head><body><div class="wrap"><header class="top"><p class="course">Philosophy of Artificial Intelligence (11118BLG003), week 5 of 14</p><h1>Symbol Grounding and Meaning</h1><p class="who">Prof. Dr. Utku Kose, Süleyman Demirel University</p><nav><a href="../../index.html">Course home</a><a href="lab.html">Interactive lab</a><a href="https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-05/NB05_symbol_grounding.ipynb">Colab notebook</a><a href="Week05_Lecture_Notes.pdf">PDF notes</a></nav></header><div class="lec-tools"><div class="lec-prog"><span class="lec-bar"><i></i></span><span class="lec-txt" aria-live="polite"></span></div></div><article class="lecture"><h2>Overview</h2>
+<p>How can the symbols of a system mean anything to the system itself? This week examines the symbol grounding problem, the distributional view of meaning that underlies language models, the argument that form alone cannot yield meaning, and replies that locate meaning in conceptual roles or learned relations [1, 2, 3].</p>
+<p><strong>Estimated study time:</strong> 6 to 8 hours.</p>
+<h2>Learning outcomes</h2>
+<p>By the end of the week, students are expected to state the symbol grounding problem and Harnad's proposed solution, to compute distributional word representations and interpret their similarities, to reconstruct the octopus argument of Bender and Koller, and to evaluate replies based on conceptual roles and vector grounding.</p>
+<h2>Study path</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Activity</th>
+<th>Suggested time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Read the lecture below or the <a href="Week05_Lecture_Notes.pdf">PDF version</a></td>
+<td>90 minutes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Explore the <a href="lab.html">interactive lab</a></td>
+<td>45 minutes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Work through the <a href="https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-05/NB05_symbol_grounding.ipynb">Colab notebook</a> and its exercises</td>
+<td>2 to 3 hours</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Take the self-assessment in the lab (tab: Check yourself)</td>
+<td>20 minutes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Write the reflection, export the learning log and complete the weekly task</td>
+<td>60 minutes</td>
+</tr>
+</tbody>
+</table>
+<h2>Week at a glance</h2>
+<pre class="mermaid">flowchart LR
+  S[&quot;Symbols&quot;] --&gt; D[&quot;Dictionary-go-round: symbols defined by symbols&quot;]
+  D --&gt; G[&quot;Grounding: iconic and categorical representations&quot;]
+  S --&gt; DS[&quot;Distributional meaning: the company words keep&quot;]
+  DS --&gt; O[&quot;Octopus argument: form alone lacks meaning&quot;]
+  DS --&gt; CR[&quot;Conceptual role: meaning in relations&quot;]
+  O --&gt; V[&quot;Vector grounding debate&quot;]
+  CR --&gt; V
+</pre>
+<div class="mstep"><button type="button" class="btn ghost" data-act="mstep-start">Build the diagram step by step</button><button type="button" class="btn ghost" data-act="mstep-prev" hidden>Previous step</button><button type="button" class="btn ghost" data-act="mstep-next" hidden>Next step</button><button type="button" class="btn ghost" data-act="mstep-all" hidden>Show the whole diagram</button><span class="mstep-info"></span></div>
+
+<h2>Lecture</h2>
+<h3>The grounding problem</h3>
+<p>Harnad asked how the meanings of symbols in a formal system can be intrinsic to the system rather than parasitic on the meanings in the heads of its users [1]. He illustrated the problem with a dictionary-go-round: Someone who knows no Chinese and tries to learn it from a Chinese-Chinese dictionary will pass from one meaningless string to another without end, because every definition consists of further undefined symbols. The Chinese Room of Week 4 can be read as a case of the same problem.</p>
+<p>Harnad proposed a hybrid solution. Elementary symbols are grounded in two kinds of non-symbolic representation: iconic representations, which are analogues of sensory projections, and categorical representations, which are feature detectors that pick out the invariant properties of categories. Higher-level symbols are then composed from grounded ones, so that a new word such as zebra can inherit meaning from horse and stripes. Grounding, on this view, requires a causal connection between symbols and the things they are about.</p>
+<div class="kc" data-answer="1" data-id="s1"><p class="kc-q"><span class="kc-tag">Check your understanding</span>What is the symbol grounding problem?</p><div class="kc-opts"><button type="button" class="kc-opt" data-i="0">How symbols can be stored efficiently</button><button type="button" class="kc-opt" data-i="1">How the meanings of symbols can be intrinsic to a system rather than borrowed from the minds of interpreters</button><button type="button" class="kc-opt" data-i="2">How to translate between languages</button><button type="button" class="kc-opt" data-i="3">How to compress text</button></div><p class="kc-fb" hidden></p><p class="kc-why" hidden>Harnad compared the situation to learning Chinese from a Chinese-Chinese dictionary alone.</p></div>
+
+<div class="explore"><p><strong>Explore while reading.</strong> The interactive lab of this week can be opened inside this page or next to the text, so that ideas can be tried out as they are introduced.</p><p><button type="button" class="btn" data-act="inline-lab">Open the lab here</button> <button type="button" class="btn ghost wide-only" data-act="study">Study side by side</button></p><div class="inline-lab"></div></div>
+
+<h3>Meaning from distribution</h3>
+<p>A different tradition locates meaning in patterns of use. Harris proposed that words that occur in similar contexts tend to have similar meanings [2]. Modern vector semantics turns the idea into computation: Each word is represented by the contexts in which it occurs, often after weighting co-occurrence counts by positive pointwise mutual information and reducing their dimension. Figure 5.1 shows the result for a toy corpus: Animals, vehicles and fruits separate into regions, although the program has never seen an animal, a vehicle or a fruit. Large language models are distributional learners on an enormous scale, which is why the grounding problem has returned with new urgency.</p>
+<p><img alt="Toy corpus words positioned by their co-occurrence statistics alone. The categories separate even though the program has no access to animals, vehicles or fruits {cite:harris1954}." src="figures/w05_fig1.png" /></p>
+<p><em>Figure 5.1. Toy corpus words positioned by their co-occurrence statistics alone. The categories separate even though the program has no access to animals, vehicles or fruits [2].</em></p>
+<div class="kc" data-answer="2" data-id="s2"><p class="kc-q"><span class="kc-tag">Check your understanding</span>What does the distributional hypothesis state?</p><div class="kc-opts"><button type="button" class="kc-opt" data-i="0">Words are distributed randomly</button><button type="button" class="kc-opt" data-i="1">Meaning comes only from perception</button><button type="button" class="kc-opt" data-i="2">Words that occur in similar contexts tend to have similar meanings</button><button type="button" class="kc-opt" data-i="3">Word frequency determines meaning</button></div><p class="kc-fb" hidden></p><p class="kc-why" hidden>The hypothesis underlies word embeddings and language models.</p></div>
+
+<h3>Form and meaning</h3>
+<p>Bender and Koller argued that a system trained only on linguistic form cannot learn meaning, understood as the relation between form and something outside language, such as communicative intent [3]. Their thought experiment features a hyperintelligent octopus that taps an undersea cable between two people stranded on separate islands. The octopus learns the statistical patterns of their messages well enough to impersonate one of them. When the other asks for help to build a device from local materials or to escape a bear, the octopus fails, because it has never had access to what the words are about.</p>
+<p>Others resist the conclusion. Piantadosi and Hill argued that meaning need not depend on reference, since in conceptual role theories the meaning of a concept is fixed by its relations to other concepts, and language models may capture such relations [4]. Mollo and Millière distinguished several senses of grounding and argued that the relevant sense for language models is referential grounding, whose conditions do not require multimodal input or embodiment [5]. The debate turns on what meaning is, not only on what the models do.</p>
+<div class="kc" data-answer="1" data-id="s3"><p class="kc-q"><span class="kc-tag">Check your understanding</span>What does Bender and Koller&#x27;s octopus argument claim?</p><div class="kc-opts"><button type="button" class="kc-opt" data-i="0">Octopuses understand language</button><button type="button" class="kc-opt" data-i="1">A system trained only on linguistic form cannot learn meaning, understood as the relation between form and communicative intent</button><button type="button" class="kc-opt" data-i="2">Form and meaning are identical</button><button type="button" class="kc-opt" data-i="3">Language models are grounded by design</button></div><p class="kc-fb" hidden></p><p class="kc-why" hidden>The argument separates form from meaning and asks where meaning could come from.</p></div>
+
+<h3>Grounding as a matter of degree</h3>
+<p>The positions can be compared by asking what connects symbols to the world in each case. For Harnad, the connection runs through perception. For distributional semantics, it runs through the texts that people wrote about the world, so it is indirect. For conceptual role theories, relations among concepts may carry part of the meaning even without reference. The lab makes the contrast concrete: One part computes similarities from co-occurrence alone, and another follows chains of definitions until they either loop or reach words marked as grounded in perception. The notebook then tests whether a mapping learned from a few grounded words transfers to others.</p>
+<blockquote>
+<p><strong>Pause and reflect.</strong> When a language model describes the taste of a lemon, is it referring to lemons? What would have to be added for the answer to change?</p>
+</blockquote>
+<div class="kc" data-answer="3" data-id="s4"><p class="kc-q"><span class="kc-tag">Check your understanding</span>What does the view that grounding comes in degrees suggest?</p><div class="kc-opts"><button type="button" class="kc-opt" data-i="0">Grounding is all or nothing</button><button type="button" class="kc-opt" data-i="1">Only humans are grounded</button><button type="button" class="kc-opt" data-i="2">Grounding requires consciousness</button><button type="button" class="kc-opt" data-i="3">Systems can be partly grounded through different routes, such as perception, action or relations to the world</button></div><p class="kc-fb" hidden></p><p class="kc-why" hidden>Graded views change the question from whether a system is grounded to how and how far.</p></div>
+
+<h2>Interactive lab</h2>
+<p>Part A computes word similarities from a small corpus with a sliding context window. Part B follows the definitions of a toy dictionary: without grounded words the chains only return to other symbols, while marking some words as grounded in perception gives the chains an end [1, 2].</p>
+<p><a href="lab.html">Open the interactive lab</a></p>
+<p><img alt="Screenshot of the Week 5 interactive lab" src="screenshots/lab.png" /></p>
+<h2>Colab notebook</h2>
+<p>The notebook builds distributional word vectors from a generated corpus, inspects their neighbourhoods and then grounds a few words in simple perceptual features to test whether the grounding transfers to words that were never grounded [1, 2, 5].</p>
+<p><a href="https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-05/NB05_symbol_grounding.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Screenshots of the executed notebook:</p>
+<p><img alt="Output 1 of the Week 5 notebook" src="screenshots/nb_1.png" /></p>
+<h2>Self-assessment and reflection</h2>
+<p>The lab contains a 6-question self-assessment with instant feedback and a confidence rating for each answer. A confident but wrong answer marks the first topic to revisit. The reflection prompts below are also available in the lab, where answers are saved in the browser and can be exported as a learning log.</p>
+<ol>
+<li>Which position on meaning from this week do you find most plausible for language models, and what evidence would change your mind?</li>
+<li>The notebook transferred features from grounded to ungrounded words. Is that genuine grounding or a sophisticated dictionary-go-round?</li>
+<li>Choose a technical term from your field. How did you come to understand it: through definitions, through use, through perception or through practice?</li>
+</ol>
+<div class="cards"></div>
+
+<h2>Weekly task and submission</h2>
+<p>Write about 500 words comparing Harnad's grounding requirement with the conceptual role view of Piantadosi and Hill, applied to a language model answering questions in your field. Use the notebook results as evidence where appropriate and attach the completed notebook.</p>
+<p>The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.</p>
+<h2>Research and report assignment (optional)</h2>
+<p><strong>Do multimodal models ground their symbols?.</strong> Examine whether models trained on images and text meet the conditions of the grounding requirement, contrasting Harnad's view with the vector grounding debate [1, 3, 5].</p>
+<p>This research assignment is optional and supports self-learning. When the related weeks are followed within the course during an active semester, the report can be sent to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation. Unless the assignment states otherwise, a report has 1500 to 2500 words, follows the structure of an academic paper, cites at least six scholarly or official sources in square brackets and ends with a reference list.</p>
+<h2>References</h2>
+<p>[1] Harnad, S. (1990). The symbol grounding problem. <em>Physica D: Nonlinear Phenomena</em>, 42(1-3), 335-346. <a href="https://doi.org/10.1016/0167-2789(90)90087-6">https://doi.org/10.1016/0167-2789(90)90087-6</a></p>
+<p>[2] Harris, Z. S. (1954). Distributional structure. <em>Word</em>, 10(2-3), 146-162. <a href="https://doi.org/10.1080/00437956.1954.11659520">https://doi.org/10.1080/00437956.1954.11659520</a></p>
+<p>[3] Bender, E. M., &amp; Koller, A. (2020). Climbing towards NLU: On meaning, form, and understanding in the age of data. In <em>Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</em> (pp. 5185-5198). <a href="https://doi.org/10.18653/v1/2020.acl-main.463">https://doi.org/10.18653/v1/2020.acl-main.463</a></p>
+<p>[4] Piantadosi, S. T., &amp; Hill, F. (2022). Meaning without reference in large language models. arXiv preprint arXiv:2208.02957. <a href="https://arxiv.org/abs/2208.02957">https://arxiv.org/abs/2208.02957</a></p>
+<p>[5] Mollo, D. C., &amp; Millière, R. (2023). The vector grounding problem. arXiv preprint arXiv:2304.01481. <a href="https://arxiv.org/abs/2304.01481">https://arxiv.org/abs/2304.01481</a></p></article><footer class="sig"><p><strong>Prof. Dr. Utku Kose</strong><br>Full Professor, Department of Computer Engineering, Süleyman Demirel University, Isparta, Türkiye<br>Founding Director, AI Application and Research Center (YAZEM), Süleyman Demirel University<br>Head of the Computer Science Division, Department of Computer Engineering, Süleyman Demirel University<br>Additional affiliations: University of North Dakota (USA), Universidad Panamericana (Mexico City, Mexico), Vel Tech University (Chennai, India)<br><a href="https://orcid.org/0000-0002-9652-6415">ORCID 0000-0002-9652-6415</a>, <a href="https://www.utkukose.com">utkukose.com</a>, <a href="https://github.com/utkukose">github.com/utkukose</a><br><a href="mailto:utkukose@sdu.edu.tr">utkukose@sdu.edu.tr</a>, <a href="mailto:utku.kose@und.edu">utku.kose@und.edu</a>, <a href="mailto:ukose@up.edu.mx">ukose@up.edu.mx</a>, <a href="mailto:utkukose@gmail.com">utkukose@gmail.com</a></p><p>This course is updated in line with current developments in the field. Last update: September 2026. Course materials licensed under CC BY 4.0. Code licensed under MIT.</p></footer></div><script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";window.mermaid=mermaid;mermaid.initialize({startOnLoad:true,theme:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"neutral"});</script><script>window.LEC={key:"PAI:lec:w5"};</script><script>(function () {
+  "use strict";
+  var KEY = (window.LEC && window.LEC.key) || "lecture";
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+  var article = document.querySelector("article.lecture");
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".kc"));
+  var bar = document.querySelector(".lec-bar i"), txt = document.querySelector(".lec-txt");
+
+  function update() {
+    var answered = 0, correct = 0;
+    boxes.forEach(function (b) { var r = state[b.dataset.id]; if (r) { answered++; if (r.ok) { correct++; } } });
+    state.total = boxes.length; state.answered = answered; state.correct = correct; save();
+    if (bar) { bar.style.width = (boxes.length ? 100 * answered / boxes.length : 0) + "%"; }
+    if (txt) { txt.textContent = "Reading checks: " + answered + " of " + boxes.length + " answered, " + correct + " correct"; }
+  }
+
+  boxes.forEach(function (box) {
+    var ans = +box.dataset.answer, id = box.dataset.id;
+    var opts = Array.prototype.slice.call(box.querySelectorAll(".kc-opt"));
+    var fb = box.querySelector(".kc-fb"), why = box.querySelector(".kc-why");
+    var retry = document.createElement("button");
+    retry.type = "button"; retry.className = "btn ghost kc-retry"; retry.textContent = "Try again"; retry.hidden = true;
+    box.appendChild(retry);
+    function show(i) {
+      opts.forEach(function (o, j) { o.disabled = true; o.classList.toggle("ok", j === ans); o.classList.toggle("no", j === i && i !== ans); });
+      fb.textContent = i === ans ? "Correct." : "Not quite. The correct option is highlighted.";
+      fb.className = "kc-fb " + (i === ans ? "good" : "bad");
+      fb.hidden = false; why.hidden = false; retry.hidden = false;
+    }
+    opts.forEach(function (o, i) {
+      o.addEventListener("click", function () { state[id] = { ok: i === ans, choice: i }; show(i); update(); });
+    });
+    retry.addEventListener("click", function () {
+      opts.forEach(function (o) { o.disabled = false; o.classList.remove("ok", "no"); });
+      fb.hidden = true; why.hidden = true; retry.hidden = true; delete state[id]; update();
+    });
+    if (state[id] && typeof state[id].choice === "number") { show(state[id].choice); }
+  });
+  update();
+
+  function toggleStudy() {
+    var pane = document.getElementById("study-pane");
+    if (pane) { pane.parentNode.removeChild(pane); document.body.classList.remove("study"); return; }
+    pane = document.createElement("aside");
+    pane.id = "study-pane";
+    pane.innerHTML = '<div class="study-bar"><strong>Interactive lab</strong><button type="button" class="btn ghost" data-act="study">Close</button></div>' +
+      '<iframe src="lab.html" title="Interactive lab"></iframe>';
+    document.body.appendChild(pane);
+    document.body.classList.add("study");
+  }
+
+  document.addEventListener("click", function (ev) {
+    var t = ev.target && ev.target.closest ? ev.target.closest("[data-act]") : null;
+    if (!t) { return; }
+    var act = t.dataset.act;
+    if (act === "inline-lab") {
+      var holder = t.closest(".explore").querySelector(".inline-lab");
+      if (holder.firstChild) { holder.innerHTML = ""; t.textContent = "Open the lab here"; }
+      else { holder.innerHTML = '<iframe src="lab.html" title="Interactive lab" loading="lazy"></iframe>'; t.textContent = "Close the embedded lab"; }
+    } else if (act === "study") { toggleStudy(); }
+    else if (act.indexOf("mstep") === 0) { mstep(act); }
+    else if (act.indexOf("card") === 0) { card(act); }
+  });
+
+  var refs = {};
+  var heads = article ? Array.prototype.slice.call(article.querySelectorAll("h2")) : [];
+  var refHead = heads.filter(function (h) { return h.textContent.trim() === "References"; })[0];
+  if (refHead) {
+    for (var el = refHead.nextElementSibling; el && el.tagName !== "H2"; el = el.nextElementSibling) {
+      var m = el.textContent.match(/^\[(\d+)\]\s*([\s\S]*)$/);
+      if (m) { refs[m[1]] = m[2].trim(); }
+    }
+  }
+  if (refHead && Object.keys(refs).length) {
+    var walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT, null), nodes = [];
+    while (walker.nextNode()) {
+      var n = walker.currentNode;
+      if (/\[\d+(?:,\s*\d+)*\]/.test(n.nodeValue) && (n.compareDocumentPosition(refHead) & Node.DOCUMENT_POSITION_FOLLOWING) &&
+          !n.parentNode.closest("pre, .kc, h1, h2, h3")) { nodes.push(n); }
+    }
+    nodes.forEach(function (node) {
+      var frag = document.createDocumentFragment(), s = node.nodeValue, re = /\[(\d+(?:,\s*\d+)*)\]/g, last = 0, mm;
+      while ((mm = re.exec(s))) {
+        frag.appendChild(document.createTextNode(s.slice(last, mm.index)));
+        var span = document.createElement("span");
+        span.className = "cite"; span.tabIndex = 0; span.textContent = mm[0];
+        span.dataset.ref = mm[1].split(/,\s*/).map(function (k) { return "[" + k + "] " + (refs[k] || ""); }).join("\n");
+        span.title = span.dataset.ref;
+        frag.appendChild(span);
+        last = mm.index + mm[0].length;
+      }
+      frag.appendChild(document.createTextNode(s.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    });
+    document.addEventListener("click", function (ev) {
+      var c = ev.target && ev.target.closest ? ev.target.closest(".cite") : null;
+      var open = document.querySelector(".cite-pop");
+      var same = open && c && open.dataset.for === c.dataset.ref;
+      if (open) { open.parentNode.removeChild(open); }
+      if (!c || same) { return; }
+      var pop = document.createElement("span");
+      pop.className = "cite-pop"; pop.textContent = c.dataset.ref; pop.dataset.for = c.dataset.ref;
+      c.parentNode.insertBefore(pop, c.nextSibling);
+    });
+  }
+
+  var merPre = document.querySelector("pre.mermaid");
+  var merSrc = merPre ? merPre.textContent : "";
+  var ms = null, mk = 0, mcount = 0;
+  function msteps() {
+    var lines = merSrc.split("\n").filter(function (l) { return l.trim(); });
+    var styleRe = /^\s*(classDef|class\s|style\s|linkStyle|%%)/;
+    var body = lines.slice(1);
+    var content = body.filter(function (l) { return !styleRe.test(l); });
+    var idx = [];
+    content.forEach(function (l, i) { var s = l.trim(); if (s !== "end" && s.indexOf("subgraph") !== 0 && s.indexOf("direction") !== 0) { idx.push(i); } });
+    return { head: lines[0], styles: body.filter(function (l) { return styleRe.test(l); }), content: content, idx: idx };
+  }
+  function partial(k) {
+    var sel = ms.content.slice(0, ms.idx[k - 1] + 1), open = 0;
+    sel.forEach(function (l) { var s = l.trim(); if (s.indexOf("subgraph") === 0) { open++; } else if (s === "end") { open--; } });
+    for (var i = 0; i < open; i++) { sel.push("end"); }
+    return [ms.head].concat(sel, ms.styles).join("\n");
+  }
+  function mview() {
+    var v = document.querySelector(".mstep-view");
+    if (!v) { v = document.createElement("div"); v.className = "mstep-view"; var ctl = document.querySelector(".mstep"); ctl.parentNode.insertBefore(v, ctl.nextSibling); }
+    return v;
+  }
+  function minfo(t) { var i = document.querySelector(".mstep-info"); if (i) { i.textContent = t; } }
+  function mrender(k, dir) {
+    if (!window.mermaid || !window.mermaid.render) { minfo("The diagram library is still loading. Try again in a moment."); return; }
+    window.mermaid.render("mstep" + (++mcount), partial(k)).then(function (out) {
+      mview().innerHTML = out.svg; mk = k;
+      minfo("Step " + k + " of " + ms.idx.length);
+    }).catch(function () {
+      var nk = k + (dir || 1);
+      if (nk >= 1 && nk <= ms.idx.length) { mrender(nk, dir); }
+    });
+  }
+  function mstep(act) {
+    if (!merPre) { return; }
+    if (!ms) { ms = msteps(); }
+    function btn(a) { return document.querySelector('[data-act="' + a + '"]'); }
+    if (act === "mstep-start") {
+      merPre.style.display = "none";
+      ["mstep-prev", "mstep-next", "mstep-all"].forEach(function (a) { btn(a).hidden = false; });
+      btn("mstep-start").hidden = true;
+      mrender(1, 1);
+    } else if (act === "mstep-next") { if (mk < ms.idx.length) { mrender(mk + 1, 1); } }
+    else if (act === "mstep-prev") { if (mk > 1) { mrender(mk - 1, -1); } }
+    else if (act === "mstep-all") {
+      var v = document.querySelector(".mstep-view"); if (v) { v.innerHTML = ""; }
+      merPre.style.display = "";
+      ["mstep-prev", "mstep-next", "mstep-all"].forEach(function (a) { btn(a).hidden = true; });
+      btn("mstep-start").hidden = false; minfo(""); mk = 0;
+    }
+  }
+
+  var host = document.querySelector(".cards");
+  var cards = boxes.map(function (b) {
+    var o = b.querySelectorAll(".kc-opt");
+    return { q: b.querySelector(".kc-q").lastChild.textContent, a: o[+b.dataset.answer].textContent, why: b.querySelector(".kc-why").textContent };
+  });
+  var ci = 0, flipped = false;
+  function drawCard() {
+    var c = cards[ci];
+    host.querySelector(".card-face").textContent = flipped ? (c.a + ". " + c.why) : c.q;
+    host.querySelector(".card").classList.toggle("back", flipped);
+    host.querySelector(".card-n").textContent = "Card " + (ci + 1) + " of " + cards.length + (flipped ? ", answer" : ", question");
+  }
+  function card(act) {
+    if (!host || !cards.length) { return; }
+    if (act === "card-flip") { flipped = !flipped; }
+    else { ci = (ci + (act === "card-next" ? 1 : cards.length - 1)) % cards.length; flipped = false; }
+    drawCard();
+  }
+  if (host && cards.length) {
+    host.innerHTML = '<h3>Review cards</h3><p>Recall the answer to each question before turning the card.</p>' +
+      '<div class="card" data-act="card-flip" tabindex="0" role="button"><div class="card-face"></div></div>' +
+      '<p class="card-nav"><button type="button" class="btn ghost" data-act="card-prev">Previous</button> ' +
+      '<button type="button" class="btn" data-act="card-flip">Turn the card</button> ' +
+      '<button type="button" class="btn ghost" data-act="card-next">Next</button> <span class="card-n"></span></p>';
+    drawCard();
+    host.querySelector(".card").addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); card("card-flip"); } });
+  }
+})();
+</script></body></html>
