@@ -2,7 +2,7 @@
 
 # Philosophy of Artificial Intelligence
 
-**Graduate course 11118BLG003, Süleyman Demirel University**
+**Graduate course 11118BLG003, Süleyman Demirel University** 
 
 *A 14-week asynchronous graduate course in which thought experiments become simulations, with lecture notes, interactive labs, Colab notebooks and weekly self-assessment*
 
