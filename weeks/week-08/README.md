@@ -17,7 +17,7 @@ An intelligent agent must know what changes when it acts and what stays the same
 
 ## Learning outcomes
 
-By the end of the week, students are expected to distinguish the representational frame problem from the general problem of relevance, to explain STRIPS and successor state axioms as solutions to the former, to reconstruct Dennett's robot story, and to explain why Winograd schemas test common sense.
+By the end of the week, students are expected to distinguish the representational frame problem from the general problem of relevance. They should be able to explain STRIPS and successor state axioms as solutions to the former and to reconstruct Dennett's robot story. Finally, they should be able to explain why Winograd schemas test common sense.
 
 ## Study path
 
@@ -26,8 +26,8 @@ By the end of the week, students are expected to distinguish the representationa
 | 1 | Read the lecture below or the [PDF version](Week08_Lecture_Notes.pdf) | 90 minutes |
 | 2 | Explore the [interactive lab](https://utkukose.github.io/philosophy-of-ai-NB-lecture/weeks/week-08/lab.html) | 45 minutes |
 | 3 | Work through the [Colab notebook](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-08/NB08_frame_problem.ipynb) and its exercises | 2 to 3 hours |
-| 4 | Take the self-assessment in the lab (tab: Check yourself) | 20 minutes |
-| 5 | Write the reflection, export the learning log and complete the weekly task | 60 minutes |
+| 4 | Take the self-assessment in the interactive lab (tab: Check yourself) | 20 minutes |
+| 5 | Answer the reflection prompts in the interactive lab, export the learning log and complete the weekly task | 60 minutes |
 
 ## Week at a glance
 
@@ -47,11 +47,11 @@ flowchart LR
 
 ### A logical problem
 
-McCarthy and Hayes introduced the situation calculus to represent actions and their effects in logic, and noticed a difficulty [1]. To reason that painting a block does not move it, the system needs an explicit axiom saying so, and the same holds for every pair of an action and a property it does not affect. The number of these frame axioms grows with the product of actions and properties, called fluents. Figure 8.1 shows the growth. They named this the frame problem.
+McCarthy and Hayes introduced the situation calculus to represent actions and their effects in logic, and noticed a difficulty [1]. To reason that painting a block does not move it, the system needs an explicit axiom saying so. The same holds for every pair of an action and a property it does not affect. The number of these frame axioms grows with the product of actions and properties, called fluents. Figure 8.1 shows the growth. They named this the frame problem.
 
 Two classic answers address the representational side. The STRIPS planner of Fikes and Nilsson represented each action by lists of facts it adds and deletes and assumed that everything else persists [4]. Reiter later showed how to compile all frame axioms into one successor state axiom per fluent, which states exactly when the fluent is true after an action [5]. Shanahan presented a detailed treatment of such solutions based on a common sense law of inertia [6]. In the logical sense, the frame problem is largely solved.
 
-![Explicit frame axioms grow with the product of actions and fluents, while successor state axioms grow with the number of fluents {cite:mccarthy1969,reiter2001}.](figures/w08_fig1.png)
+![Explicit frame axioms grow with the product of actions and fluents, while successor state axioms grow with the number of fluents.](figures/w08_fig1.png)
 
 *Figure 8.1. Explicit frame axioms grow with the product of actions and fluents, while successor state axioms grow with the number of fluents [1, 5].*
 
@@ -69,7 +69,7 @@ D. How to speed up search
 
 ### A problem of relevance
 
-Dennett told a story that turned the frame problem into a general problem of cognition [2]. A robot, R1, must fetch its spare battery from a room in which a bomb is timed to go off. The battery is on a wagon, and so is the bomb. R1 pulls the wagon out, knowing that the battery is on it, but does not notice that the bomb comes along too. Its designers build R1D1, which deduces the implications of its actions, and it is still deducing irrelevant consequences, such as that pulling the wagon would not change the colour of the walls, when the bomb explodes. The next model, R2D1, is taught to ignore irrelevant implications, but it is busy classifying thousands of them as irrelevant when time runs out.
+Dennett told a story that turned the frame problem into a general problem of cognition [2]. A robot, R1, must fetch its spare battery from a room in which a bomb is timed to go off. The battery is on a wagon, and so is the bomb. R1 pulls the wagon out, knowing that the battery is on it, but does not notice that the bomb comes along too. Its designers build R1D1, which deduces the implications of its actions. When the bomb explodes, R1D1 is still deducing irrelevant consequences, such as that pulling the wagon would not change the colour of the walls. The next model, R2D1, is taught to ignore irrelevant implications, but it is busy classifying thousands of them as irrelevant when time runs out.
 
 The moral is that the difficulty lies not in representing change but in determining relevance quickly, without considering everything. People do this effortlessly, and no one knows how. Dreyfus, whose critique is examined in Week 9, saw in the problem evidence that intelligence rests on background coping rather than on rules.
 
@@ -87,7 +87,7 @@ D. That batteries are unreliable
 
 ### Common sense
 
-Davis and Marcus surveyed the challenge of commonsense reasoning and argued that it remains a central obstacle for AI [3]. Commonsense knowledge is vast, mostly unstated and used without effort: that objects fall when dropped, that containers hold things smaller than themselves, that people act on their beliefs. Levesque, Davis and Morgenstern proposed the Winograd schema challenge as a test [7]. Each item is a pair of sentences that differ in one word, which flips the referent of a pronoun. In the pair about a trophy that does not fit into a suitcase because it is too large or too small, the pronoun refers to the trophy in one case and to the suitcase in the other. Surface statistics that ignore the special word can do no better than chance.
+Davis and Marcus surveyed the challenge of commonsense reasoning and argued that it remains a central obstacle for AI [3]. Commonsense knowledge is vast, mostly unstated and used without effort: that objects fall when dropped, that containers hold things smaller than themselves, that people act on their beliefs. Levesque, Davis and Morgenstern proposed the Winograd schema challenge as a test [7]. Each item is a pair of sentences that differ in one word, which flips the referent of a pronoun. One pair concerns a trophy that does not fit into a suitcase because it is too large or too small. The pronoun refers to the trophy in one case and to the suitcase in the other. Surface statistics that ignore the special word can do no better than chance.
 
 <details>
 <summary><b>Check your understanding.</b> What do Winograd schemas test?</summary>
@@ -103,7 +103,7 @@ D. Translation speed
 
 ### Relevance in present systems
 
-Large language models answer many Winograd-style questions correctly, which shows that statistics over vast text capture much commonsense knowledge. Whether they solve the relevance problem or sidestep it is debated: A model that has absorbed enormous numbers of situations may retrieve the relevant pattern without ever facing Dennett's explosion, but it may also fail on situations that its training did not cover. The lab reconstructs Dennett's robots with an adjustable time budget, and the notebook counts frame axioms and tests surface heuristics on Winograd-style pairs.
+Large language models answer many Winograd-style questions correctly, which shows that statistics over vast text capture much commonsense knowledge. Whether they solve the relevance problem or sidestep it is debated. A model that has absorbed enormous numbers of situations may retrieve the relevant pattern without ever facing Dennett's explosion. It may also fail on situations that its training did not cover. The interactive lab reconstructs Dennett's robots with an adjustable time budget, and the Colab notebook counts frame axioms and tests surface heuristics on Winograd-style pairs.
 
 > **Pause and reflect.** When you decide what to check before leaving home, how do you avoid considering irrelevant facts? Could that procedure be written down?
 
@@ -129,33 +129,45 @@ A robot must pull a wagon carrying its battery out of a room before a bomb explo
 
 ## Colab notebook
 
-The notebook grounds a blocks world in STRIPS operators, counts the frame axioms that an explicit situation calculus encoding would need, and tests two surface heuristics on Winograd-style sentence pairs [4, 5, 7].
+The Colab notebook grounds a blocks world in STRIPS operators and counts the frame axioms that an explicit situation calculus encoding would need. It then tests two surface heuristics on Winograd-style sentence pairs [4, 5, 7].
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-08/NB08_frame_problem.ipynb)
 
-Screenshots of the executed notebook:
+Screenshots of the executed Colab notebook:
 
-![Output 1 of the Week 8 notebook](screenshots/nb_1.png)
+![Output 1 of the Week 8 Colab notebook](screenshots/nb_1.png)
 
 ## Self-assessment and reflection
 
-The lab contains a 6-question self-assessment with instant feedback and a confidence rating for each answer. A confident but wrong answer marks the first topic to revisit. The reflection prompts below are also available in the lab, where answers are saved in the browser and can be exported as a learning log.
+The interactive lab contains a self-assessment of six questions (tab: Check yourself). Students answer each question, state how sure they are and receive instant feedback. A confident but wrong answer marks the first topic to revisit. The reflection prompts below also appear in the interactive lab (tab: Reflect and submit). Answers written there are saved in the browser and can be exported as a learning log.
 
-1. In the lab, how did you know which facts to tick? Could that knowledge be written as rules?
+1. In the interactive lab, how did you know which facts to tick? Could that knowledge be written as rules?
 2. Do large language models solve the relevance problem, sidestep it or merely hide it? Give an example that supports your answer.
 3. Describe a failure of common sense that you have seen in an AI system and explain it with the ideas of this week.
 
 ## Weekly task and submission
 
-Write about 500 words distinguishing the logical frame problem from the problem of relevance, using the lab and the notebook as examples, and assess whether present language models face the second problem. Attach the notebook with both exercises completed.
+**What to do.** Distinguish two versions of the frame problem with examples. First, explain the logical frame problem with the frame axioms of the Colab notebook. Second, explain the problem of relevance with Dennett's robots in the interactive lab. Third, assess whether present language models face the second problem, using one example from your field.
 
-The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.
+**Where to look.** Lecture: sections "A logical problem", "A problem of relevance" and "Relevance in present systems". Interactive lab: Dennett's robots and the bomb, where each inference costs time (tab: Explore). Colab notebook: Section 2 with Exercise 1, which counts frame axioms. Section 3 with Exercise 2 tests surface heuristics on Winograd-style pairs.
+
+**Example.** A planning assistant must update a project plan after a supplier is delayed. The logical problem asks how the system knows that the delay leaves the office address unchanged. The relevance problem asks how it finds the few tasks that the delay affects without checking every fact, which is the trap of R1D1 in Dennett's story.
+
+**What to submit.** About 500 words, and the Colab notebook with Exercises 1 and 2 completed.
+
+The weekly task supports self-learning and builds a personal portfolio. In an active semester, students who follow the course with the instructor can send their work for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The e-mail contains the items that the task lists under What to submit. It also includes the learning log exported from the interactive lab (tab: Reflect and submit).
 
 ## Research and report assignment (optional)
 
-**Commonsense benchmarks after Winograd.** Review what happened to Winograd-style benchmarks once language models approached human scores, and what this shows about common sense and relevance [2, 3, 7].
+**Commonsense benchmarks after Winograd.** What happened to Winograd-style benchmarks when language models approached human scores?
 
-This research assignment is optional and supports self-learning. When the related weeks are followed within the course during an active semester, the report can be sent to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation. Unless the assignment states otherwise, a report has 1500 to 2500 words, follows the structure of an academic paper, cites at least six scholarly or official sources in square brackets and ends with a reference list.
+**What to do.** Review what happened to Winograd-style benchmarks once language models approached human scores [7]. Discuss what this shows about common sense and about the problem of relevance [2, 3].
+
+**Where to start.** Lecture sections "Common sense" and "Relevance in present systems". Section 3 of the Colab notebook shows why surface heuristics fail on twin pairs.
+
+**Example focus.** The report could ask whether high scores reflect common sense or patterns in the benchmark data that a model can exploit.
+
+This research assignment is optional and supports self-learning. In an active semester, students who follow these weeks with the instructor can send the report for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The report has 1500 to 2500 words and follows the structure of an academic paper. It cites at least six scholarly or official sources in square brackets and ends with a reference list. The [report template](https://github.com/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/REPORT_TEMPLATE.md) shows a suitable structure.
 
 ## References
 
@@ -175,4 +187,4 @@ This research assignment is optional and supports self-learning. When the relate
 
 ---
 
-<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. Last update: September 2026.</sub>
+<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026.</sub>

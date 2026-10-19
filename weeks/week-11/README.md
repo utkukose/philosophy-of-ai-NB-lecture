@@ -17,7 +17,7 @@ Scientific theories of consciousness make claims about the mechanisms that give 
 
 ## Learning outcomes
 
-By the end of the week, students are expected to describe four major theories of consciousness and what each implies for machines, to compute a simplified integration measure for small networks, to explain the indicator property method and its assumption of computational functionalism, and to state the main disagreements about conscious AI.
+By the end of the week, students are expected to describe four major theories of consciousness and what each implies for machines. They should be able to compute a simplified integration measure for small networks. They should also be able to explain the indicator property method and its assumption of computational functionalism. Finally, they should be able to state the main disagreements about conscious AI.
 
 ## Study path
 
@@ -26,8 +26,8 @@ By the end of the week, students are expected to describe four major theories of
 | 1 | Read the lecture below or the [PDF version](Week11_Lecture_Notes.pdf) | 90 minutes |
 | 2 | Explore the [interactive lab](https://utkukose.github.io/philosophy-of-ai-NB-lecture/weeks/week-11/lab.html) | 45 minutes |
 | 3 | Work through the [Colab notebook](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-11/NB11_machine_consciousness.ipynb) and its exercises | 2 to 3 hours |
-| 4 | Take the self-assessment in the lab (tab: Check yourself) | 20 minutes |
-| 5 | Write the reflection, export the learning log and complete the weekly task | 60 minutes |
+| 4 | Take the self-assessment in the interactive lab (tab: Check yourself) | 20 minutes |
+| 5 | Answer the reflection prompts in the interactive lab, export the learning log and complete the weekly task | 60 minutes |
 
 ## Week at a glance
 
@@ -45,7 +45,7 @@ flowchart LR
 
 ### Global workspace theories
 
-Baars proposed that consciousness corresponds to a global workspace: a limited-capacity stage on which information is broadcast to many specialised, unconscious processors [1]. Only content that wins the competition for the workspace becomes conscious and available for report and flexible use. Dehaene and Naccache developed a neuronal version in which conscious access involves a sudden, self-sustaining ignition of activity in long-range cortical networks [4]. On this family of theories, a machine with specialised modules, a limited workspace and global broadcast would satisfy the central conditions. The notebook simulates ignition, a nonlinear transition from local to global activity as stimulus strength increases.
+Baars proposed that consciousness corresponds to a global workspace: a limited-capacity stage on which information is broadcast to many specialised, unconscious processors [1]. Only content that wins the competition for the workspace becomes conscious and available for report and flexible use. Dehaene and Naccache developed a neuronal version in which conscious access involves a sudden, self-sustaining ignition of activity in long-range cortical networks [4]. On this family of theories, a machine with specialised modules, a limited workspace and global broadcast would satisfy the central conditions. The Colab notebook simulates ignition, a nonlinear transition from local to global activity as stimulus strength increases.
 
 <details>
 <summary><b>Check your understanding.</b> According to global workspace theory, which contents are conscious?</summary>
@@ -61,13 +61,13 @@ D. Contents stored in long-term memory
 
 ### Integrated information theory
 
-Tononi proposed that consciousness corresponds to integrated information, the extent to which a system as a whole generates information over and above its parts [2]. The theory was later formulated from axioms about the essential properties of experience, from which it derives requirements for its physical substrate [5, 6]. Its measure, Φ, is defined over the cause-effect structure of a system, and purely feedforward systems have zero Φ, whatever they compute. Integrated information theory therefore implies that a conventional digital computer running any program might have very little consciousness, because the relevant quantity depends on the physical causal structure, not on the software.
+Tononi proposed that consciousness corresponds to integrated information, the extent to which a system as a whole generates information over and above its parts [2]. The theory was later formulated from axioms about the essential properties of experience, from which it derives requirements for its physical substrate [5, 6]. Its measure, Φ, is defined over the cause-effect structure of a system, and purely feedforward systems have zero Φ, whatever they compute. Integrated information theory therefore implies that a conventional digital computer running any program might have very little consciousness. The relevant quantity depends on the physical causal structure, not on the software.
 
-The lab and the notebook compute a much simpler quantity: how much the whole system's past predicts its future beyond what the best split into two parts predicts. Figure 11.1 shows that this simplified measure is zero for independent or feedforward networks and positive for recurrent loops, which mirrors one qualitative claim of the theory without reproducing its formal machinery.
+The interactive lab and the Colab notebook compute a much simpler quantity: how much the whole system's past predicts its future beyond what the best split into two parts predicts. Figure 11.1 shows that this simplified measure is zero for independent or feedforward networks and positive for recurrent loops. This mirrors one qualitative claim of the theory without reproducing its formal machinery.
 
-![A simplified integration measure, whole-system information minus the information of the best split into parts, for five three-node boolean networks. It is inspired by, but not equal to, Φ of integrated information theory {cite:tononi2004,albantakis2023}.](figures/w11_fig1.png)
+![A simplified integration measure, whole-system information minus the information of the best split into parts, for five three-node Boolean networks. It is inspired by, but not equal to, Φ of integrated information theory.](figures/w11_fig1.png)
 
-*Figure 11.1. A simplified integration measure, whole-system information minus the information of the best split into parts, for five three-node boolean networks. It is inspired by, but not equal to, Φ of integrated information theory [2, 6].*
+*Figure 11.1. A simplified integration measure, whole-system information minus the information of the best split into parts, for five three-node Boolean networks. It is inspired by, but not equal to, Φ of integrated information theory [2, 6].*
 
 <details>
 <summary><b>Check your understanding.</b> How does integrated information theory characterise consciousness?</summary>
@@ -99,9 +99,9 @@ D. Motor output
 
 ### Indicator properties and the debate about AI
 
-Butlin and colleagues proposed an empirical method for assessing AI systems [3]. Assuming computational functionalism as a working hypothesis, they derived indicator properties from several scientific theories, including recurrent processing, global workspace, higher-order, predictive processing and attention schema theories, together with agency and embodiment. They assessed several recent systems and concluded that no current AI system is conscious, but also that there are no obvious barriers to building systems that satisfy the indicators. Chalmers examined large language models and argued that they lack several features that many theories require, such as recurrent processing, a global workspace and unified agency, while such features could be added in future systems [9].
+Butlin and colleagues proposed an empirical method for assessing AI systems [3]. They assumed computational functionalism as a working hypothesis and derived indicator properties from several scientific theories. The theories include recurrent processing, global workspace, higher-order, predictive processing and attention schema theories. Agency and embodiment complete the list. They assessed several recent systems and concluded that no current AI system is conscious, but also that there are no obvious barriers to building systems that satisfy the indicators. Chalmers examined large language models and argued that they lack several features that many theories require, such as recurrent processing, a global workspace and unified agency [9]. Such features could, however, be added in future systems.
 
-Others doubt the functionalist assumption. Seth argued for biological naturalism, the view that consciousness may depend on properties of living systems, such as the regulation of a living body, so that computation alone would not suffice [10]. The lab lets students weigh the theories by credence and see how the verdict about an architecture depends on those weights.
+Others doubt the functionalist assumption. Seth argued for biological naturalism [10]. On this view, consciousness may depend on properties of living systems, such as the regulation of a living body, so computation alone would not suffice. The interactive lab lets students weigh the theories by credence and see how the verdict about an architecture depends on those weights.
 
 > **Pause and reflect.** Would you change how you treat a system if its indicator score rose? What does your answer reveal about the role of theory in such judgements?
 
@@ -127,33 +127,45 @@ Part A combines indicator properties with your credence in each theory to score 
 
 ## Colab notebook
 
-The notebook implements the simplified integration measure for small boolean networks and simulates ignition in a single global workspace unit with self-excitation [2, 4].
+The Colab notebook implements the simplified integration measure for small Boolean networks and simulates ignition in a single global workspace unit with self-excitation [2, 4].
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-11/NB11_machine_consciousness.ipynb)
 
-Screenshots of the executed notebook:
+Screenshots of the executed Colab notebook:
 
-![Output 1 of the Week 11 notebook](screenshots/nb_1.png)
+![Output 1 of the Week 11 Colab notebook](screenshots/nb_1.png)
 
 ## Self-assessment and reflection
 
-The lab contains a 6-question self-assessment with instant feedback and a confidence rating for each answer. A confident but wrong answer marks the first topic to revisit. The reflection prompts below are also available in the lab, where answers are saved in the browser and can be exported as a learning log.
+The interactive lab contains a self-assessment of six questions (tab: Check yourself). Students answer each question, state how sure they are and receive instant feedback. A confident but wrong answer marks the first topic to revisit. The reflection prompts below also appear in the interactive lab (tab: Reflect and submit). Answers written there are saved in the browser and can be exported as a learning log.
 
-1. Set the credences in the lab to your own beliefs. Which architecture scores highest, and would you accept that verdict?
+1. Set the credences in the interactive lab to your own beliefs. Which architecture scores highest, and would you accept that verdict?
 2. The simplified measure distinguishes loops from feedforward networks. Is that difference a plausible marker of consciousness? Why or why not?
 3. Which theory of this week is most testable, and what experiment would you run on an AI system to test it?
 
 ## Weekly task and submission
 
-Write about 600 words that assess one current AI system with the indicator method, using at least three theories, and discuss whether computational functionalism is a reasonable working assumption. Include the lab chart for your credences and attach the notebook with both exercises completed.
+**What to do.** Assess one current AI system with the indicator method. First, choose a system, such as a chat assistant based on a language model, and describe its architecture briefly. Second, examine it with at least three theories of consciousness: For each theory, state the indicator properties it implies and whether the system has them. Third, discuss whether computational functionalism, which the method assumes, is a reasonable working assumption.
 
-The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.
+**Where to look.** Lecture: sections "Global workspace theories", "Integrated information theory", "Higher-order and recurrent processing theories" and "Indicator properties and the debate about AI". Interactive lab: Part A for indicators and credences, and Part B for the simplified integration measure. Colab notebook: Section 1 for integration and Section 2 for ignition in a global workspace unit.
+
+**Example.** Consider a robot whose controller is a recurrent network with a central planner. It has recurrence, so it meets one indicator of recurrent processing theory. Whether its planner works as a global workspace depends on whether its contents are broadcast to many modules. Integrated information theory would look at the hardware rather than at the program.
+
+**What to submit.** About 600 words with the chart of your credences from Part A of the interactive lab, and the Colab notebook with Exercises 1 and 2 completed.
+
+The weekly task supports self-learning and builds a personal portfolio. In an active semester, students who follow the course with the instructor can send their work for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The e-mail contains the items that the task lists under What to submit. It also includes the learning log exported from the interactive lab (tab: Reflect and submit).
 
 ## Research and report assignment (optional)
 
-**Methods for assessing AI consciousness.** Compare the theory-heavy indicator method with approaches based on behaviour and with biological naturalism, and identify what each would count as evidence [3, 9, 10].
+**Methods for assessing AI consciousness.** What would count as evidence of consciousness in an AI system?
 
-This research assignment is optional and supports self-learning. When the related weeks are followed within the course during an active semester, the report can be sent to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation. Unless the assignment states otherwise, a report has 1500 to 2500 words, follows the structure of an academic paper, cites at least six scholarly or official sources in square brackets and ends with a reference list.
+**What to do.** Compare the theory-heavy indicator method with approaches based on behaviour and with biological naturalism [3, 9, 10]. Identify what each approach would count as evidence.
+
+**Where to start.** Lecture section "Indicator properties and the debate about AI" and Part A of the interactive lab, where credences in theories change the scores of six architectures.
+
+**Example focus.** A chat assistant that reports feelings gives behavioural evidence that the indicator method would discount. The report could ask why.
+
+This research assignment is optional and supports self-learning. In an active semester, students who follow these weeks with the instructor can send the report for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The report has 1500 to 2500 words and follows the structure of an academic paper. It cites at least six scholarly or official sources in square brackets and ends with a reference list. The [report template](https://github.com/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/REPORT_TEMPLATE.md) shows a suitable structure.
 
 ## References
 
@@ -179,4 +191,4 @@ This research assignment is optional and supports self-learning. When the relate
 
 ---
 
-<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. Last update: September 2026.</sub>
+<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026.</sub>

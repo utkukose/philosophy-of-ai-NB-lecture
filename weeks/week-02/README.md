@@ -11,13 +11,13 @@ Prof. Dr. Utku Kose, Süleyman Demirel University
 
 ## Overview
 
-In 1950, Alan Turing replaced the question of whether machines can think with a game of imitation. This week reconstructs his proposal and his replies to objections, examines critiques that target the sufficiency of behaviour, and interprets recent experiments in which language models were judged to be human [1, 2, 3].
+In 1950, Alan Turing replaced the question of whether machines can think with a game of imitation. This week reconstructs his proposal and his replies to objections. It examines critiques that target the sufficiency of behaviour and interprets recent experiments in which language models were judged to be human [1, 2, 3].
 
 **Estimated study time:** 6 to 8 hours.
 
 ## Learning outcomes
 
-By the end of the week, students are expected to describe the imitation game and Turing's prediction, to evaluate at least three of the objections he considered, to explain why Blockhead and subcognitive questions challenge behavioural tests, and to interpret the results of recent three-party Turing tests with appropriate statistical care.
+By the end of the week, students are expected to describe the imitation game and Turing's prediction, and to evaluate at least three of the objections he considered. They should be able to explain why Blockhead and subcognitive questions challenge behavioural tests. Finally, they should be able to interpret the results of recent three-party Turing tests with appropriate statistical care.
 
 ## Study path
 
@@ -26,8 +26,8 @@ By the end of the week, students are expected to describe the imitation game and
 | 1 | Read the lecture below or the [PDF version](Week02_Lecture_Notes.pdf) | 90 minutes |
 | 2 | Explore the [interactive lab](https://utkukose.github.io/philosophy-of-ai-NB-lecture/weeks/week-02/lab.html) | 45 minutes |
 | 3 | Work through the [Colab notebook](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-02/NB02_turing_test.ipynb) and its exercises | 2 to 3 hours |
-| 4 | Take the self-assessment in the lab (tab: Check yourself) | 20 minutes |
-| 5 | Write the reflection, export the learning log and complete the weekly task | 60 minutes |
+| 4 | Take the self-assessment in the interactive lab (tab: Check yourself) | 20 minutes |
+| 5 | Answer the reflection prompts in the interactive lab, export the learning log and complete the weekly task | 60 minutes |
 
 ## Week at a glance
 
@@ -45,9 +45,9 @@ flowchart LR
 
 ### Replacing the question
 
-Turing found the question of whether machines can think too vague to answer, so he proposed to replace it with a game [1]. An interrogator communicates in writing with two hidden witnesses, one human and one machine, and must decide which is which. If machines play the game so well that interrogators do no better than chance, the original question loses its point. Turing also made a prediction: that by about the end of the twentieth century, an average interrogator would have no more than a 70 percent chance of making the right identification after five minutes of questioning.
+Turing found the question of whether machines can think too vague to answer, so he proposed to replace it with a game [1]. An interrogator communicates in writing with two hidden witnesses, one human and one machine, and must decide which is which. If machines play the game so well that interrogators do no better than chance, the original question loses its point. Turing also made a prediction. By about the end of the twentieth century, an average interrogator would have no more than a 70 percent chance of making the right identification after five minutes of questioning.
 
-The proposal is behavioural and deliberately so. It sets aside the appearance of the machine and the material it is made of and focuses on verbal behaviour, which Turing treated as a sufficient basis for attributing thought, just as people attribute thought to one another.
+The proposal is behavioural and deliberately so. It sets aside the appearance of the machine and the material it is made of, and focuses on verbal behaviour. Turing treated such behaviour as a sufficient basis for attributing thought, just as people attribute thought to one another.
 
 <details>
 <summary><b>Check your understanding.</b> With what did Turing replace the question whether machines can think?</summary>
@@ -63,7 +63,7 @@ D. Whether a machine can pass a medical exam
 
 ### Objections and replies
 
-Turing anticipated nine objections to his view: the theological objection, the heads-in-the-sand objection, the mathematical objection, the argument from consciousness, arguments from various disabilities, Lady Lovelace's objection, the argument from the continuity of the nervous system, the argument from the informality of behaviour and the argument from extrasensory perception [1]. Three of them return later in the course. The mathematical objection draws on Gödel's theorem and is examined in Week 9. The argument from consciousness, which holds that a machine must feel what it writes, is examined in Weeks 10 and 11. Lady Lovelace's objection, that a machine can only do what it is ordered to do, is examined in Week 13. To the argument from consciousness, Turing replied that it leads to solipsism, since the only way to be sure that a person thinks would be to be that person. Saygin, Cicekli and Akman reviewed the first fifty years of debate about the test and its variants [4].
+Turing anticipated nine objections to his view [1]. They are the theological objection, the heads-in-the-sand objection, the mathematical objection, the argument from consciousness and arguments from various disabilities. The list continues with Lady Lovelace's objection, the argument from the continuity of the nervous system, the argument from the informality of behaviour and the argument from extrasensory perception. Three of them return later in the course. The mathematical objection draws on Gödel's theorem and is examined in Week 9. The argument from consciousness, which holds that a machine must feel what it writes, is examined in Weeks 10 and 11. Lady Lovelace's objection, that a machine can only do what it is ordered to do, is examined in Week 13. To the argument from consciousness, Turing replied that it leads to solipsism, since the only way to be sure that a person thinks would be to be that person. Saygin, Cicekli and Akman reviewed the first fifty years of debate about the test and its variants [4].
 
 <details>
 <summary><b>Check your understanding.</b> What does Lady Lovelace&#x27;s objection state?</summary>
@@ -81,7 +81,7 @@ D. Machines will become conscious
 
 Critics have questioned whether passing the test is sufficient for thought. Block imagined a machine, later called Blockhead, that stores a sensible reply for every possible conversation up to the length of the test [2]. Such a lookup table would pass, yet it would be as unintelligent as a jukebox. Block concluded that intelligence depends on how behaviour is produced, not only on the behaviour itself, a position he called psychologism. The practical impossibility of the table does not answer the point, since the argument concerns what the test measures, not what can be built.
 
-French argued that the test is too demanding in a different way [5]. Subcognitive questions, such as asking how good a made-up word would be as a name for a breakfast cereal, probe associations that only an entity with a human life history would share. The test may therefore detect humanness rather than intelligence. Weizenbaum's ELIZA showed a third problem from the opposite direction: A simple program that transformed user sentences with pattern-matching rules led some users to attribute understanding to it [6]. Human judges are not neutral instruments.
+French argued that the test is too demanding in a different way [5]. Subcognitive questions probe associations that only an entity with a human life history would share. An example is asking how good a made-up word would be as a name for a breakfast cereal. The test may therefore detect humanness rather than intelligence. Weizenbaum's ELIZA showed a third problem from the opposite direction: A simple program that transformed user sentences with pattern-matching rules led some users to attribute understanding to it [6]. Human judges are not neutral instruments.
 
 <details>
 <summary><b>Check your understanding.</b> What does Block&#x27;s Blockhead thought experiment suggest?</summary>
@@ -99,11 +99,11 @@ D. Humans are lookup tables
 
 Jones and Bergen ran randomised, controlled and pre-registered three-party Turing tests in which interrogators held five-minute conversations simultaneously with a human and a machine [3]. When prompted to adopt a humanlike persona, GPT-4.5 was judged to be the human in 73 percent of the games, significantly more often than the real human participants. LLaMa-3.1-405B with the same prompt was judged human 56 percent of the time, while ELIZA and GPT-4o without a persona reached 23 and 21 percent. Figure 2.1 shows these reported rates.
 
-The results meet Turing's operational criterion in its standard form. Whether they show that the systems think is exactly the question that Block and French raised. The results also depended strongly on the persona prompt, which suggests that the test measures skill at a particular social performance. The lab asks students to act as interrogators, to compute whether their own accuracy exceeds chance and to estimate the size of Blockhead's table.
+The results meet Turing's operational criterion in its standard form. Whether they show that the systems think is exactly the question that Block and French raised. The results also depended strongly on the persona prompt, which suggests that the test measures skill at a particular social performance. The interactive lab asks students to act as interrogators, to compute whether their own accuracy exceeds chance and to estimate the size of Blockhead's table.
 
 > **Pause and reflect.** If a system passes the test only with a carefully written persona, who or what has passed the test: the model, the prompt writer or the combination?
 
-![Share of games in which each system was judged to be the human in the three-party Turing tests reported by Jones and Bergen; the dashed line marks chance {cite:jones2025}.](figures/w02_fig1.png)
+![Share of games in which each system was judged to be the human in the three-party Turing tests reported by Jones and Bergen; the dashed line marks chance.](figures/w02_fig1.png)
 
 *Figure 2.1. Share of games in which each system was judged to be the human in the three-party Turing tests reported by Jones and Bergen; the dashed line marks chance [3].*
 
@@ -129,17 +129,17 @@ Part A presents eight short replies, constructed for this exercise, each written
 
 ## Colab notebook
 
-The notebook implements a small ELIZA-style program, models interrogators with signal detection theory to relate accuracy to Turing's 70 percent criterion, tests judge accuracy against chance and computes the size of Blockhead's table [1, 2, 6].
+The Colab notebook implements a small ELIZA-style program and models interrogators with signal detection theory, which relates their accuracy to Turing's 70 percent criterion. It then tests judge accuracy against chance and computes the size of Blockhead's table [1, 2, 6].
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-02/NB02_turing_test.ipynb)
 
-Screenshots of the executed notebook:
+Screenshots of the executed Colab notebook:
 
-![Output 1 of the Week 2 notebook](screenshots/nb_1.png)
+![Output 1 of the Week 2 Colab notebook](screenshots/nb_1.png)
 
 ## Self-assessment and reflection
 
-The lab contains a 6-question self-assessment with instant feedback and a confidence rating for each answer. A confident but wrong answer marks the first topic to revisit. The reflection prompts below are also available in the lab, where answers are saved in the browser and can be exported as a learning log.
+The interactive lab contains a self-assessment of six questions (tab: Check yourself). Students answer each question, state how sure they are and receive instant feedback. A confident but wrong answer marks the first topic to revisit. The reflection prompts below also appear in the interactive lab (tab: Reflect and submit). Answers written there are saved in the browser and can be exported as a learning log.
 
 1. How accurate were you in Part A, and what cues did you rely on? Would the same cues work against a persona-prompted model?
 2. Does Blockhead refute behavioural tests of intelligence, or only show their limits? Defend your view.
@@ -147,15 +147,27 @@ The lab contains a 6-question self-assessment with instant feedback and a confid
 
 ## Weekly task and submission
 
-Write an argument analysis of about 500 words: Reconstruct Turing's argument as numbered premises and a conclusion, state which premise Block and French each attack, and evaluate whether the results of Jones and Bergen change the debate. Attach the notebook with both exercises completed.
+**What to do.** Write an argument analysis of Turing's proposal. First, reconstruct Turing's argument as numbered premises and a conclusion. Second, state which premise Block attacks with Blockhead and which premise French attacks with subcognitive questions. Third, assess whether the three-party tests of Jones and Bergen change the debate.
 
-The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.
+**Where to look.** Lecture: sections "Replacing the question", "Is behaviour enough?" and "The test in the age of language models". Interactive lab: Part B for the size of Blockhead's table and Part C for testing your own position. Colab notebook: Section 2 for Turing's 70 percent criterion, Section 3 for testing judges against chance and Section 4 for the size of Blockhead.
+
+**Example.** One premise could read: People attribute thought to one another on the basis of verbal behaviour alone. The argument from consciousness attacks the step from this premise to machines, and Turing replied that it leads to solipsism. Block and French attack other premises, which your analysis must identify.
+
+**What to submit.** About 500 words, and the Colab notebook with Exercises 1 and 2 completed.
+
+The weekly task supports self-learning and builds a personal portfolio. In an active semester, students who follow the course with the instructor can send their work for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The e-mail contains the items that the task lists under What to submit. It also includes the learning log exported from the interactive lab (tab: Reflect and submit).
 
 ## Research and report assignment (optional)
 
-**The 2025 Turing test results and their critics.** Review the responses to the three-party Turing tests reported in 2025 and assess them with the arguments of Block and French [2, 3, 5].
+**The 2025 Turing test results and their critics.** Do the three-party Turing tests reported in 2025 show that machines think?
 
-This research assignment is optional and supports self-learning. When the related weeks are followed within the course during an active semester, the report can be sent to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation. Unless the assignment states otherwise, a report has 1500 to 2500 words, follows the structure of an academic paper, cites at least six scholarly or official sources in square brackets and ends with a reference list.
+**What to do.** Review the published reactions to the three-party Turing tests that Jones and Bergen reported in 2025 [3]. Assess these reactions with the arguments of Block and French [2, 5].
+
+**Where to start.** Lecture sections "Is behaviour enough?" and "The test in the age of language models". Section 3 of the Colab notebook shows how to test whether judges do better than chance.
+
+**Example focus.** The report could ask whether a pass that depends on a persona prompt measures the model, the prompt writer or the two together.
+
+This research assignment is optional and supports self-learning. In an active semester, students who follow these weeks with the instructor can send the report for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The report has 1500 to 2500 words and follows the structure of an academic paper. It cites at least six scholarly or official sources in square brackets and ends with a reference list. The [report template](https://github.com/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/REPORT_TEMPLATE.md) shows a suitable structure.
 
 ## References
 
@@ -173,4 +185,4 @@ This research assignment is optional and supports self-learning. When the relate
 
 ---
 
-<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. Last update: September 2026.</sub>
+<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026.</sub>

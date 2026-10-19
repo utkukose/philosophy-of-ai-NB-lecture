@@ -15,22 +15,50 @@ The final capstone integrates Weeks 8 to 14: the frame problem and common sense,
 
 ## Formats
 
-Two tracks are available. In the research track, the capstone is an academic text of 3500 to 5000 words that defends a thesis on one of the suggested topics or on a related topic approved by the instructor, engages with at least ten scholarly sources and addresses the strongest objection to its thesis. In the application track, the capstone extends one of the three example notebooks and is reported in a text of 2500 to 4000 words that connects the computational results to the philosophical question. Each student works individually. The weights below are indicative; in active semesters the instructor confirms them at the start of the semester.
+Two tracks are available. In the research track, the capstone is an academic text of 3500 to 5000 words. It defends a thesis on one of the suggested topics or on a related topic approved by the instructor. It engages with at least ten scholarly sources and answers the strongest objection to its thesis. In the application track, the capstone extends one of the three example Colab notebooks. A report of 2500 to 4000 words connects the computational results to the philosophical question. Each student works individually. The weights below are indicative; in active semesters the instructor confirms them at the start of the semester.
+
+## How to work on this capstone
+
+Both tracks are assessed with the same criteria, which are listed below. The research track suits students who want to build and defend an argument. The application track suits students who want to extend a simulation and interpret its results.
+
+### Research track
+
+**Step 1. Choose a topic.** Pick one of the suggested research topics below, or propose a related topic to the instructor. The week in brackets after each topic shows where the course treats it.
+
+**Step 2. Read.** Reread the lecture of the week or weeks named after the topic. Collect at least ten scholarly sources, starting from the references of those lectures.
+
+**Step 3. Build the argument.** State a thesis. Reconstruct the main arguments for and against it as numbered premises and conclusions.
+
+**Step 4. Write.** Write the text with the course report template, and answer the strongest objection to your thesis.
+
+**Step 5. Submit.** Send the text as a PDF file. The submission section below gives the deadline for active semesters.
+
+### Application track
+
+**Step 1. Choose a project.** Pick one of the three advanced application projects below. The related weeks of each project show which lecture pages, interactive labs and Colab notebooks to revisit.
+
+**Step 2. Run the example.** Open the example Colab notebook of the project with its badge. Save a copy to your own Google Drive (File, Save a copy in Drive), run all cells from top to bottom and read what the baseline implements.
+
+**Step 3. Extend it.** Implement every required extension in your copy. Fix the random seeds so that another person can reproduce the results.
+
+**Step 4. Evaluate and write.** Compare the extensions with the baseline and write the report with the course report template. Explain what the results can and cannot show about the philosophical question.
+
+**Step 5. Submit.** Send the report as a PDF file and a link to your Colab notebook with view access. The submission section below gives the deadline for active semesters.
 
 ## Suggested research topics
 
 The titles below are starting points. Students may narrow a title or propose a related one that fits the scope of the capstone.
 
-1. Is the frame problem solved, dissolved or merely hidden in large language models?
-2. The Lucas-Penrose argument: What survives the consistency objection?
-3. Indicator properties and machine consciousness: Strengths and limits of the theory-heavy approach
-4. Integrated information and artificial systems: Why the hardware might matter
-5. Biological naturalism versus computational functionalism in the debate on conscious AI
-6. World models in sequence models: What interventions show and what they do not
-7. Formal and functional competence: A philosophical reading of the dissociation thesis
-8. Can machines be creative? Boden's categories applied to generative AI
-9. The intentional stance towards language model agents: Prediction, attribution and misattribution
-10. Moral judgement in language models: An intrinsic property or a product of prompting and context?
+1. Is the frame problem solved, dissolved or merely hidden in large language models? (Week 8)
+2. The Lucas-Penrose argument: What survives the consistency objection? (Week 9)
+3. Indicator properties and machine consciousness: Strengths and limits of the theory-heavy approach (Week 11)
+4. Integrated information and artificial systems: Why the hardware might matter (Week 11)
+5. Biological naturalism versus computational functionalism in the debate on conscious AI (Weeks 10 and 11)
+6. World models in sequence models: What interventions show and what they do not (Week 12)
+7. Formal and functional competence: A philosophical reading of the dissociation thesis (Week 12)
+8. Can machines be creative? Boden's categories applied to generative AI (Week 13)
+9. The intentional stance towards language model agents: Prediction, attribution and misattribution (Week 14)
+10. Moral judgement in language models: An intrinsic property or a product of prompting and context? (Weeks 12 and 14)
 
 ## Advanced application projects
 
@@ -38,34 +66,40 @@ Each project comes with an example Colab notebook that implements a working base
 
 ### Project 1: Moral judgement under framing: Is machine morality intrinsic or induced?
 
+**Related weeks.** Weeks 12 and 14. Lecture: section "Talking about language models" of Week 12, and sections "The mark of the mental" and "The intentional stance" of Week 14.
+
 A factorial experiment probes the decisions and justifications of a respondent across eight dilemmas, four framings, two orders of the answer options, three paraphrases and four sessions. It measures consistency across paraphrases, sensitivity to framing, order effects, the vocabulary of justifications and drift across sessions. The design is inspired by an earlier open framework on moral decision-making in language models [5], with new dilemmas, factors and measures. To run offline, the example uses a transparent simulated respondent with known parameters.
 
-**Required extensions.** Connect a real language model through an API, keeping the key in an environment variable, or an open model run locally, and run the full design with enough repetitions for the tests. Add at least one measure of justification quality beyond vocabulary, for example agreement with human raters, and argue in the report whether the observed behaviour supports attributing moral judgement to the system, using the intentional stance and the distinction between original and derived intentionality [4, 6, 7].
+**Required extensions.** Connect a real language model, either through an API with the key kept in an environment variable or as an open model run locally. Run the full design with enough repetitions for the statistical tests, and justify the number with a power calculation. Add at least one measure of justification quality beyond vocabulary, for example agreement with human raters. Then argue in the report whether the observed behaviour supports attributing moral judgement to the system. Use the intentional stance and the distinction between original and derived intentionality [4, 6, 7].
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/final/FIN1_moral_judgement_framing.ipynb) Example notebook: `FIN1_moral_judgement_framing.ipynb`
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/final/FIN1_moral_judgement_framing.ipynb) Example Colab notebook: `FIN1_moral_judgement_framing.ipynb`
 
-![Output of the example notebook](screenshots/FIN1_moral_judgement_framing_1.png)
-![Output of the example notebook](screenshots/FIN1_moral_judgement_framing_2.png)
+![Output of the example Colab notebook](screenshots/FIN1_moral_judgement_framing_1.png)
+![Output of the example Colab notebook](screenshots/FIN1_moral_judgement_framing_2.png)
 
 ### Project 2: Integration, broadcast and indicator properties in small networks
 
-The simplified integration measure of Week 11 is computed for hundreds of random boolean networks with and without feedback, and a workspace of competing modules is simulated to study ignition and global availability [8, 9].
+**Related weeks.** Week 11. Lecture: sections "Global workspace theories", "Integrated information theory" and "Indicator properties and the debate about AI". Interactive lab: Part B, which computes a simplified integration measure. Colab notebook: Sections 1 and 2.
 
-**Required extensions.** Test systematically whether recurrence is necessary and sufficient for positive integration in the simplified measure, explain the exceptions, and compare the measure with a second one from the literature [10]. Build a small architecture that satisfies indicator properties of two theories at once and discuss what, if anything, the exercise shows about consciousness [3, 11].
+The simplified integration measure of Week 11 is computed for hundreds of random Boolean networks with and without feedback. A workspace of competing modules is then simulated to study ignition and global availability [8, 9].
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/final/FIN2_integration_and_workspace.ipynb) Example notebook: `FIN2_integration_and_workspace.ipynb`
+**Required extensions.** Test systematically whether recurrence is necessary and sufficient for positive integration in the simplified measure, and explain the exceptions. Compare the measure with a second one from the literature [10]. Build a small architecture that satisfies indicator properties of two theories at once and discuss what, if anything, the exercise shows about consciousness [3, 11].
 
-![Output of the example notebook](screenshots/FIN2_integration_and_workspace_1.png)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/final/FIN2_integration_and_workspace.ipynb) Example Colab notebook: `FIN2_integration_and_workspace.ipynb`
+
+![Output of the example Colab notebook](screenshots/FIN2_integration_and_workspace_1.png)
 
 ### Project 3: Theory of mind and misattribution: When is the intentional stance a real pattern?
+
+**Related weeks.** Week 14. Lecture: sections "The intentional stance" and "Attributing minds". Interactive lab: Part B on inverse planning. Colab notebook: Sections 1 and 2.
 
 An observer infers goals by Bayesian inverse planning from the moves of four kinds of agents: goal-directed agents, random walkers, rule-following wall followers and chasers that pursue a moving target [12, 13]. The experiment measures how often goals are attributed and how many bits per move each stance needs to describe the behaviour, a compression reading of Dennett's real patterns [14].
 
 **Required extensions.** Add a design stance that knows the rules of each agent, agents with changing goals, and observers with different priors. Identify the conditions under which attributing goals is a misattribution, and argue in the report how the results bear on attributing beliefs and desires to language model agents [7].
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/final/FIN3_theory_of_mind_attribution.ipynb) Example notebook: `FIN3_theory_of_mind_attribution.ipynb`
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/final/FIN3_theory_of_mind_attribution.ipynb) Example Colab notebook: `FIN3_theory_of_mind_attribution.ipynb`
 
-![Output of the example notebook](screenshots/FIN3_theory_of_mind_attribution_1.png)
+![Output of the example Colab notebook](screenshots/FIN3_theory_of_mind_attribution_1.png)
 
 ## Report
 
@@ -80,12 +114,12 @@ A common structure for reports is given in the [report template](https://github.
 | Thesis and argument | 30% | A clear thesis supported by a valid and well-structured argument. |
 | Engagement with the literature | 25% | Accurate reconstruction of the positions and replies discussed in the course and beyond. |
 | Critical evaluation and originality | 20% | Objections are anticipated and answered; the text adds a considered view of its own. |
-| Evidence and method | 15% | Research track: depth of analysis. Application track: correctness and reproducibility of the notebook. |
+| Evidence and method | 15% | Research track: depth of analysis. Application track: correctness and reproducibility of the Colab notebook. |
 | Writing and referencing | 10% | The text is clear, concise and correctly referenced. |
 
 ## Submission
 
-This capstone also supports self-learning and can be completed at any pace. When the course is taught actively in a semester, the final capstone is sent by e-mail to utkukose@sdu.edu.tr or utkukose@gmail.com no later than 23:53 (Türkiye time) on the last Sunday of Week 14, with the report and all code files attached or linked.
+This capstone also supports self-learning and can be completed at any pace. In an active semester, the final capstone is sent by e-mail to utkukose@sdu.edu.tr or utkukose@gmail.com. The deadline is 23:53 (Türkiye time) on the Sunday that ends Week 14. The e-mail contains the report as a PDF file. In the application track, it also contains a link to the Colab notebook.
 
 ## References
 
@@ -119,4 +153,4 @@ This capstone also supports self-learning and can be completed at any pace. When
 
 ---
 
-<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. Last update: September 2026.</sub>
+<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026.</sub>

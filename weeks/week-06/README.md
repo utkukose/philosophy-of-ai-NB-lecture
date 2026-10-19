@@ -17,7 +17,7 @@ Two traditions have competed to explain intelligence: symbolic systems that mani
 
 ## Learning outcomes
 
-By the end of the week, students are expected to contrast symbolic and connectionist architectures, to reconstruct the systematicity argument of Fodor and Pylyshyn and Smolensky's reply, to explain why compositional generalisation tests such as SCAN bear on the argument, and to evaluate recent evidence and neurosymbolic proposals.
+By the end of the week, students are expected to contrast symbolic and connectionist architectures. They should be able to reconstruct the systematicity argument of Fodor and Pylyshyn and Smolensky's reply. They should also be able to explain why compositional generalisation tests such as SCAN bear on the argument. Finally, they should be able to evaluate recent evidence and neurosymbolic proposals.
 
 ## Study path
 
@@ -26,8 +26,8 @@ By the end of the week, students are expected to contrast symbolic and connectio
 | 1 | Read the lecture below or the [PDF version](Week06_Lecture_Notes.pdf) | 90 minutes |
 | 2 | Explore the [interactive lab](https://utkukose.github.io/philosophy-of-ai-NB-lecture/weeks/week-06/lab.html) | 45 minutes |
 | 3 | Work through the [Colab notebook](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-06/NB06_systematicity.ipynb) and its exercises | 2 to 3 hours |
-| 4 | Take the self-assessment in the lab (tab: Check yourself) | 20 minutes |
-| 5 | Write the reflection, export the learning log and complete the weekly task | 60 minutes |
+| 4 | Take the self-assessment in the interactive lab (tab: Check yourself) | 20 minutes |
+| 5 | Answer the reflection prompts in the interactive lab, export the learning log and complete the weekly task | 60 minutes |
 
 ## Week at a glance
 
@@ -62,7 +62,7 @@ D. With formal logic proofs
 
 ### The systematicity argument
 
-Fodor and Pylyshyn argued that human thought has two properties that a cognitive architecture must explain [1]. Thought is productive: People can think indefinitely many new thoughts. Thought is systematic: Anyone who can think that John loves Mary can also think that Mary loves John. Classical architectures explain both properties, because their representations have a combinatorial syntax and semantics: the same parts are recombined by the same rules. Connectionist networks, they argued, face a dilemma. Either they implement a classical architecture, in which case they offer no new theory of cognition, or they do not, in which case they fail to explain systematicity.
+Fodor and Pylyshyn argued that human thought has two properties that a cognitive architecture must explain [1]. Thought is productive: People can think indefinitely many new thoughts. Thought is systematic: Anyone who can think that John loves Mary can also think that Mary loves John. Classical architectures explain both properties, because their representations have a combinatorial syntax and semantics: The same parts are recombined by the same rules. Connectionist networks, they argued, face a dilemma. Either they implement a classical architecture, in which case they offer no new theory of cognition, or they do not, in which case they fail to explain systematicity.
 
 Smolensky replied that connectionist models work at a subsymbolic level, below the level of concepts, and that structured representations can be encoded in distributed patterns of activity [2]. On his proposal, symbolic descriptions are approximations of the underlying dynamics rather than the mechanism itself. The dispute therefore concerns explanation as well as performance: whether systematicity is guaranteed by the architecture or merely possible after suitable training.
 
@@ -80,11 +80,11 @@ D. Speaking many languages
 
 ### Empirical tests
 
-Lake and Baroni turned the argument into an experiment [3]. Their SCAN benchmark maps commands such as jump twice and walk left to action sequences. Sequence-to-sequence networks generalised well when test commands were drawn at random, but failed when a primitive such as jump had been seen only in isolation during training and had to be combined with modifiers at test time. People, by contrast, generalise from a single example. Marcus used such results in a broader critique that listed the limitations of deep learning, including limited transfer and the absence of hierarchical structure [5].
+Lake and Baroni turned the argument into an experiment [3]. Their SCAN benchmark maps commands such as jump twice and walk left to action sequences. Sequence-to-sequence networks generalised well when test commands were drawn at random. They failed when a primitive such as jump had been seen only in isolation during training and had to be combined with modifiers at test time. People, by contrast, generalise from a single example. Marcus used such results in a broader critique that listed the limitations of deep learning, including limited transfer and the absence of hierarchical structure [5].
 
 Later work complicated the picture. Lake and Baroni showed that a standard neural network trained with meta-learning for compositionality, across many tasks that each required systematic generalisation, reached human-like performance on new instruction-learning tasks [6]. Systematicity, on this evidence, is achievable by networks but depends on how they are trained. Figure 6.1 reproduces the original contrast on a small command language.
 
-![Exact-match accuracy of a symbolic interpreter and a multilayer perceptron on a random split and on a split in which the primitive jump appears only alone during training {cite:lake2018}.](figures/w06_fig1.png)
+![Exact-match accuracy of a symbolic interpreter and a multilayer perceptron on a random split and on a split in which the primitive jump appears only alone during training.](figures/w06_fig1.png)
 
 *Figure 6.1. Exact-match accuracy of a symbolic interpreter and a multilayer perceptron on a random split and on a split in which the primitive jump appears only alone during training [3].*
 
@@ -102,7 +102,7 @@ D. They cannot be trained
 
 ### Hybrid prospects
 
-d'Avila Garcez and Lamb described neurosymbolic AI as a third wave that integrates learning with reasoning over structured representations [7]. For philosophy of mind, the lesson of the debate is that systematicity has become an empirical and architecture-sensitive question. The lab compares three systems on the same command language: a hand-written interpreter, a learner that memorises examples and a learner that acquires word meanings but composes them with fixed grammatical rules. The pattern of their successes and failures shows what compositional structure contributes.
+d'Avila Garcez and Lamb described neurosymbolic AI as a third wave that integrates learning with reasoning over structured representations [7]. For philosophy of mind, the lesson of the debate is that systematicity has become an empirical and architecture-sensitive question. The interactive lab compares three systems on the same command language. They are a hand-written interpreter, a learner that memorises examples and a learner that acquires word meanings but composes them with fixed grammatical rules. The pattern of their successes and failures shows what compositional structure contributes.
 
 > **Pause and reflect.** If a network becomes systematic only after training on many systematic tasks, has it explained systematicity or inherited it from its training?
 
@@ -128,33 +128,45 @@ A small command language maps commands such as jump twice and walk left to actio
 
 ## Colab notebook
 
-The notebook generates all commands of the small language, trains a multilayer perceptron that predicts the action at every output position, and compares its exact-match accuracy with a symbolic interpreter on a random split and on the held-out primitive split [1, 3].
+The Colab notebook generates all commands of the small language and trains a multilayer perceptron that predicts the action at every output position. It compares the exact-match accuracy of the network with a symbolic interpreter on a random split and on the held-out primitive split [1, 3].
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-06/NB06_systematicity.ipynb)
 
-Screenshots of the executed notebook:
+Screenshots of the executed Colab notebook:
 
-![Output 1 of the Week 6 notebook](screenshots/nb_1.png)
+![Output 1 of the Week 6 Colab notebook](screenshots/nb_1.png)
 
 ## Self-assessment and reflection
 
-The lab contains a 6-question self-assessment with instant feedback and a confidence rating for each answer. A confident but wrong answer marks the first topic to revisit. The reflection prompts below are also available in the lab, where answers are saved in the browser and can be exported as a learning log.
+The interactive lab contains a self-assessment of six questions (tab: Check yourself). Students answer each question, state how sure they are and receive instant feedback. A confident but wrong answer marks the first topic to revisit. The reflection prompts below also appear in the interactive lab (tab: Reflect and submit). Answers written there are saved in the browser and can be exported as a learning log.
 
-1. Which system in the lab behaves most like a person learning a new verb? What does that suggest about the architecture of human cognition?
+1. Which system in the interactive lab behaves most like a person learning a new verb? What does that suggest about the architecture of human cognition?
 2. Does the success of meta-learning answer Fodor and Pylyshyn's dilemma, or does it choose its first horn?
 3. Describe a compositional generalisation that matters in your field and how you would test a model for it.
 
 ## Weekly task and submission
 
-Write about 500 words evaluating the systematicity argument in the light of the notebook results and the evidence of Lake and Baroni. State which horn of the dilemma present neural networks fall under, if any. Attach the notebook with both exercises completed.
+**What to do.** Evaluate the systematicity argument with evidence. First, state the dilemma of Fodor and Pylyshyn in two sentences. Second, compare the results of the Colab notebook with the SCAN results of Lake and Baroni. Use three splits: the random split, the split in which jump is seen only alone and your own length split. Third, state which horn of the dilemma present neural networks fall under, if any.
 
-The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.
+**Where to look.** Lecture: sections "The systematicity argument" and "Empirical tests". Interactive lab: the comparison of the interpreter with two learners on different training splits (tab: Explore). Colab notebook: Section 3 with Exercise 1, and Exercise 2, where you design the length split.
+
+**Example.** Figure 6.1 of the lecture shows the contrast that the Colab notebook reproduces. The network is almost perfect on the random split but fails on the commands that combine jump with a modifier. A student could argue that such a network fails to explain systematicity, and then ask whether the meta-learning results of Lake and Baroni change the verdict.
+
+**What to submit.** About 500 words with a table of the accuracies on the three splits, and the Colab notebook with Exercises 1 and 2 completed.
+
+The weekly task supports self-learning and builds a personal portfolio. In an active semester, students who follow the course with the instructor can send their work for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The e-mail contains the items that the task lists under What to submit. It also includes the learning log exported from the interactive lab (tab: Reflect and submit).
 
 ## Research and report assignment (optional)
 
-**Neurosymbolic systems and the systematicity challenge.** Review how neurosymbolic and meta-learning approaches respond to the systematicity argument and assess which horn of the dilemma they choose [1, 6, 7].
+**Neurosymbolic systems and the systematicity challenge.** How do recent approaches answer the systematicity argument?
 
-This research assignment is optional and supports self-learning. When the related weeks are followed within the course during an active semester, the report can be sent to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation. Unless the assignment states otherwise, a report has 1500 to 2500 words, follows the structure of an academic paper, cites at least six scholarly or official sources in square brackets and ends with a reference list.
+**What to do.** Review how neurosymbolic approaches and meta-learning respond to the systematicity argument [1, 6, 7]. Assess which horn of the dilemma each approach chooses.
+
+**Where to start.** Lecture sections "Empirical tests" and "Hybrid prospects", and the meta-learning study of Lake and Baroni [6].
+
+**Example focus.** A system that learns word meanings but composes them with fixed grammatical rules builds classical structure into its design. The report could ask whether such a system takes the horn of implementing a classical architecture.
+
+This research assignment is optional and supports self-learning. In an active semester, students who follow these weeks with the instructor can send the report for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The report has 1500 to 2500 words and follows the structure of an academic paper. It cites at least six scholarly or official sources in square brackets and ends with a reference list. The [report template](https://github.com/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/REPORT_TEMPLATE.md) shows a suitable structure.
 
 ## References
 
@@ -174,4 +186,4 @@ This research assignment is optional and supports self-learning. When the relate
 
 ---
 
-<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. Last update: September 2026.</sub>
+<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026.</sub>

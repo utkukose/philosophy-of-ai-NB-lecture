@@ -17,7 +17,7 @@ Searle's Chinese Room is the most discussed argument against strong AI. This wee
 
 ## Learning outcomes
 
-By the end of the week, students are expected to reconstruct the Chinese Room argument and its later axiomatic form, to explain the systems, robot and brain simulator replies and Searle's answers, to assess the luminous room objection, and to state precisely which conclusion the argument supports.
+By the end of the week, students are expected to reconstruct the Chinese Room argument and its later axiomatic form. They should be able to explain the systems, robot and brain simulator replies and Searle's answers, and to assess the luminous room objection. Finally, they should be able to state precisely which conclusion the argument supports.
 
 ## Study path
 
@@ -26,8 +26,8 @@ By the end of the week, students are expected to reconstruct the Chinese Room ar
 | 1 | Read the lecture below or the [PDF version](Week04_Lecture_Notes.pdf) | 90 minutes |
 | 2 | Explore the [interactive lab](https://utkukose.github.io/philosophy-of-ai-NB-lecture/weeks/week-04/lab.html) | 45 minutes |
 | 3 | Work through the [Colab notebook](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-04/NB04_chinese_room.ipynb) and its exercises | 2 to 3 hours |
-| 4 | Take the self-assessment in the lab (tab: Check yourself) | 20 minutes |
-| 5 | Write the reflection, export the learning log and complete the weekly task | 60 minutes |
+| 4 | Take the self-assessment in the interactive lab (tab: Check yourself) | 20 minutes |
+| 5 | Answer the reflection prompts in the interactive lab, export the learning log and complete the weekly task | 60 minutes |
 
 ## Week at a glance
 
@@ -48,7 +48,7 @@ flowchart TD
 
 Searle imagined himself locked in a room with a large rulebook written in English [1]. Batches of Chinese characters are passed in, and by following the rules, which relate shapes to shapes, he passes back other Chinese characters. The rules are so good that people outside, who read the answers, cannot tell them from those of a native speaker. Yet Searle understands no Chinese: He manipulates symbols by their shapes alone. Since a computer running a program does nothing more than Searle does in the room, running a program cannot be sufficient for understanding. The target is strong AI, not the usefulness of AI.
 
-A decade later, Searle presented the reasoning as an argument from axioms [2]. Programs are formal, or syntactic. Minds have mental contents, or semantics. Syntax by itself is neither constitutive of nor sufficient for semantics. Therefore programs are neither constitutive of nor sufficient for minds. The lab of this week puts students inside the room and then asks them to test their position on these axioms.
+A decade later, Searle presented the reasoning as an argument from axioms [2]. Programs are formal, or syntactic. Minds have mental contents, or semantics. Syntax by itself is neither constitutive of nor sufficient for semantics. Therefore programs are neither constitutive of nor sufficient for minds. The interactive lab of this week puts students inside the room and then asks them to test their position on these axioms.
 
 <details>
 <summary><b>Check your understanding.</b> What does the person in the Chinese Room do?</summary>
@@ -84,7 +84,7 @@ D. Only robots can understand
 
 Precision about the conclusion matters. The argument claims that running a program is not sufficient for understanding. It does not claim that machines cannot understand, since Searle held that a machine with causal powers equivalent to those of brains could think. It also leaves open what those causal powers are, which critics regard as a weakness. The argument relies on an intuition, that the man in the room does not understand, and on a step from the man to the system. Most replies attack that step or the reliability of the intuition, as Figure 4.1 shows. Harnad read the room as an illustration of a more specific problem, namely how symbols can be connected to what they mean, which is the topic of Week 5 [5].
 
-![Searle's axiomatic argument and the points at which four replies attack it {cite:searle1990,churchland1990}.](figures/w04_fig1.png)
+![Searle's axiomatic argument and the points at which four replies attack it.](figures/w04_fig1.png)
 
 *Figure 4.1. Searle's axiomatic argument and the points at which four replies attack it [2, 4].*
 
@@ -102,9 +102,9 @@ D. Syntax is not by itself sufficient for semantics
 
 ### The room and language models
 
-Large language models are trained on text alone and produce fluent text by transforming symbols, so the argument seems to apply to them directly. There are also differences. No person wrote their rules; the rules are learned statistical regularities distributed over billions of parameters. Defenders of the systems reply argue that whatever understanding exists would belong to the trained system as a whole, not to any component. Critics answer that learning the rules does not change their syntactic character. The notebook builds two rooms, one that only stores question-answer pairs and one that composes answers from a small model of a world, and compares how they handle new questions. Both only manipulate symbols, but they differ in how they generalise, which is one way of making the debate empirical.
+Large language models are trained on text alone and produce fluent text by transforming symbols, so the argument seems to apply to them directly. There are also differences. No person wrote their rules; the rules are learned statistical regularities distributed over billions of parameters. Defenders of the systems reply argue that whatever understanding exists would belong to the trained system as a whole, not to any component. Critics answer that learning the rules does not change their syntactic character. The Colab notebook builds two rooms and compares how they handle new questions. One room only stores question-answer pairs, and the other composes answers from a small model of a world. Both only manipulate symbols, but they differ in how they generalise, which is one way of making the debate empirical.
 
-> **Pause and reflect.** In the lab, did following the rulebook feel like understanding? Does your answer tell you anything about a system that follows billions of rules at high speed?
+> **Pause and reflect.** In the interactive lab, did following the rulebook feel like understanding? Does your answer tell you anything about a system that follows billions of rules at high speed?
 
 <details>
 <summary><b>Check your understanding.</b> How would a proponent of the argument view fluent text from a language model?</summary>
@@ -128,33 +128,45 @@ Part A places you inside the room: notes arrive in Chinese, and a rulebook of sh
 
 ## Colab notebook
 
-The notebook builds two rooms for a small symbolic world: one that stores question-answer pairs, like a pure rulebook, and one that composes answers from a model of the world. It measures how each handles questions it has never seen and computes the size of a complete rulebook [1, 6].
+The Colab notebook builds two rooms for a small symbolic world. One stores question-answer pairs, like a pure rulebook, and the other composes answers from a model of the world. It measures how each handles questions it has never seen and computes the size of a complete rulebook [1, 6].
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-04/NB04_chinese_room.ipynb)
 
-Screenshots of the executed notebook:
+Screenshots of the executed Colab notebook:
 
-![Output 1 of the Week 4 notebook](screenshots/nb_1.png)
+![Output 1 of the Week 4 Colab notebook](screenshots/nb_1.png)
 
 ## Self-assessment and reflection
 
-The lab contains a 6-question self-assessment with instant feedback and a confidence rating for each answer. A confident but wrong answer marks the first topic to revisit. The reflection prompts below are also available in the lab, where answers are saved in the browser and can be exported as a learning log.
+The interactive lab contains a self-assessment of six questions (tab: Check yourself). Students answer each question, state how sure they are and receive instant feedback. A confident but wrong answer marks the first topic to revisit. The reflection prompts below also appear in the interactive lab (tab: Reflect and submit). Answers written there are saved in the browser and can be exported as a learning log.
 
 1. Which reply do you find strongest, and what would Searle say in response? Write the exchange as a short dialogue.
-2. Does the difference between the two rooms in the notebook matter for the argument? Why or why not?
+2. Does the difference between the two rooms in the Colab notebook matter for the argument? Why or why not?
 3. Apply the argument to a language model assistant you use. Which premise would its defenders reject?
 
 ## Weekly task and submission
 
-Write an argument analysis of about 600 words that reconstructs the Chinese Room argument in numbered form, evaluates the systems reply and the luminous room objection, and states whether the argument applies to present language models. Attach the notebook with both exercises completed.
+**What to do.** Write an argument analysis of the Chinese Room. First, reconstruct the argument in numbered form, either as the original story or as Searle's later axioms. Second, evaluate two replies: the systems reply and the luminous room objection of Churchland and Churchland. For each reply, name the premise it attacks. Third, state whether the argument applies to present language models, and why.
 
-The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.
+**Where to look.** Lecture: sections "The argument", "The replies" and "The room and language models". Interactive lab: Part A, where you follow the rulebook yourself, Part B for Searle's axioms and Part C for the step that each reply attacks. Colab notebook: Sections 2 and 3, which compare a pure rulebook (Room 1) with a room that composes answers from a world model (Room 2). Exercise 1 measures how each room handles new questions.
+
+**Example.** The robot reply, which the task does not ask about, claims that sensors and motors would connect the symbols to what they mean. It therefore attacks the step from symbol manipulation to a lack of meaning. Searle answered that the new inputs are just more symbols to him.
+
+**What to submit.** About 600 words, and the Colab notebook with Exercises 1 and 2 completed.
+
+The weekly task supports self-learning and builds a personal portfolio. In an active semester, students who follow the course with the instructor can send their work for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The e-mail contains the items that the task lists under What to submit. It also includes the learning log exported from the interactive lab (tab: Reflect and submit).
 
 ## Research and report assignment (optional)
 
-**The systems reply after four decades.** Survey the main defences and criticisms of the systems reply and decide whether the reply succeeds against the Chinese Room [1, 3].
+**The systems reply after four decades.** Does the systems reply succeed against the Chinese Room?
 
-This research assignment is optional and supports self-learning. When the related weeks are followed within the course during an active semester, the report can be sent to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation. Unless the assignment states otherwise, a report has 1500 to 2500 words, follows the structure of an academic paper, cites at least six scholarly or official sources in square brackets and ends with a reference list.
+**What to do.** Survey the main defences and criticisms of the systems reply since Searle's original article [1, 3]. Decide whether the reply succeeds, and state the strongest point on each side.
+
+**Where to start.** Lecture sections "The replies" and "What the argument shows and what it does not", and the essays collected by Preston and Bishop [3].
+
+**Example focus.** Searle answered the systems reply by imagining that he memorises the rulebook. The report could ask whether one person can host a second system that understands what the person does not.
+
+This research assignment is optional and supports self-learning. In an active semester, students who follow these weeks with the instructor can send the report for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The report has 1500 to 2500 words and follows the structure of an academic paper. It cites at least six scholarly or official sources in square brackets and ends with a reference list. The [report template](https://github.com/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/REPORT_TEMPLATE.md) shows a suitable structure.
 
 ## References
 
@@ -172,4 +184,4 @@ This research assignment is optional and supports self-learning. When the relate
 
 ---
 
-<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. Last update: September 2026.</sub>
+<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026.</sub>

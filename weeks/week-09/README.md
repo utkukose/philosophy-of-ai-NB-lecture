@@ -17,7 +17,7 @@ Two very different arguments claim that minds can do something that machines can
 
 ## Learning outcomes
 
-By the end of the week, students are expected to state the incompleteness theorem and the undecidability of the halting problem informally, to construct a diagonal argument, to reconstruct the Lucas-Penrose argument and the consistency objection, and to explain Dreyfus's critique of rule-based AI and its relation to later developments.
+By the end of the week, students are expected to state the incompleteness theorem and the undecidability of the halting problem informally, and to construct a diagonal argument. They should be able to reconstruct the Lucas-Penrose argument and the consistency objection. Finally, they should be able to explain Dreyfus's critique of rule-based AI and its relation to later developments.
 
 ## Study path
 
@@ -26,8 +26,8 @@ By the end of the week, students are expected to state the incompleteness theore
 | 1 | Read the lecture below or the [PDF version](Week09_Lecture_Notes.pdf) | 90 minutes |
 | 2 | Explore the [interactive lab](https://utkukose.github.io/philosophy-of-ai-NB-lecture/weeks/week-09/lab.html) | 45 minutes |
 | 3 | Work through the [Colab notebook](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-09/NB09_limits_of_machines.ipynb) and its exercises | 2 to 3 hours |
-| 4 | Take the self-assessment in the lab (tab: Check yourself) | 20 minutes |
-| 5 | Write the reflection, export the learning log and complete the weekly task | 60 minutes |
+| 4 | Take the self-assessment in the interactive lab (tab: Check yourself) | 20 minutes |
+| 5 | Answer the reflection prompts in the interactive lab, export the learning log and complete the weekly task | 60 minutes |
 
 ## Week at a glance
 
@@ -46,7 +46,7 @@ flowchart LR
 
 Gödel proved in 1931 that any consistent formal system that can express elementary arithmetic contains statements that are true but cannot be proved within the system [1]. The construction uses self-reference: a sentence that, in effect, says of itself that it is not provable. If the system is consistent, the sentence is unprovable and therefore true. Turing reached a related result for machines [4]. No Turing machine can decide, for every program and input, whether the program halts. The proof is a diagonal argument: Given any claimed decider, one can build a program that asks the decider about itself and does the opposite. Figure 9.1 shows the idea as a table in which the flipped diagonal differs from every row.
 
-![A diagonal argument: flipping the diagonal of any table of programs and inputs yields a behaviour that differs from every program in the table {cite:turing1936}.](figures/w09_fig1.png)
+![A diagonal argument: flipping the diagonal of any table of programs and inputs yields a behaviour that differs from every program in the table.](figures/w09_fig1.png)
 
 *Figure 9.1. A diagonal argument: flipping the diagonal of any table of programs and inputs yields a behaviour that differs from every program in the table [4].*
 
@@ -84,7 +84,7 @@ D. The argument is too short
 
 Dreyfus argued that the programme of symbolic AI rested on assumptions that were false [3, 8]. It assumed that the brain processes information in discrete operations, that the mind follows rules over symbols, that all knowledge can be formalised and that the world consists of independent facts. Drawing on Heidegger and Merleau-Ponty, he argued that human expertise is not rule-following. Experts respond directly to situations that show up as already meaningful against a background of practices, and this know-how cannot be captured in explicit rules. The frame problem of Week 8 was, for Dreyfus, a symptom of this mistake.
 
-Later, Dreyfus examined attempts to build Heideggerian AI, including behaviour-based robotics, and argued that they had not gone far enough [9]. Brooks's robots, in his view, responded to fixed features of the world rather than to changing significance, and a truly Heideggerian AI would need a body with needs that makes situations matter to it.
+Later, Dreyfus examined attempts to build Heideggerian AI, including behaviour-based robotics, and argued that they had not gone far enough [9]. In his view, Brooks's robots responded to fixed features of the world rather than to changing significance. A truly Heideggerian AI would need a body with needs that makes situations matter to it.
 
 <details>
 <summary><b>Check your understanding.</b> What did Dreyfus argue?</summary>
@@ -100,9 +100,9 @@ D. Human expertise rests on embodied, situated know-how that explicit rules cann
 
 ### Which limits are real?
 
-The two arguments differ in kind. The Gödelian argument claims an in-principle limit on any machine. It fails, according to most critics, because the same limits apply to humans. Dreyfus's critique targeted a particular approach, symbolic AI, and much of it has been vindicated by the shift to learning systems that acquire skills from experience rather than from explicit rules. What remains open is whether learned systems escape his deeper point about significance and embodiment. The undecidability of halting remains a genuine limit, but it binds every computing system, including brains, if they compute.
+The two arguments differ in kind. The Gödelian argument claims an in-principle limit on any machine. It fails, according to most critics, because the same limits apply to humans. Dreyfus's critique targeted a particular approach, symbolic AI. Much of it has been vindicated by the shift to learning systems that acquire skills from experience rather than from explicit rules. What remains open is whether learned systems escape his deeper point about significance and embodiment. The undecidability of halting remains a genuine limit, but it binds every computing system, including brains, if they compute.
 
-> **Pause and reflect.** The lab shows that a bounded halting checker is always wrong about some programs. Are you, as a human reasoner, subject to the same limit?
+> **Pause and reflect.** The interactive lab shows that a bounded halting checker is always wrong about some programs. Are you, as a human reasoner, subject to the same limit?
 
 <details>
 <summary><b>Check your understanding.</b> What does the undecidability of the halting problem imply?</summary>
@@ -126,17 +126,17 @@ Part A asks you to build the program D by flipping the diagonal of a table and t
 
 ## Colab notebook
 
-The notebook builds a table of programs and inputs from simple iterated maps, constructs the diagonal program, evaluates bounded halting checkers and detects cycles exactly where possible [1, 4].
+The Colab notebook builds a table of programs and inputs from simple iterated maps, constructs the diagonal program, evaluates bounded halting checkers and detects cycles exactly where possible [1, 4].
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-09/NB09_limits_of_machines.ipynb)
 
-Screenshots of the executed notebook:
+Screenshots of the executed Colab notebook:
 
-![Output 1 of the Week 9 notebook](screenshots/nb_1.png)
+![Output 1 of the Week 9 Colab notebook](screenshots/nb_1.png)
 
 ## Self-assessment and reflection
 
-The lab contains a 6-question self-assessment with instant feedback and a confidence rating for each answer. A confident but wrong answer marks the first topic to revisit. The reflection prompts below are also available in the lab, where answers are saved in the browser and can be exported as a learning log.
+The interactive lab contains a self-assessment of six questions (tab: Check yourself). Students answer each question, state how sure they are and receive instant feedback. A confident but wrong answer marks the first topic to revisit. The reflection prompts below also appear in the interactive lab (tab: Reflect and submit). Answers written there are saved in the browser and can be exported as a learning log.
 
 1. Does undecidability limit human reasoners as well as machines? Explain how you would argue either way.
 2. Which parts of Dreyfus's critique were vindicated by machine learning, and which remain challenges for present systems?
@@ -144,15 +144,27 @@ The lab contains a 6-question self-assessment with instant feedback and a confid
 
 ## Weekly task and submission
 
-Write about 500 words reconstructing the Lucas-Penrose argument, presenting the consistency objection and assessing whether any version of the argument survives. Use the diagonal construction from the notebook in your explanation. Attach the notebook with both exercises completed.
+**What to do.** Reconstruct and assess the Lucas-Penrose argument. First, write the argument as numbered premises and a conclusion. Second, explain the diagonal construction with your answer to Exercise 1 of the Colab notebook. Third, present the consistency objection. Finally, assess whether any version of the argument survives.
 
-The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.
+**Where to look.** Lecture: sections "Incompleteness and undecidability" and "The Lucas-Penrose argument". Interactive lab: Part A for the diagonal and Part C for Lucas's argument. Colab notebook: Section 1 with Exercise 1, which builds the diagonal program D, and Section 2 with Exercise 2 on bounded halting checkers.
+
+**Example.** Lucas reasons in a way that resembles the diagonal construction of Exercise 1: For any machine, a human can see that some sentence is true although the machine cannot prove it. The consistency objection asks how the human knows that the machine is consistent, which this step requires.
+
+**What to submit.** About 500 words, and the Colab notebook with Exercises 1 and 2 completed.
+
+The weekly task supports self-learning and builds a personal portfolio. In an active semester, students who follow the course with the instructor can send their work for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The e-mail contains the items that the task lists under What to submit. It also includes the learning log exported from the interactive lab (tab: Reflect and submit).
 
 ## Research and report assignment (optional)
 
-**Gödelian arguments today.** Review contemporary defences and critiques of the Lucas-Penrose argument and assess whether any version survives the consistency objection [2, 6, 7].
+**Gödelian arguments today.** Does any version of the Lucas-Penrose argument survive the consistency objection?
 
-This research assignment is optional and supports self-learning. When the related weeks are followed within the course during an active semester, the report can be sent to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation. Unless the assignment states otherwise, a report has 1500 to 2500 words, follows the structure of an academic paper, cites at least six scholarly or official sources in square brackets and ends with a reference list.
+**What to do.** Review contemporary defences and critiques of the Lucas-Penrose argument [2, 6]. Assess whether any version survives the consistency objection [7].
+
+**Where to start.** Lecture section "The Lucas-Penrose argument" and Part C of the interactive lab.
+
+**Example focus.** Penrose's later version claims that human mathematical understanding is not algorithmic at all. The report could ask whether this version escapes Benacerraf's disjunction.
+
+This research assignment is optional and supports self-learning. In an active semester, students who follow these weeks with the instructor can send the report for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The report has 1500 to 2500 words and follows the structure of an academic paper. It cites at least six scholarly or official sources in square brackets and ends with a reference list. The [report template](https://github.com/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/REPORT_TEMPLATE.md) shows a suitable structure.
 
 ## References
 
@@ -176,4 +188,4 @@ This research assignment is optional and supports self-learning. When the relate
 
 ---
 
-<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. Last update: September 2026.</sub>
+<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026.</sub>

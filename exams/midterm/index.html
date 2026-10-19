@@ -124,39 +124,56 @@ body.study .wrap{margin-right:50vw;max-width:none}
 </style></head><body><div class="wrap"><header class="top"><p class="course">Philosophy of Artificial Intelligence, midterm capstone</p><h1>Midterm Capstone: Machines, Tests and Meaning</h1><p class="who">Prof. Dr. Utku Kose, Süleyman Demirel University</p><nav><a href="../../index.html">Course home</a><a href="https://github.com/utkukose/philosophy-of-ai-NB-lecture">GitHub repository</a></nav></header><article class="lecture"><h2>Overview</h2>
 <p>The midterm capstone integrates Weeks 1 to 7: definitions and measures of intelligence, the Turing test, computation and functionalism, the Chinese Room, symbol grounding, systematicity and embodiment [1, 2, 3, 4]. Students choose the research track or the application track.</p>
 <h2>Formats</h2>
-<p>Two tracks are available. In the research track, the capstone is an academic text of 3500 to 5000 words that defends a thesis on one of the suggested topics or on a related topic approved by the instructor, engages with at least ten scholarly sources and addresses the strongest objection to its thesis. In the application track, the capstone extends one of the three example notebooks and is reported in a text of 2500 to 4000 words that connects the computational results to the philosophical question. Each student works individually. The weights below are indicative; in active semesters the instructor confirms them at the start of the semester.</p>
+<p>Two tracks are available. In the research track, the capstone is an academic text of 3500 to 5000 words. It defends a thesis on one of the suggested topics or on a related topic approved by the instructor. It engages with at least ten scholarly sources and answers the strongest objection to its thesis. In the application track, the capstone extends one of the three example Colab notebooks. A report of 2500 to 4000 words connects the computational results to the philosophical question. Each student works individually. The weights below are indicative; in active semesters the instructor confirms them at the start of the semester.</p>
+<h2>How to work on this capstone</h2>
+<p>Both tracks are assessed with the same criteria, which are listed below. The research track suits students who want to build and defend an argument. The application track suits students who want to extend a simulation and interpret its results.</p>
+<h3>Research track</h3>
+<p><strong>Step 1. Choose a topic.</strong> Pick one of the suggested research topics below, or propose a related topic to the instructor. The week in brackets after each topic shows where the course treats it.</p>
+<p><strong>Step 2. Read.</strong> Reread the lecture of the week or weeks named after the topic. Collect at least ten scholarly sources, starting from the references of those lectures.</p>
+<p><strong>Step 3. Build the argument.</strong> State a thesis. Reconstruct the main arguments for and against it as numbered premises and conclusions.</p>
+<p><strong>Step 4. Write.</strong> Write the text with the course report template, and answer the strongest objection to your thesis.</p>
+<p><strong>Step 5. Submit.</strong> Send the text as a PDF file. The submission section below gives the deadline for active semesters.</p>
+<h3>Application track</h3>
+<p><strong>Step 1. Choose a project.</strong> Pick one of the three advanced application projects below. The related weeks of each project show which lecture pages, interactive labs and Colab notebooks to revisit.</p>
+<p><strong>Step 2. Run the example.</strong> Open the example Colab notebook of the project with its badge. Save a copy to your own Google Drive (File, Save a copy in Drive), run all cells from top to bottom and read what the baseline implements.</p>
+<p><strong>Step 3. Extend it.</strong> Implement every required extension in your copy. Fix the random seeds so that another person can reproduce the results.</p>
+<p><strong>Step 4. Evaluate and write.</strong> Compare the extensions with the baseline and write the report with the course report template. Explain what the results can and cannot show about the philosophical question.</p>
+<p><strong>Step 5. Submit.</strong> Send the report as a PDF file and a link to your Colab notebook with view access. The submission section below gives the deadline for active semesters.</p>
 <h2>Suggested research topics</h2>
 <p>The titles below are starting points. Students may narrow a title or propose a related one that fits the scope of the capstone.</p>
 <ol>
-<li>Does passing a three-party Turing test show that a system thinks? The 2025 results in the light of Block and French</li>
-<li>The Chinese Room and large language models: Which reply survives?</li>
-<li>Symbol grounding without sensors: Can distributional learning fix reference?</li>
-<li>Multiple realisability and the question of the substrate for artificial minds</li>
-<li>Systematicity revisited: What meta-learning shows about the challenge of Fodor and Pylyshyn</li>
-<li>Embodiment as a condition for intelligence: Brooks, the enactivists and disembodied language models</li>
-<li>Psychologism and behaviourism: Is the way behaviour is produced part of what intelligence is?</li>
-<li>Measuring intelligence: Legg and Hutter, Chollet and the problem of benchmarks</li>
-<li>The extended mind and AI tools: Is a language model part of its user's cognitive system?</li>
-<li>Is computation observer-relative? Searle, Putnam and the mechanistic account</li>
+<li>Does passing a three-party Turing test show that a system thinks? The 2025 results in the light of Block and French (Week 2)</li>
+<li>The Chinese Room and large language models: Which reply survives? (Week 4)</li>
+<li>Symbol grounding without sensors: Can distributional learning fix reference? (Week 5)</li>
+<li>Multiple realisability and the question of the substrate for artificial minds (Week 3)</li>
+<li>Systematicity revisited: What meta-learning shows about the challenge of Fodor and Pylyshyn (Week 6)</li>
+<li>Embodiment as a condition for intelligence: Brooks, the enactivists and disembodied language models (Week 7)</li>
+<li>Psychologism and behaviourism: Is the way behaviour is produced part of what intelligence is? (Week 2)</li>
+<li>Measuring intelligence: Legg and Hutter, Chollet and the problem of benchmarks (Week 1)</li>
+<li>The extended mind and AI tools: Is a language model part of its user's cognitive system? (Week 7)</li>
+<li>Is computation observer-relative? Searle, Putnam and the mechanistic account (Week 3)</li>
 </ol>
 <h2>Advanced application projects</h2>
 <p>Each project comes with an example Colab notebook that implements a working baseline. The capstone extends the baseline as described, evaluates the extensions and reports the results.</p>
 <h3>Project 1: An imitation game laboratory</h3>
+<p><strong>Related weeks.</strong> Week 2. Lecture: sections "Is behaviour enough?" and "The test in the age of language models". Interactive lab: Part A, where you act as the interrogator. Colab notebook: Sections 1 to 3, on ELIZA, on interrogators and on judges compared with chance.</p>
 <p>Two machine witnesses, a pattern-matching program in the style of ELIZA and a Markov chain trained on a small corpus, play three-party games against constructed human replies. A learned interrogator judges the replies from surface cues, and the results are analysed with exact power calculations and Bayesian estimates of the win rate [1, 5, 6].</p>
-<p><strong>Required extensions.</strong> Add a stronger witness, for example a retrieval-based responder or a small language model, and at least two further cues or a text classifier as interrogator. Determine how many games are needed to test Turing's 70 percent criterion reliably, and argue in the report what the win rates can and cannot show, with reference to Blockhead and to subcognitive questions [7, 8].</p>
-<p><a href="https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/midterm/MID1_imitation_game_lab.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> Example notebook: <code>MID1_imitation_game_lab.ipynb</code></p>
-<p><img alt="Output of the example notebook" src="screenshots/MID1_imitation_game_lab_1.png" /></p>
+<p><strong>Required extensions.</strong> Add a stronger witness, for example a retrieval-based responder or a small language model, and at least two further cues or a text classifier as interrogator. Determine how many games are needed to test Turing's 70 percent criterion reliably. In the report, argue what the win rates can and cannot show, with reference to Blockhead and to subcognitive questions [7, 8].</p>
+<p><a href="https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/midterm/MID1_imitation_game_lab.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> Example Colab notebook: <code>MID1_imitation_game_lab.ipynb</code></p>
+<p><img alt="Output of the example Colab notebook" src="screenshots/MID1_imitation_game_lab_1.png" /></p>
 <h3>Project 2: Grounding through language games</h3>
+<p><strong>Related weeks.</strong> Week 5. Lecture: sections "The grounding problem", "Form and meaning" and "Grounding as a matter of degree". Colab notebook: Section 2, where a few words are grounded in perception.</p>
 <p>A population of agents invents and aligns a vocabulary for colours, sizes and shapes by playing naming games about objects they perceive. The vocabulary is then studied as text only: Co-occurrence recovers the dimensions of meaning, but reference stays at chance unless some words are grounded [3, 9].</p>
-<p><strong>Required extensions.</strong> Add perceptual noise and continuous features so that categories must be learned rather than given, compare populations of different sizes, and test whether structural information can propagate reference from anchor words to others. Discuss what the results imply for conceptual role semantics and for the vector grounding debate [10, 11].</p>
-<p><a href="https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/midterm/MID2_grounding_naming_game.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> Example notebook: <code>MID2_grounding_naming_game.ipynb</code></p>
-<p><img alt="Output of the example notebook" src="screenshots/MID2_grounding_naming_game_1.png" />
-<img alt="Output of the example notebook" src="screenshots/MID2_grounding_naming_game_2.png" /></p>
+<p><strong>Required extensions.</strong> Add perceptual noise and continuous features, so that categories must be learned rather than given. Compare populations of different sizes. Test whether structural information can propagate reference from anchor words to other words. Discuss what the results imply for conceptual role semantics and for the vector grounding debate [10, 11].</p>
+<p><a href="https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/midterm/MID2_grounding_naming_game.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> Example Colab notebook: <code>MID2_grounding_naming_game.ipynb</code></p>
+<p><img alt="Output of the example Colab notebook" src="screenshots/MID2_grounding_naming_game_1.png" />
+<img alt="Output of the example Colab notebook" src="screenshots/MID2_grounding_naming_game_2.png" /></p>
 <h3>Project 3: Evolving Braitenberg vehicles</h3>
+<p><strong>Related weeks.</strong> Week 7. Lecture: sections "Synthetic psychology" and "The embodied and enactive mind". Interactive lab: the Braitenberg vehicle. Colab notebook: Section 1.</p>
 <p>Instead of wiring vehicles by hand, a genetic algorithm evolves sensor-motor weights and the angle of the sensors for two tasks: approaching a light and keeping a fixed distance from it. The evolved controllers are then analysed in Braitenberg's terms, which illustrates the difference between downhill invention and uphill analysis [12, 13].</p>
-<p><strong>Required extensions.</strong> Add a second light with a different colour and sensors for each colour, evolve controllers that approach one light while avoiding the other, and study how the sensor angle, a property of the body, co-evolves with the wiring. Discuss whether observers' descriptions in terms of fear or love are justified and what the results imply for embodied accounts of cognition [4, 14].</p>
-<p><a href="https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/midterm/MID3_evolving_vehicles.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> Example notebook: <code>MID3_evolving_vehicles.ipynb</code></p>
-<p><img alt="Output of the example notebook" src="screenshots/MID3_evolving_vehicles_1.png" /></p>
+<p><strong>Required extensions.</strong> Add a second light with a different colour and sensors for each colour. Evolve controllers that approach one light while avoiding the other. Study how the sensor angle, a property of the body, co-evolves with the wiring. Discuss whether observers' descriptions in terms of fear or love are justified and what the results imply for embodied accounts of cognition [4, 14].</p>
+<p><a href="https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/midterm/MID3_evolving_vehicles.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> Example Colab notebook: <code>MID3_evolving_vehicles.ipynb</code></p>
+<p><img alt="Output of the example Colab notebook" src="screenshots/MID3_evolving_vehicles_1.png" /></p>
 <h2>Report</h2>
 <p>Both tracks follow the course report template. A research report states its thesis in the introduction, reconstructs the relevant arguments as explicit premises and conclusions, and evaluates them. An application report explains what the simulation or experiment can and cannot show about the philosophical question, presents its results with figures and discusses its limitations. All sources are cited in square brackets.</p>
 <p>A common structure for reports is given in the <a href="https://github.com/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/REPORT_TEMPLATE.md">report template</a>.</p>
@@ -188,7 +205,7 @@ body.study .wrap{margin-right:50vw;max-width:none}
 <tr>
 <td>Evidence and method</td>
 <td>15%</td>
-<td>Research track: depth of analysis. Application track: correctness and reproducibility of the notebook.</td>
+<td>Research track: depth of analysis. Application track: correctness and reproducibility of the Colab notebook.</td>
 </tr>
 <tr>
 <td>Writing and referencing</td>
@@ -198,7 +215,7 @@ body.study .wrap{margin-right:50vw;max-width:none}
 </tbody>
 </table>
 <h2>Submission</h2>
-<p>This capstone also supports self-learning and can be completed at any pace. When the course is taught actively in a semester, the midterm capstone is sent by e-mail to utkukose@sdu.edu.tr or utkukose@gmail.com no later than 23:53 (Türkiye time) on the last Sunday of Week 7, with the report and all code files attached or linked.</p>
+<p>This capstone also supports self-learning and can be completed at any pace. In an active semester, the midterm capstone is sent by e-mail to utkukose@sdu.edu.tr or utkukose@gmail.com. The deadline is 23:53 (Türkiye time) on the Sunday that ends Week 7. The e-mail contains the report as a PDF file. In the application track, it also contains a link to the Colab notebook.</p>
 <h2>References</h2>
 <p>[1] Turing, A. M. (1950). Computing machinery and intelligence. <em>Mind</em>, 59(236), 433-460. <a href="https://doi.org/10.1093/mind/LIX.236.433">https://doi.org/10.1093/mind/LIX.236.433</a></p>
 <p>[2] Searle, J. R. (1980). Minds, brains, and programs. <em>Behavioral and Brain Sciences</em>, 3(3), 417-424. <a href="https://doi.org/10.1017/S0140525X00005756">https://doi.org/10.1017/S0140525X00005756</a></p>
@@ -213,4 +230,4 @@ body.study .wrap{margin-right:50vw;max-width:none}
 <p>[11] Bender, E. M., &amp; Koller, A. (2020). Climbing towards NLU: On meaning, form, and understanding in the age of data. In <em>Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</em> (pp. 5185-5198). <a href="https://doi.org/10.18653/v1/2020.acl-main.463">https://doi.org/10.18653/v1/2020.acl-main.463</a></p>
 <p>[12] Braitenberg, V. (1984). <em>Vehicles: Experiments in Synthetic Psychology</em>. MIT Press.</p>
 <p>[13] Pfeifer, R., &amp; Bongard, J. (2006). <em>How the Body Shapes the Way We Think: A New View of Intelligence</em>. MIT Press.</p>
-<p>[14] Varela, F. J., Thompson, E., &amp; Rosch, E. (1991). <em>The Embodied Mind: Cognitive Science and Human Experience</em>. MIT Press.</p></article><footer class="sig"><p><strong>Prof. Dr. Utku Kose</strong><br>Full Professor, Department of Computer Engineering, Süleyman Demirel University, Isparta, Türkiye<br>Founding Director, AI Application and Research Center (YAZEM), Süleyman Demirel University<br>Head of the Computer Science Division, Department of Computer Engineering, Süleyman Demirel University<br>Additional affiliations: University of North Dakota (USA), Universidad Panamericana (Mexico City, Mexico), Vel Tech University (Chennai, India)<br><a href="https://orcid.org/0000-0002-9652-6415">ORCID 0000-0002-9652-6415</a>, <a href="https://www.utkukose.com">utkukose.com</a>, <a href="https://github.com/utkukose">github.com/utkukose</a><br><a href="mailto:utkukose@sdu.edu.tr">utkukose@sdu.edu.tr</a>, <a href="mailto:utku.kose@und.edu">utku.kose@und.edu</a>, <a href="mailto:ukose@up.edu.mx">ukose@up.edu.mx</a>, <a href="mailto:utkukose@gmail.com">utkukose@gmail.com</a></p><p>This course is updated in line with current developments in the field. Last update: September 2026. Course materials licensed under CC BY 4.0. Code licensed under MIT.</p></footer></div></body></html>
+<p>[14] Varela, F. J., Thompson, E., &amp; Rosch, E. (1991). <em>The Embodied Mind: Cognitive Science and Human Experience</em>. MIT Press.</p></article><footer class="sig"><p><strong>Prof. Dr. Utku Kose</strong><br>Full Professor, Department of Computer Engineering, Süleyman Demirel University, Isparta, Türkiye<br>Founding Director, AI Application and Research Center (YAZEM), Süleyman Demirel University<br>Head of the Computer Science Division, Department of Computer Engineering, Süleyman Demirel University<br>Additional affiliations: University of North Dakota (USA), Universidad Panamericana (Mexico City, Mexico), Vel Tech University (Chennai, India)<br><a href="https://orcid.org/0000-0002-9652-6415">ORCID 0000-0002-9652-6415</a>, <a href="https://www.utkukose.com">utkukose.com</a>, <a href="https://github.com/utkukose">github.com/utkukose</a><br><a href="mailto:utkukose@sdu.edu.tr">utkukose@sdu.edu.tr</a>, <a href="mailto:utku.kose@und.edu">utku.kose@und.edu</a>, <a href="mailto:ukose@up.edu.mx">ukose@up.edu.mx</a>, <a href="mailto:utkukose@gmail.com">utkukose@gmail.com</a></p><p>This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026. Course materials licensed under CC BY 4.0. Code licensed under MIT.</p></footer></div></body></html>

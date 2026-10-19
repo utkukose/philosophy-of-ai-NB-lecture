@@ -12,15 +12,15 @@
 | Additional affiliations | University of North Dakota (USA), Universidad Panamericana (Mexico City, Mexico), Vel Tech University (Chennai, India) |
 | Contact | utkukose@sdu.edu.tr, utku.kose@und.edu, ukose@up.edu.mx, utkukose@gmail.com |
 | Course site | https://utkukose.github.io/philosophy-of-ai-NB-lecture/ |
-| Updates | This course is updated in line with current developments in the field. Last update: September 2026. |
+| Updates | This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026. |
 
 ## Use in other courses
 
-These materials were prepared for the graduate course 11118BLG003 Philosophy of Artificial Intelligence at Süleyman Demirel University. They are openly available: Anyone may use and adapt them in courses of related scope, with attribution, under the CC BY 4.0 licence for content and the MIT licence for code.
+These materials were prepared for the graduate course 11118BLG003 Philosophy of Artificial Intelligence at Süleyman Demirel University. They are openly available: Anyone may use and adapt them in courses of related scope, with attribution. Content is licensed under CC BY 4.0 and code under the MIT licence.
 
 ## Description
 
-Can machines think, understand, be conscious or create? This course examines the philosophical questions raised by artificial intelligence and the arguments that shaped the field, from Turing's imitation game and Searle's Chinese Room to the symbol grounding problem, the frame problem, Gödelian arguments and the hard problem of consciousness cite:turing1950,searle1980,harnad1990,chalmers1995. Classic positions are tested against present systems, in particular large language models, whose performance has reopened questions about understanding, world models, creativity and intentionality cite:mitchell2023,jones2025. The course is theory-intensive by design, and every week pairs the arguments with interactive simulations and computational experiments.
+Can machines think, understand, be conscious or create? This course examines the philosophical questions raised by artificial intelligence and the arguments that shaped the field. They range from Turing's imitation game and Searle's Chinese Room to the symbol grounding problem, the frame problem, Gödelian arguments and the hard problem of consciousness [1, 2, 3, 4]. Classic positions are tested against present systems, in particular large language models, whose performance has reopened questions about understanding, world models, creativity and intentionality [5, 6]. The course is theory-intensive by design, and every week pairs the arguments with interactive simulations and computational experiments.
 
 ## Learning outcomes
 
@@ -53,19 +53,19 @@ Can machines think, understand, be conscious or create? This course examines the
 
 ## Weekly workload
 
-Each week asks for roughly six to eight hours of study: reading the lecture, exploring the lab, working through the notebook, taking the self-assessment and completing the reflection and weekly task.
+Each week asks for roughly six to eight hours of study. The work consists of reading the lecture, exploring the interactive lab and working through the Colab notebook. It ends with the self-assessment, the reflection and the weekly task.
 
 ## Assessment
 
-Assessment combines formative and summative components. Each week offers a notebook task, an optional research and report assignment and a self-assessment in the lab. The midterm capstone at the end of Week 7 and the final capstone at the end of Week 14 can each be completed in one of two tracks: a research report in the form of an academic text, or a coding application with a report. During active semesters, components and weights are announced by the instructor at the start of the semester in line with Süleyman Demirel University regulations. The self-assessments are formative and do not count towards the grade.
+Assessment combines formative and summative components. Each week offers a weekly task, an optional research and report assignment and a self-assessment in the interactive lab. The midterm capstone at the end of Week 7 and the final capstone at the end of Week 14 each offer two tracks. Students choose either a research report in the form of an academic text or a coding application with a report. During active semesters, components and weights are announced by the instructor at the start of the semester in line with Süleyman Demirel University regulations. The self-assessments are formative and do not count towards the grade.
 
 ## Submission
 
-The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.
+The weekly task supports self-learning and builds a personal portfolio. In an active semester, students who follow the course with the instructor can send their work for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The e-mail contains the items that the task lists under What to submit. It also includes the learning log exported from the interactive lab (tab: Reflect and submit).
 
 ## Policies
 
-Academic integrity: Submitted work must be the student's own, and all sources must be cited in square brackets with a reference list. Use of generative AI tools: Such tools may be used for brainstorming, language editing and coding support unless a task states otherwise. Every use must be disclosed in a short note that names the tool and describes what it was used for. Essays must present the student's own reconstruction and evaluation of arguments. Accessibility: All labs support keyboard navigation and respect reduced-motion settings. Students who need adjustments should contact the instructor early in the semester. Communication: Questions are answered by e-mail or through the course discussion space announced at the start of each semester.
+Academic integrity: Submitted work must be the student's own, and all sources must be cited in square brackets with a reference list. Use of generative AI tools: Such tools may be used for brainstorming, language editing and coding support unless a task states otherwise. Every use must be disclosed in a short note that names the tool and describes what it was used for. Essays must present the student's own reconstruction and evaluation of arguments. Accessibility: All interactive labs support keyboard navigation and respect reduced-motion settings. Students who need adjustments should contact the instructor early in the semester. Communication: Questions are answered by e-mail or through the course discussion space announced at the start of each semester.
 
 ## Capstones
 
@@ -73,4 +73,18 @@ Academic integrity: Submitted work must be the student's own, and all sources mu
 
 **Final Capstone: Minds, Morals and Machines** (end of Week 14): Research report, or coding application with report. See [exams/final/README.md](exams/final/README.md).
 
-Active-semester deadline: 23:53 (Türkiye time) on the last Sunday of the capstone week, by e-mail to utkukose@sdu.edu.tr or utkukose@gmail.com.
+Active-semester deadline: 23:53 (Türkiye time) on the Sunday that ends the capstone week, by e-mail to utkukose@sdu.edu.tr or utkukose@gmail.com.
+
+## References cited in this syllabus
+
+[1] Turing, A. M. (1950). Computing machinery and intelligence. *Mind*, 59(236), 433-460. <https://doi.org/10.1093/mind/LIX.236.433>
+
+[2] Searle, J. R. (1980). Minds, brains, and programs. *Behavioral and Brain Sciences*, 3(3), 417-424. <https://doi.org/10.1017/S0140525X00005756>
+
+[3] Harnad, S. (1990). The symbol grounding problem. *Physica D: Nonlinear Phenomena*, 42(1-3), 335-346. <https://doi.org/10.1016/0167-2789(90)90087-6>
+
+[4] Chalmers, D. J. (1995). Facing up to the problem of consciousness. *Journal of Consciousness Studies*, 2(3), 200-219.
+
+[5] Mitchell, M., & Krakauer, D. C. (2023). The debate over understanding in AI's large language models. *Proceedings of the National Academy of Sciences*, 120(13), e2215907120. <https://doi.org/10.1073/pnas.2215907120>
+
+[6] Jones, C. R., & Bergen, B. K. (2025). Large language models pass the Turing test. arXiv preprint arXiv:2503.23674. <https://arxiv.org/abs/2503.23674>

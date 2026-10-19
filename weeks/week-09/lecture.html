@@ -125,7 +125,7 @@ body.study .wrap{margin-right:50vw;max-width:none}
 <p>Two very different arguments claim that minds can do something that machines cannot. One appeals to Gödel's incompleteness theorems, the other to the phenomenology of skilled human activity. This week reconstructs both, examines the replies and asks which limits of machines are real [1, 2, 3].</p>
 <p><strong>Estimated study time:</strong> 6 to 8 hours.</p>
 <h2>Learning outcomes</h2>
-<p>By the end of the week, students are expected to state the incompleteness theorem and the undecidability of the halting problem informally, to construct a diagonal argument, to reconstruct the Lucas-Penrose argument and the consistency objection, and to explain Dreyfus's critique of rule-based AI and its relation to later developments.</p>
+<p>By the end of the week, students are expected to state the incompleteness theorem and the undecidability of the halting problem informally, and to construct a diagonal argument. They should be able to reconstruct the Lucas-Penrose argument and the consistency objection. Finally, they should be able to explain Dreyfus's critique of rule-based AI and its relation to later developments.</p>
 <h2>Study path</h2>
 <table>
 <thead>
@@ -153,12 +153,12 @@ body.study .wrap{margin-right:50vw;max-width:none}
 </tr>
 <tr>
 <td>4</td>
-<td>Take the self-assessment in the lab (tab: Check yourself)</td>
+<td>Take the self-assessment in the interactive lab (tab: Check yourself)</td>
 <td>20 minutes</td>
 </tr>
 <tr>
 <td>5</td>
-<td>Write the reflection, export the learning log and complete the weekly task</td>
+<td>Answer the reflection prompts in the interactive lab, export the learning log and complete the weekly task</td>
 <td>60 minutes</td>
 </tr>
 </tbody>
@@ -176,11 +176,11 @@ body.study .wrap{margin-right:50vw;max-width:none}
 <h2>Lecture</h2>
 <h3>Incompleteness and undecidability</h3>
 <p>Gödel proved in 1931 that any consistent formal system that can express elementary arithmetic contains statements that are true but cannot be proved within the system [1]. The construction uses self-reference: a sentence that, in effect, says of itself that it is not provable. If the system is consistent, the sentence is unprovable and therefore true. Turing reached a related result for machines [4]. No Turing machine can decide, for every program and input, whether the program halts. The proof is a diagonal argument: Given any claimed decider, one can build a program that asks the decider about itself and does the opposite. Figure 9.1 shows the idea as a table in which the flipped diagonal differs from every row.</p>
-<p><img alt="A diagonal argument: flipping the diagonal of any table of programs and inputs yields a behaviour that differs from every program in the table {cite:turing1936}." src="figures/w09_fig1.png" /></p>
+<p><img alt="A diagonal argument: flipping the diagonal of any table of programs and inputs yields a behaviour that differs from every program in the table." src="figures/w09_fig1.png" /></p>
 <p><em>Figure 9.1. A diagonal argument: flipping the diagonal of any table of programs and inputs yields a behaviour that differs from every program in the table [4].</em></p>
 <div class="kc" data-answer="1" data-id="s1"><p class="kc-q"><span class="kc-tag">Check your understanding</span>What does Gödel&#x27;s first incompleteness theorem state?</p><div class="kc-opts"><button type="button" class="kc-opt" data-i="0">Every true statement is provable</button><button type="button" class="kc-opt" data-i="1">Any consistent formal system that includes enough arithmetic contains true statements it cannot prove</button><button type="button" class="kc-opt" data-i="2">Mathematics is inconsistent</button><button type="button" class="kc-opt" data-i="3">Computers cannot do arithmetic</button></div><p class="kc-fb" hidden></p><p class="kc-why" hidden>The theorem concerns formal systems, and its application to minds is disputed.</p></div>
 
-<div class="explore"><p><strong>Explore while reading.</strong> The interactive lab of this week can be opened inside this page or next to the text, so that ideas can be tried out as they are introduced.</p><p><button type="button" class="btn" data-act="inline-lab">Open the lab here</button> <button type="button" class="btn ghost wide-only" data-act="study">Study side by side</button></p><div class="inline-lab"></div></div>
+<div class="explore"><p><strong>Explore while reading.</strong> The interactive lab of this week can be opened inside this page or next to the text, so that ideas can be tried out as they are introduced.</p><p><button type="button" class="btn" data-act="inline-lab">Open the interactive lab here</button> <button type="button" class="btn ghost wide-only" data-act="study">Study side by side</button></p><div class="inline-lab"></div></div>
 
 <h3>The Lucas-Penrose argument</h3>
 <p>Lucas argued that the incompleteness theorem shows that minds are not machines [2]. For any machine that proves arithmetic, there is a Gödel sentence that the machine cannot prove, but a human mathematician can see that the sentence is true. So the mathematician can do something that the machine cannot, and no machine can be an adequate model of the mind. Penrose developed a version of the argument and concluded that human mathematical insight is not computable, which led him to speculate about new physics in the brain [5, 6].</p>
@@ -189,13 +189,13 @@ body.study .wrap{margin-right:50vw;max-width:none}
 
 <h3>Dreyfus's phenomenological critique</h3>
 <p>Dreyfus argued that the programme of symbolic AI rested on assumptions that were false [3, 8]. It assumed that the brain processes information in discrete operations, that the mind follows rules over symbols, that all knowledge can be formalised and that the world consists of independent facts. Drawing on Heidegger and Merleau-Ponty, he argued that human expertise is not rule-following. Experts respond directly to situations that show up as already meaningful against a background of practices, and this know-how cannot be captured in explicit rules. The frame problem of Week 8 was, for Dreyfus, a symptom of this mistake.</p>
-<p>Later, Dreyfus examined attempts to build Heideggerian AI, including behaviour-based robotics, and argued that they had not gone far enough [9]. Brooks's robots, in his view, responded to fixed features of the world rather than to changing significance, and a truly Heideggerian AI would need a body with needs that makes situations matter to it.</p>
+<p>Later, Dreyfus examined attempts to build Heideggerian AI, including behaviour-based robotics, and argued that they had not gone far enough [9]. In his view, Brooks's robots responded to fixed features of the world rather than to changing significance. A truly Heideggerian AI would need a body with needs that makes situations matter to it.</p>
 <div class="kc" data-answer="3" data-id="s3"><p class="kc-q"><span class="kc-tag">Check your understanding</span>What did Dreyfus argue?</p><div class="kc-opts"><button type="button" class="kc-opt" data-i="0">Computers will soon be conscious</button><button type="button" class="kc-opt" data-i="1">Logic explains all of cognition</button><button type="button" class="kc-opt" data-i="2">Chess is impossible for computers</button><button type="button" class="kc-opt" data-i="3">Human expertise rests on embodied, situated know-how that explicit rules cannot capture</button></div><p class="kc-fb" hidden></p><p class="kc-why" hidden>Later critics noted that learning systems changed the target of the critique.</p></div>
 
 <h3>Which limits are real?</h3>
-<p>The two arguments differ in kind. The Gödelian argument claims an in-principle limit on any machine. It fails, according to most critics, because the same limits apply to humans. Dreyfus's critique targeted a particular approach, symbolic AI, and much of it has been vindicated by the shift to learning systems that acquire skills from experience rather than from explicit rules. What remains open is whether learned systems escape his deeper point about significance and embodiment. The undecidability of halting remains a genuine limit, but it binds every computing system, including brains, if they compute.</p>
+<p>The two arguments differ in kind. The Gödelian argument claims an in-principle limit on any machine. It fails, according to most critics, because the same limits apply to humans. Dreyfus's critique targeted a particular approach, symbolic AI. Much of it has been vindicated by the shift to learning systems that acquire skills from experience rather than from explicit rules. What remains open is whether learned systems escape his deeper point about significance and embodiment. The undecidability of halting remains a genuine limit, but it binds every computing system, including brains, if they compute.</p>
 <blockquote>
-<p><strong>Pause and reflect.</strong> The lab shows that a bounded halting checker is always wrong about some programs. Are you, as a human reasoner, subject to the same limit?</p>
+<p><strong>Pause and reflect.</strong> The interactive lab shows that a bounded halting checker is always wrong about some programs. Are you, as a human reasoner, subject to the same limit?</p>
 </blockquote>
 <div class="kc" data-answer="0" data-id="s4"><p class="kc-q"><span class="kc-tag">Check your understanding</span>What does the undecidability of the halting problem imply?</p><div class="kc-opts"><button type="button" class="kc-opt" data-i="0">No algorithm decides for every program and input whether the program halts</button><button type="button" class="kc-opt" data-i="1">Every program halts</button><button type="button" class="kc-opt" data-i="2">Programs cannot loop</button><button type="button" class="kc-opt" data-i="3">Humans can decide halting for every program</button></div><p class="kc-fb" hidden></p><p class="kc-why" hidden>The limit applies to any agent that decides by following an algorithm.</p></div>
 
@@ -204,12 +204,12 @@ body.study .wrap{margin-right:50vw;max-width:none}
 <p><a href="lab.html">Open the interactive lab</a></p>
 <p><img alt="Screenshot of the Week 9 interactive lab" src="screenshots/lab.png" /></p>
 <h2>Colab notebook</h2>
-<p>The notebook builds a table of programs and inputs from simple iterated maps, constructs the diagonal program, evaluates bounded halting checkers and detects cycles exactly where possible [1, 4].</p>
+<p>The Colab notebook builds a table of programs and inputs from simple iterated maps, constructs the diagonal program, evaluates bounded halting checkers and detects cycles exactly where possible [1, 4].</p>
 <p><a href="https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-09/NB09_limits_of_machines.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
-<p>Screenshots of the executed notebook:</p>
-<p><img alt="Output 1 of the Week 9 notebook" src="screenshots/nb_1.png" /></p>
+<p>Screenshots of the executed Colab notebook:</p>
+<p><img alt="Output 1 of the Week 9 Colab notebook" src="screenshots/nb_1.png" /></p>
 <h2>Self-assessment and reflection</h2>
-<p>The lab contains a 6-question self-assessment with instant feedback and a confidence rating for each answer. A confident but wrong answer marks the first topic to revisit. The reflection prompts below are also available in the lab, where answers are saved in the browser and can be exported as a learning log.</p>
+<p>The interactive lab contains a self-assessment of six questions (tab: Check yourself). Students answer each question, state how sure they are and receive instant feedback. A confident but wrong answer marks the first topic to revisit. The reflection prompts below also appear in the interactive lab (tab: Reflect and submit). Answers written there are saved in the browser and can be exported as a learning log.</p>
 <ol>
 <li>Does undecidability limit human reasoners as well as machines? Explain how you would argue either way.</li>
 <li>Which parts of Dreyfus's critique were vindicated by machine learning, and which remain challenges for present systems?</li>
@@ -218,11 +218,17 @@ body.study .wrap{margin-right:50vw;max-width:none}
 <div class="cards"></div>
 
 <h2>Weekly task and submission</h2>
-<p>Write about 500 words reconstructing the Lucas-Penrose argument, presenting the consistency objection and assessing whether any version of the argument survives. Use the diagonal construction from the notebook in your explanation. Attach the notebook with both exercises completed.</p>
-<p>The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.</p>
+<p><strong>What to do.</strong> Reconstruct and assess the Lucas-Penrose argument. First, write the argument as numbered premises and a conclusion. Second, explain the diagonal construction with your answer to Exercise 1 of the Colab notebook. Third, present the consistency objection. Finally, assess whether any version of the argument survives.</p>
+<p><strong>Where to look.</strong> Lecture: sections "Incompleteness and undecidability" and "The Lucas-Penrose argument". Interactive lab: Part A for the diagonal and Part C for Lucas's argument. Colab notebook: Section 1 with Exercise 1, which builds the diagonal program D, and Section 2 with Exercise 2 on bounded halting checkers.</p>
+<p><strong>Example.</strong> Lucas reasons in a way that resembles the diagonal construction of Exercise 1: For any machine, a human can see that some sentence is true although the machine cannot prove it. The consistency objection asks how the human knows that the machine is consistent, which this step requires.</p>
+<p><strong>What to submit.</strong> About 500 words, and the Colab notebook with Exercises 1 and 2 completed.</p>
+<p>The weekly task supports self-learning and builds a personal portfolio. In an active semester, students who follow the course with the instructor can send their work for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The e-mail contains the items that the task lists under What to submit. It also includes the learning log exported from the interactive lab (tab: Reflect and submit).</p>
 <h2>Research and report assignment (optional)</h2>
-<p><strong>Gödelian arguments today.</strong> Review contemporary defences and critiques of the Lucas-Penrose argument and assess whether any version survives the consistency objection [2, 6, 7].</p>
-<p>This research assignment is optional and supports self-learning. When the related weeks are followed within the course during an active semester, the report can be sent to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation. Unless the assignment states otherwise, a report has 1500 to 2500 words, follows the structure of an academic paper, cites at least six scholarly or official sources in square brackets and ends with a reference list.</p>
+<p><strong>Gödelian arguments today.</strong> Does any version of the Lucas-Penrose argument survive the consistency objection?</p>
+<p><strong>What to do.</strong> Review contemporary defences and critiques of the Lucas-Penrose argument [2, 6]. Assess whether any version survives the consistency objection [7].</p>
+<p><strong>Where to start.</strong> Lecture section "The Lucas-Penrose argument" and Part C of the interactive lab.</p>
+<p><strong>Example focus.</strong> Penrose's later version claims that human mathematical understanding is not algorithmic at all. The report could ask whether this version escapes Benacerraf's disjunction.</p>
+<p>This research assignment is optional and supports self-learning. In an active semester, students who follow these weeks with the instructor can send the report for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The report has 1500 to 2500 words and follows the structure of an academic paper. It cites at least six scholarly or official sources in square brackets and ends with a reference list. The <a href="https://github.com/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/REPORT_TEMPLATE.md">report template</a> shows a suitable structure.</p>
 <h2>References</h2>
 <p>[1] Gödel, K. (1931). Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. <em>Monatshefte für Mathematik und Physik</em>, 38(1), 173-198. <a href="https://doi.org/10.1007/BF01700692">https://doi.org/10.1007/BF01700692</a></p>
 <p>[2] Lucas, J. R. (1961). Minds, machines and Gödel. <em>Philosophy</em>, 36(137), 112-127. <a href="https://doi.org/10.1017/S0031819100057983">https://doi.org/10.1017/S0031819100057983</a></p>
@@ -232,7 +238,7 @@ body.study .wrap{margin-right:50vw;max-width:none}
 <p>[6] Penrose, R. (1994). <em>Shadows of the Mind: A Search for the Missing Science of Consciousness</em>. Oxford University Press.</p>
 <p>[7] Benacerraf, P. (1967). God, the devil, and Gödel. <em>The Monist</em>, 51(1), 9-32. <a href="https://doi.org/10.5840/monist196751112">https://doi.org/10.5840/monist196751112</a></p>
 <p>[8] Dreyfus, H. L. (1972). <em>What Computers Can't Do: A Critique of Artificial Reason</em>. Harper &amp; Row.</p>
-<p>[9] Dreyfus, H. L. (2007). Why Heideggerian AI failed and how fixing it would require making it more Heideggerian. <em>Philosophical Psychology</em>, 20(2), 247-268. <a href="https://doi.org/10.1080/09515080701239510">https://doi.org/10.1080/09515080701239510</a></p></article><footer class="sig"><p><strong>Prof. Dr. Utku Kose</strong><br>Full Professor, Department of Computer Engineering, Süleyman Demirel University, Isparta, Türkiye<br>Founding Director, AI Application and Research Center (YAZEM), Süleyman Demirel University<br>Head of the Computer Science Division, Department of Computer Engineering, Süleyman Demirel University<br>Additional affiliations: University of North Dakota (USA), Universidad Panamericana (Mexico City, Mexico), Vel Tech University (Chennai, India)<br><a href="https://orcid.org/0000-0002-9652-6415">ORCID 0000-0002-9652-6415</a>, <a href="https://www.utkukose.com">utkukose.com</a>, <a href="https://github.com/utkukose">github.com/utkukose</a><br><a href="mailto:utkukose@sdu.edu.tr">utkukose@sdu.edu.tr</a>, <a href="mailto:utku.kose@und.edu">utku.kose@und.edu</a>, <a href="mailto:ukose@up.edu.mx">ukose@up.edu.mx</a>, <a href="mailto:utkukose@gmail.com">utkukose@gmail.com</a></p><p>This course is updated in line with current developments in the field. Last update: September 2026. Course materials licensed under CC BY 4.0. Code licensed under MIT.</p></footer></div><script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";window.mermaid=mermaid;mermaid.initialize({startOnLoad:true,theme:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"neutral"});</script><script>window.LEC={key:"PAI:lec:w9"};</script><script>(function () {
+<p>[9] Dreyfus, H. L. (2007). Why Heideggerian AI failed and how fixing it would require making it more Heideggerian. <em>Philosophical Psychology</em>, 20(2), 247-268. <a href="https://doi.org/10.1080/09515080701239510">https://doi.org/10.1080/09515080701239510</a></p></article><footer class="sig"><p><strong>Prof. Dr. Utku Kose</strong><br>Full Professor, Department of Computer Engineering, Süleyman Demirel University, Isparta, Türkiye<br>Founding Director, AI Application and Research Center (YAZEM), Süleyman Demirel University<br>Head of the Computer Science Division, Department of Computer Engineering, Süleyman Demirel University<br>Additional affiliations: University of North Dakota (USA), Universidad Panamericana (Mexico City, Mexico), Vel Tech University (Chennai, India)<br><a href="https://orcid.org/0000-0002-9652-6415">ORCID 0000-0002-9652-6415</a>, <a href="https://www.utkukose.com">utkukose.com</a>, <a href="https://github.com/utkukose">github.com/utkukose</a><br><a href="mailto:utkukose@sdu.edu.tr">utkukose@sdu.edu.tr</a>, <a href="mailto:utku.kose@und.edu">utku.kose@und.edu</a>, <a href="mailto:ukose@up.edu.mx">ukose@up.edu.mx</a>, <a href="mailto:utkukose@gmail.com">utkukose@gmail.com</a></p><p>This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026. Course materials licensed under CC BY 4.0. Code licensed under MIT.</p></footer></div><script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";window.mermaid=mermaid;mermaid.initialize({startOnLoad:true,theme:matchMedia("(prefers-color-scheme: dark)").matches?"dark":"neutral"});</script><script>window.LEC={key:"PAI:lec:w9"};</script><script>(function () {
   "use strict";
   var KEY = (window.LEC && window.LEC.key) || "lecture";
   var state = {};
@@ -291,7 +297,7 @@ body.study .wrap{margin-right:50vw;max-width:none}
     var act = t.dataset.act;
     if (act === "inline-lab") {
       var holder = t.closest(".explore").querySelector(".inline-lab");
-      if (holder.firstChild) { holder.innerHTML = ""; t.textContent = "Open the lab here"; }
+      if (holder.firstChild) { holder.innerHTML = ""; t.textContent = "Open the interactive lab here"; }
       else { holder.innerHTML = '<iframe src="lab.html" title="Interactive lab" loading="lazy"></iframe>'; t.textContent = "Close the embedded lab"; }
     } else if (act === "study") { toggleStudy(); }
     else if (act.indexOf("mstep") === 0) { mstep(act); }

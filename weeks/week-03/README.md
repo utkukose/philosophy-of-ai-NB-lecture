@@ -17,7 +17,7 @@ The claim that machines could think rests on a view of what thinking is. This we
 
 ## Learning outcomes
 
-By the end of the week, students are expected to describe a Turing machine and the Church-Turing thesis, to state the physical symbol system hypothesis and the computational theory of mind, to explain functionalism and multiple realisability, and to implement and test simple Turing machines.
+By the end of the week, students are expected to describe a Turing machine and the Church-Turing thesis. They should be able to state the physical symbol system hypothesis and the computational theory of mind, and to explain functionalism and multiple realisability. Finally, they should be able to implement and test simple Turing machines.
 
 ## Study path
 
@@ -26,8 +26,8 @@ By the end of the week, students are expected to describe a Turing machine and t
 | 1 | Read the lecture below or the [PDF version](Week03_Lecture_Notes.pdf) | 90 minutes |
 | 2 | Explore the [interactive lab](https://utkukose.github.io/philosophy-of-ai-NB-lecture/weeks/week-03/lab.html) | 45 minutes |
 | 3 | Work through the [Colab notebook](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-03/NB03_computation_and_mind.ipynb) and its exercises | 2 to 3 hours |
-| 4 | Take the self-assessment in the lab (tab: Check yourself) | 20 minutes |
-| 5 | Write the reflection, export the learning log and complete the weekly task | 60 minutes |
+| 4 | Take the self-assessment in the interactive lab (tab: Check yourself) | 20 minutes |
+| 5 | Answer the reflection prompts in the interactive lab, export the learning log and complete the weekly task | 60 minutes |
 
 ## Week at a glance
 
@@ -46,13 +46,13 @@ flowchart LR
 
 ### What computation is
 
-In 1936, Turing analysed what a human computer, a person carrying out a calculation by rule, can do, and captured it in an abstract machine [1]. A Turing machine has an unbounded tape divided into cells, a head that reads and writes one symbol at a time and moves left or right, a finite set of states and a transition table that fixes, for each state and symbol, what to write, where to move and which state comes next. Turing also described a universal machine that can simulate any other machine given its description, the idea behind the stored-program computer. Figure 3.1 shows a machine that adds one to a binary number.
+In 1936, Turing analysed what a human computer, a person carrying out a calculation by rule, can do, and captured it in an abstract machine [1]. A Turing machine has an unbounded tape divided into cells and a head that reads and writes one symbol at a time and moves left or right. It also has a finite set of states and a transition table. For each state and symbol, the table fixes what to write, where to move and which state comes next. Turing also described a universal machine that can simulate any other machine given its description, the idea behind the stored-program computer. Figure 3.1 shows a machine that adds one to a binary number.
 
 In the same year, Church reached equivalent results with a different formalism [4]. The Church-Turing thesis states that every function that can be computed by an effective procedure can be computed by a Turing machine. It is a thesis rather than a theorem, because the notion of an effective procedure is informal, but every alternative formalism proposed since has turned out to be equivalent.
 
-![A Turing machine for adding one to a binary number: the head moves to the right end, then propagates the carry to the left {cite:turing1936}.](figures/w03_fig1.png)
+![A Turing machine for adding one to a binary number: The head moves to the right end, then propagates the carry to the left.](figures/w03_fig1.png)
 
-*Figure 3.1. A Turing machine for adding one to a binary number: the head moves to the right end, then propagates the carry to the left [1].*
+*Figure 3.1. A Turing machine for adding one to a binary number: The head moves to the right end, then propagates the carry to the left [1].*
 
 <details>
 <summary><b>Check your understanding.</b> What does the Church-Turing thesis state?</summary>
@@ -86,9 +86,9 @@ D. Search is impossible
 
 ### Functionalism and multiple realisability
 
-Putnam compared mental states with the logical states of a Turing machine [3]. A machine state is defined by its relations to inputs, outputs and other states, not by the hardware that realises it. Functionalism generalises the idea: A mental state such as pain is defined by its causal role, what causes it, what it causes and how it interacts with other states. It follows that the same mental state could be realised in very different substrates, such as neurons or silicon. This is multiple realisability, and it is the premise that makes strong AI coherent: If minds are defined by function, the right program on any capable hardware would have a mind.
+Putnam compared mental states with the logical states of a Turing machine [3]. A machine state is defined by its relations to inputs, outputs and other states, not by the hardware that realises it. Functionalism generalises the idea: A mental state such as pain is defined by its causal role, what causes it, what it causes and how it interacts with other states. It follows that the same mental state could be realised in very different substrates, such as neurons or silicon. This is multiple realisability, the premise that makes strong AI coherent. If minds are defined by function, the right program on any capable hardware would have a mind.
 
-The lab makes multiple realisability concrete. The same function, adding one to a number, is realised by a Turing machine, by a circuit of logic gates and by a lookup table. The three realisations agree on every input and differ completely in their internal operations.
+The interactive lab makes multiple realisability concrete. The same function, adding one to a number, is realised by a Turing machine, by a circuit of logic gates and by a lookup table. The three realisations agree on every input and differ completely in their internal operations.
 
 <details>
 <summary><b>Check your understanding.</b> What is multiple realisability?</summary>
@@ -104,7 +104,7 @@ D. Every state is realised twice
 
 ### When does a physical system compute?
 
-Functionalism faces a puzzle. If computing is merely a matter of mapping physical states onto computational states, almost any physical system could be said to compute almost anything, which would make computationalism trivially true. Piccinini proposed a mechanistic account in response: A physical system computes when it is a mechanism whose function is to process vehicles, such as digits, according to rules that are sensitive to properties of those vehicles [6]. The account separates genuine computers from rocks and walls and gives computationalism empirical content.
+Functionalism faces a puzzle. If computing is merely a matter of mapping physical states onto computational states, almost any physical system could be said to compute almost anything, which would make computationalism trivially true. Piccinini proposed a mechanistic account in response [6]. On this account, a physical system computes when it is a mechanism whose function is to process vehicles, such as digits. The processing follows rules that are sensitive to properties of those vehicles. The account separates genuine computers from rocks and walls and gives computationalism empirical content.
 
 The doctrines of this week set up the next one. If thinking is computation and computation is substrate-independent, then running the right program suffices for a mind. Searle's Chinese Room argument, the topic of Week 4, targets exactly this inference.
 
@@ -132,33 +132,45 @@ Part A simulates four Turing machines step by step, including a palindrome check
 
 ## Colab notebook
 
-The notebook implements a Turing machine simulator, verifies that the binary increment machine realises the same function as ordinary arithmetic, runs the two-state busy beaver and asks for two small machines to be analysed [1, 3].
+The Colab notebook implements a Turing machine simulator and verifies that the binary increment machine realises the same function as ordinary arithmetic. It then runs the two-state busy beaver, and two exercises analyse small machines [1, 3].
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-03/NB03_computation_and_mind.ipynb)
 
-Screenshots of the executed notebook:
+Screenshots of the executed Colab notebook:
 
-![Output 1 of the Week 3 notebook](screenshots/nb_1.png)
+![Output 1 of the Week 3 Colab notebook](screenshots/nb_1.png)
 
 ## Self-assessment and reflection
 
-The lab contains a 6-question self-assessment with instant feedback and a confidence rating for each answer. A confident but wrong answer marks the first topic to revisit. The reflection prompts below are also available in the lab, where answers are saved in the browser and can be exported as a learning log.
+The interactive lab contains a self-assessment of six questions (tab: Check yourself). Students answer each question, state how sure they are and receive instant feedback. A confident but wrong answer marks the first topic to revisit. The reflection prompts below also appear in the interactive lab (tab: Reflect and submit). Answers written there are saved in the browser and can be exported as a learning log.
 
 1. If functionalism is true, what would it take for a program to have your beliefs? What would be missing if it had only your input-output behaviour?
-2. Which of the three realisations in the lab, if any, seems most like thinking? Why do intuitions differ between them?
+2. Which of the three realisations in the interactive lab, if any, seems most like thinking? Why do intuitions differ between them?
 3. Is the brain a physical symbol system? Give one consideration for and one against.
 
 ## Weekly task and submission
 
-Write about 400 words explaining how the Church-Turing thesis, the physical symbol system hypothesis and functionalism combine to support strong AI. Identify the weakest link in the chain and defend your choice. Attach the notebook with both exercises completed.
+**What to do.** Explain how three ideas of this week combine into an argument for strong AI. Write the argument as numbered steps that use the Church-Turing thesis, the physical symbol system hypothesis and functionalism. Then identify the weakest link in the chain and defend your choice.
 
-The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.
+**Where to look.** Lecture: sections "What computation is", "Symbols, search and the language of thought" and "Functionalism and multiple realisability". The section "When does a physical system compute?" raises a problem for one of the links. Interactive lab: Part B, where one function is realised in three ways. Colab notebook: Section 2, which checks that a Turing machine and Python's arithmetic realise the same function.
+
+**Example.** Step 1 could read: Every effective procedure can be carried out by a Turing machine. Step 2 could read: Thinking is the manipulation of symbols by effective procedures. A student who doubts Step 2 can argue that it is the weakest link, because the Church-Turing thesis says nothing about minds.
+
+**What to submit.** About 400 words, and the Colab notebook with Exercises 1 and 2 completed.
+
+The weekly task supports self-learning and builds a personal portfolio. In an active semester, students who follow the course with the instructor can send their work for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The e-mail contains the items that the task lists under What to submit. It also includes the learning log exported from the interactive lab (tab: Reflect and submit).
 
 ## Research and report assignment (optional)
 
-**Is the brain a computer?.** Compare the mechanistic account of physical computation with arguments that computation is observer-relative or trivial, and state which view supports functionalism best [3, 6, 7].
+**Is the brain a computer?** When does a physical system compute, and what follows for functionalism?
 
-This research assignment is optional and supports self-learning. When the related weeks are followed within the course during an active semester, the report can be sent to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation. Unless the assignment states otherwise, a report has 1500 to 2500 words, follows the structure of an academic paper, cites at least six scholarly or official sources in square brackets and ends with a reference list.
+**What to do.** Compare the mechanistic account of physical computation [6] with arguments that computation is observer-relative or trivial [7]. State which view supports functionalism best [3].
+
+**Where to start.** Lecture sections "Functionalism and multiple realisability" and "When does a physical system compute?". Part B of the interactive lab realises one function in three ways.
+
+**Example focus.** The report could ask whether a wall computes under some mapping of its physical states onto computational states, and how the mechanistic account separates genuine computers from walls.
+
+This research assignment is optional and supports self-learning. In an active semester, students who follow these weeks with the instructor can send the report for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The report has 1500 to 2500 words and follows the structure of an academic paper. It cites at least six scholarly or official sources in square brackets and ends with a reference list. The [report template](https://github.com/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/REPORT_TEMPLATE.md) shows a suitable structure.
 
 ## References
 
@@ -178,4 +190,4 @@ This research assignment is optional and supports self-learning. When the relate
 
 ---
 
-<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. Last update: September 2026.</sub>
+<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026.</sub>

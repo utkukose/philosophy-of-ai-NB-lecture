@@ -11,13 +11,13 @@ Prof. Dr. Utku Kose, Süleyman Demirel University
 
 ## Overview
 
-Mental states are about things: beliefs are about the world and desires are for outcomes. This week asks whether machines can have states with this aboutness, examines Dennett's intentional stance and its formalisation as inverse planning, and closes the course by returning to the question of whether machines can think [1, 2, 3].
+Mental states are about things: Beliefs are about the world and desires are for outcomes. This week asks whether machines can have states with this aboutness and examines Dennett's intentional stance and its formalisation as inverse planning. It closes the course by returning to the question of whether machines can think [1, 2, 3].
 
 **Estimated study time:** 6 to 8 hours.
 
 ## Learning outcomes
 
-By the end of the week, students are expected to explain intentionality and the distinction between original and derived intentionality, to describe the physical, design and intentional stances, to compute a goal posterior by inverse planning, and to defend a reasoned position on whether machines can think that draws on the whole course.
+By the end of the week, students are expected to explain intentionality and the distinction between original and derived intentionality. They should be able to describe the physical, design and intentional stances and to compute a goal posterior by inverse planning. Finally, they should be able to defend a reasoned position on whether machines can think, drawing on the whole course.
 
 ## Study path
 
@@ -26,8 +26,8 @@ By the end of the week, students are expected to explain intentionality and the 
 | 1 | Read the lecture below or the [PDF version](Week14_Lecture_Notes.pdf) | 90 minutes |
 | 2 | Explore the [interactive lab](https://utkukose.github.io/philosophy-of-ai-NB-lecture/weeks/week-14/lab.html) | 45 minutes |
 | 3 | Work through the [Colab notebook](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-14/NB14_intentional_stance.ipynb) and its exercises | 2 to 3 hours |
-| 4 | Take the self-assessment in the lab (tab: Check yourself) | 20 minutes |
-| 5 | Write the reflection, export the learning log and complete the weekly task | 60 minutes |
+| 4 | Take the self-assessment in the interactive lab (tab: Check yourself) | 20 minutes |
+| 5 | Answer the reflection prompts in the interactive lab, export the learning log and complete the weekly task | 60 minutes |
 
 ## Week at a glance
 
@@ -45,7 +45,7 @@ flowchart LR
 
 ### The mark of the mental
 
-Brentano proposed that what distinguishes mental phenomena is their intentionality, their being directed at an object [1]. A belief is about something, a desire is for something and a fear is of something, even when the object does not exist. Searle distinguished original from derived intentionality [4]. The words on a page and the states of a computer have derived intentionality: They are about things only because people interpret them. Minds have original intentionality, which does not depend on interpretation. On Searle's view, the symbols of a program have only derived intentionality, which connects this week with the Chinese Room of Week 4.
+Brentano proposed that what distinguishes mental phenomena is their intentionality, their being directed at an object [1]. A belief is about something, a desire is for something and a fear is of something, even when the object does not exist. Searle distinguished intrinsic, or original, intentionality from derived intentionality [4]. The words on a page and the states of a computer have derived intentionality: They are about things only because people interpret them. Minds have original intentionality, which does not depend on interpretation. On Searle's view, the symbols of a program have only derived intentionality, which connects this week with the Chinese Room of Week 4.
 
 <details>
 <summary><b>Check your understanding.</b> What does Brentano&#x27;s thesis identify as the mark of the mental?</summary>
@@ -77,9 +77,9 @@ D. Refusing to predict behaviour
 
 ### Attributing minds
 
-People attribute intentions readily. Heider and Simmel showed participants a short film of geometric shapes moving around a box, and almost all described the film in terms of intentions and emotions, such as a large triangle bullying a small one [6]. Baker, Saxe and Tenenbaum formalised such attributions as inverse planning [3]. An observer assumes that an agent acts approximately rationally towards a goal and uses Bayesian inference to work backwards from observed actions to the most probable goal. The model predicted human judgements of goals closely in their experiments. Figure 14.1 shows how the posterior over three goals sharpens as more of a path is observed. The lab uses this model and compares the predictions of the intentional stance with those of a simple physical stance.
+People attribute intentions readily. Heider and Simmel showed participants a short film of geometric shapes moving around a box [6]. Almost all of them described the film in terms of intentions and emotions, such as a large triangle bullying a small one. Baker, Saxe and Tenenbaum formalised such attributions as inverse planning [3]. An observer assumes that an agent acts approximately rationally towards a goal and uses Bayesian inference to work backwards from observed actions to the most probable goal. The model predicted human judgements of goals closely in their experiments. Figure 14.1 shows how the posterior over three goals sharpens as more of a path is observed. The interactive lab uses this model and compares the predictions of the intentional stance with those of a simple physical stance.
 
-![Posterior probabilities of three possible goals as successive steps of a path are observed, computed by Bayesian inverse planning {cite:baker2009}.](figures/w14_fig1.png)
+![Posterior probabilities of three possible goals as successive steps of a path are observed, computed by Bayesian inverse planning.](figures/w14_fig1.png)
 
 *Figure 14.1. Posterior probabilities of three possible goals as successive steps of a path are observed, computed by Bayesian inverse planning [3].*
 
@@ -97,7 +97,7 @@ D. People spontaneously attribute goals and emotions to moving geometric shapes
 
 ### Can machines think? The course in review
 
-The intentional stance offers one answer to the question with which the course began. If adopting the stance towards a system yields reliable predictions, the system has beliefs and desires in the only sense that Dennett thinks matters, and many present AI systems qualify for a limited range of behaviour. Searle would reply that predictive usefulness does not create original intentionality, just as the Chinese Room produced appropriate behaviour without understanding. Shanahan's caution applies here too: The intentional stance towards a dialogue system may predict well while misleading about what the underlying model is [7].
+The intentional stance offers one answer to the question with which the course began. If adopting the stance towards a system yields reliable predictions, the system has beliefs and desires in the only sense that Dennett thinks matters. Many present AI systems qualify for a limited range of behaviour. Searle would reply that predictive usefulness does not create original intentionality, just as the Chinese Room produced appropriate behaviour without understanding. Shanahan's caution applies here too: The intentional stance towards a dialogue system may predict well while misleading about what the underlying model is [7].
 
 The course has presented several ways to sharpen the question. Behavioural tests, such as Turing's, can be passed without settling it. Arguments about computation, grounding, systematicity, embodiment, relevance and limits bear on what thinking requires. Theories of consciousness address whether there is anything it is like to be the system. Studies of understanding, creativity and intentionality show where present systems succeed and where claims outrun evidence. The final essay asks each student to take a position and defend it with these tools.
 
@@ -125,17 +125,17 @@ Part A animates two shapes moved by very simple rules; describe what happens bef
 
 ## Colab notebook
 
-The notebook implements Bayesian inverse planning in a grid, simulates goal-directed agents and compares how well the physical and intentional stances predict their next moves [2, 3].
+The Colab notebook implements Bayesian inverse planning in a grid, simulates goal-directed agents and compares how well the physical and intentional stances predict their next moves [2, 3].
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-14/NB14_intentional_stance.ipynb)
 
-Screenshots of the executed notebook:
+Screenshots of the executed Colab notebook:
 
-![Output 1 of the Week 14 notebook](screenshots/nb_1.png)
+![Output 1 of the Week 14 Colab notebook](screenshots/nb_1.png)
 
 ## Self-assessment and reflection
 
-The lab contains a 6-question self-assessment with instant feedback and a confidence rating for each answer. A confident but wrong answer marks the first topic to revisit. The reflection prompts below are also available in the lab, where answers are saved in the browser and can be exported as a learning log.
+The interactive lab contains a self-assessment of six questions (tab: Check yourself). Students answer each question, state how sure they are and receive instant feedback. A confident but wrong answer marks the first topic to revisit. The reflection prompts below also appear in the interactive lab (tab: Reflect and submit). Answers written there are saved in the browser and can be exported as a learning log.
 
 1. Describe what you saw in Part A before revealing the rules. What does your description reveal about the intentional stance?
 2. Do present AI assistants satisfy Dennett's criterion for intentional systems? For which behaviours, and where does the stance fail?
@@ -143,21 +143,33 @@ The lab contains a 6-question self-assessment with instant feedback and a confid
 
 ## Weekly task and submission
 
-Write the final essay of the course, of about 1500 words: Can machines think? Take a clear position, defend it with arguments from at least five weeks, address the strongest objection to your position and use at least one lab or notebook result as evidence. Cite all sources in square brackets and attach the notebook of this week with both exercises completed.
+**What to do.** Write a short position essay on the question of the course: Can machines think? First, apply the intentional stance to one AI system and say how well it predicts the system's behaviour. Second, use Searle's distinction between original and derived intentionality to ask whether the states of the system are about anything for the system itself. Third, take a clear position and support it with arguments from at least three earlier weeks. Finally, answer the strongest objection to your position.
 
-The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.
+**Where to look.** Lecture: sections "The mark of the mental", "The intentional stance" and "Can machines think? The course in review". Interactive lab: Part A, where moving shapes invite descriptions in terms of intentions, and Part B on inverse planning. Colab notebook: Section 2, which compares how well the physical and intentional stances predict the next move.
+
+**Example.** The intentional stance predicts a navigation app well: It wants to reach the destination and believes that a road is closed. Searle would reply that this intentionality is derived from the designers and users of the app. A student could accept Dennett's view for prediction and still side with Searle on whether the app thinks. The Chinese Room of Week 4 and the grounding problem of Week 5 could support this position.
+
+**What to submit.** About 600 words that cite all sources in square brackets, and the Colab notebook with Exercises 1 and 2 completed. This weekly task is separate from the final capstone, whose page lists its own deliverables.
+
+The weekly task supports self-learning and builds a personal portfolio. In an active semester, students who follow the course with the instructor can send their work for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The e-mail contains the items that the task lists under What to submit. It also includes the learning log exported from the interactive lab (tab: Reflect and submit).
 
 ## Research and report assignment (optional)
 
-**Do language model agents have beliefs?.** Evaluate whether it is correct, useful or misleading to attribute beliefs and desires to language model agents, drawing on Dennett, Searle and Shanahan [2, 4, 7].
+**Do language model agents have beliefs?** Is it correct, useful or misleading to attribute beliefs and desires to language model agents?
 
-This research assignment is optional and supports self-learning. When the related weeks are followed within the course during an active semester, the report can be sent to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation. Unless the assignment states otherwise, a report has 1500 to 2500 words, follows the structure of an academic paper, cites at least six scholarly or official sources in square brackets and ends with a reference list.
+**What to do.** Evaluate the attribution of beliefs and desires to language model agents with the views of Dennett, Searle and Shanahan [2, 4, 7]. Distinguish what is correct, what is useful and what may mislead.
+
+**Where to start.** Lecture sections "The intentional stance" and "Can machines think? The course in review". Section 2 of the Colab notebook compares the predictions of the physical and intentional stances.
+
+**Example focus.** An agent that books flights can be described as wanting a cheap fare. The report could ask whether this description predicts its behaviour better than a description of its prompts and tools.
+
+This research assignment is optional and supports self-learning. In an active semester, students who follow these weeks with the instructor can send the report for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The report has 1500 to 2500 words and follows the structure of an academic paper. It cites at least six scholarly or official sources in square brackets and ends with a reference list. The [report template](https://github.com/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/REPORT_TEMPLATE.md) shows a suitable structure.
 
 ## Final capstone
 
 This week closes the course with the [Final Capstone: Minds, Morals and Machines](../../exams/final/README.md).
 
-This capstone also supports self-learning and can be completed at any pace. When the course is taught actively in a semester, the final capstone is sent by e-mail to utkukose@sdu.edu.tr or utkukose@gmail.com no later than 23:53 (Türkiye time) on the last Sunday of Week 14, with the report and all code files attached or linked.
+This capstone also supports self-learning and can be completed at any pace. In an active semester, the final capstone is sent by e-mail to utkukose@sdu.edu.tr or utkukose@gmail.com. The deadline is 23:53 (Türkiye time) on the Sunday that ends Week 14. The e-mail contains the report as a PDF file. In the application track, it also contains a link to the Colab notebook.
 
 ## References
 
@@ -177,4 +189,4 @@ This capstone also supports self-learning and can be completed at any pace. When
 
 ---
 
-<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. Last update: September 2026.</sub>
+<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026.</sub>

@@ -17,7 +17,7 @@ Before asking whether machines can think, it helps to ask what artificial intell
 
 ## Learning outcomes
 
-By the end of the week, students are expected to distinguish the four approaches in the classification of Russell and Norvig, to explain the difference between strong and weak AI and between both and general AI, to compute a simplicity-weighted intelligence score in the spirit of Legg and Hutter, and to discuss Chollet's view of intelligence as skill-acquisition efficiency.
+By the end of the week, students are expected to distinguish the four approaches in the classification of Russell and Norvig. They should be able to explain the difference between strong and weak AI, and between both and general AI. They should also be able to compute a simplicity-weighted intelligence score in the spirit of Legg and Hutter. Finally, they should be able to discuss Chollet's view of intelligence as skill-acquisition efficiency.
 
 ## Study path
 
@@ -26,8 +26,8 @@ By the end of the week, students are expected to distinguish the four approaches
 | 1 | Read the lecture below or the [PDF version](Week01_Lecture_Notes.pdf) | 90 minutes |
 | 2 | Explore the [interactive lab](https://utkukose.github.io/philosophy-of-ai-NB-lecture/weeks/week-01/lab.html) | 45 minutes |
 | 3 | Work through the [Colab notebook](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-01/NB01_what_is_ai.ipynb) and its exercises | 2 to 3 hours |
-| 4 | Take the self-assessment in the lab (tab: Check yourself) | 20 minutes |
-| 5 | Write the reflection, export the learning log and complete the weekly task | 60 minutes |
+| 4 | Take the self-assessment in the interactive lab (tab: Check yourself) | 20 minutes |
+| 5 | Answer the reflection prompts in the interactive lab, export the learning log and complete the weekly task | 60 minutes |
 
 ## Week at a glance
 
@@ -44,11 +44,11 @@ flowchart LR
 
 ### A field defined by an ambition
 
-The proposal for the 1955 Dartmouth summer project, which gave the field its name, rested on the conjecture that every aspect of learning and intelligence can in principle be described precisely enough for a machine to simulate it [4]. The conjecture is philosophical as much as technical: It assumes that intelligence is a matter of describable processes rather than of a particular biological substrate.
+The proposal for the 1955 Dartmouth summer project gave the field its name. It rested on the conjecture that every aspect of learning and intelligence can in principle be described precisely enough for a machine to simulate it [4]. The conjecture is philosophical as much as technical: It assumes that intelligence is a matter of describable processes rather than of a particular biological substrate.
 
 Russell and Norvig classify definitions of AI along two dimensions [1]. The first asks whether a definition concerns thought or behaviour. The second asks whether success is measured against human performance or against an ideal of rationality. The result is four approaches. Thinking humanly is the programme of cognitive modelling, which compares programs with human thought processes. Thinking rationally follows the laws of thought tradition, in which intelligence is correct inference. Acting humanly is the approach of the Turing test, which Week 2 examines. Acting rationally, the approach that Russell and Norvig adopt, defines an intelligent agent as one that acts to achieve the best expected outcome. Figure 1.1 summarises the classification.
 
-![The classification of definitions of AI by Russell and Norvig along two dimensions: thought versus behaviour and human performance versus rationality {cite:russellnorvig2021}.](figures/w01_fig1.png)
+![The classification of definitions of AI by Russell and Norvig along two dimensions: thought versus behaviour and human performance versus rationality.](figures/w01_fig1.png)
 
 *Figure 1.1. The classification of definitions of AI by Russell and Norvig along two dimensions: thought versus behaviour and human performance versus rationality [1].*
 
@@ -86,9 +86,9 @@ D. Robots must be physically strong
 
 ### Measuring intelligence
 
-Informal definitions leave room for disagreement, so some researchers have tried to formalise intelligence. Legg and Hutter collected many informal definitions and proposed universal intelligence: the expected performance of an agent across all computable environments, where each environment is weighted by two to the power of minus its Kolmogorov complexity [3]. Simple environments therefore count more than complex ones. The measure cannot be computed exactly, because Kolmogorov complexity is not computable, but it can be approximated, and its structure exposes a choice that informal definitions hide: which environments matter, and how much.
+Informal definitions leave room for disagreement, so some researchers have tried to formalise intelligence. Legg and Hutter collected many informal definitions and proposed universal intelligence [3]. It is the expected performance of an agent across all computable environments. Each environment is weighted by two to the power of minus its Kolmogorov complexity. Simple environments therefore count more than complex ones. The measure cannot be computed exactly, because Kolmogorov complexity is not computable, but it can be approximated. Its structure exposes a choice that informal definitions hide: which environments matter, and how much.
 
-Chollet argued that performance on any fixed set of tasks measures skill, which can be bought with prior knowledge or unlimited training data [5]. He proposed to define intelligence as skill-acquisition efficiency: how efficiently a system turns its priors and experience into skill on tasks that require generalisation. His benchmark of abstract reasoning puzzles, ARC, was designed on this principle. The lab of this week shows how the ranking of four agents changes when the weighting of environments changes, which makes the dependence of any intelligence score on its assumptions visible.
+Chollet argued that performance on any fixed set of tasks measures skill, which can be bought with prior knowledge or unlimited training data [5]. He proposed to define intelligence as skill-acquisition efficiency: how efficiently a system turns its priors and experience into skill on tasks that require generalisation. His benchmark of abstract reasoning puzzles, ARC, was designed on this principle. The interactive lab of this week shows how the ranking of four agents changes when the weighting of environments changes. It makes visible how any intelligence score depends on its assumptions.
 
 <details>
 <summary><b>Check your understanding.</b> How do Legg and Hutter define universal intelligence?</summary>
@@ -130,17 +130,17 @@ Part A asks for the approach behind eight descriptions of AI systems. Part B com
 
 ## Colab notebook
 
-The notebook builds six sequence-prediction environments from short programs, approximates their description length by compression, runs four prediction agents in each and computes simplicity-weighted scores, following the structure of the universal intelligence measure [3].
+The Colab notebook builds six sequence-prediction environments from short programs and approximates their description length by compression. It runs four prediction agents in each environment and computes simplicity-weighted scores, following the structure of the universal intelligence measure [3].
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/utkukose/philosophy-of-ai-NB-lecture/blob/main/weeks/week-01/NB01_what_is_ai.ipynb)
 
-Screenshots of the executed notebook:
+Screenshots of the executed Colab notebook:
 
-![Output 1 of the Week 1 notebook](screenshots/nb_1.png)
+![Output 1 of the Week 1 Colab notebook](screenshots/nb_1.png)
 
 ## Self-assessment and reflection
 
-The lab contains a 6-question self-assessment with instant feedback and a confidence rating for each answer. A confident but wrong answer marks the first topic to revisit. The reflection prompts below are also available in the lab, where answers are saved in the browser and can be exported as a learning log.
+The interactive lab contains a self-assessment of six questions (tab: Check yourself). Students answer each question, state how sure they are and receive instant feedback. A confident but wrong answer marks the first topic to revisit. The reflection prompts below also appear in the interactive lab (tab: Reflect and submit). Answers written there are saved in the browser and can be exported as a learning log.
 
 1. Write your own definition of intelligence in one sentence. Which of the four approaches does it belong to, and what would count as evidence against it?
 2. Is it possible for a system to be general but not strong in Searle's sense? Give an example or an argument.
@@ -148,15 +148,27 @@ The lab contains a 6-question self-assessment with instant feedback and a confid
 
 ## Weekly task and submission
 
-Write a short essay of about 500 words that compares two definitions of intelligence from this week, identifies an assumption that each makes explicit or hides, and applies both to one AI system of your choice. Cite at least three works in square brackets and attach the notebook with both exercises completed.
+**What to do.** Write a short essay that compares two definitions of intelligence from this week. A natural pair is the universal intelligence measure of Legg and Hutter and Chollet's view of intelligence as skill-acquisition efficiency. First, state each definition in your own words. Second, name one assumption that each definition makes explicit or hides. Third, apply both definitions to one AI system of your choice and say whether they judge it in the same way.
 
-The weekly task supports self-learning and builds a personal portfolio. When the course is followed with the instructor during an active semester, the task can be sent together with the exported learning log to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation.
+**Where to look.** Lecture: sections "Measuring intelligence" and "Why definitions matter". Interactive lab: Part B, where the strength of the simplicity prior changes the ranking of four agents. Colab notebook: Section 3 and Exercise 2, which show the same effect in Python.
+
+**Example.** A chess engine plays one game very well but cannot learn a new game on its own. Under the universal intelligence measure, it scores low because it fails in most environments. Under Chollet's view, it scores low because it needed vast experience and built-in knowledge to acquire one skill. Both definitions give a low score, but for different reasons.
+
+**What to submit.** About 500 words that cite at least three works in square brackets, and the Colab notebook with Exercises 1 and 2 completed.
+
+The weekly task supports self-learning and builds a personal portfolio. In an active semester, students who follow the course with the instructor can send their work for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The e-mail contains the items that the task lists under What to submit. It also includes the learning log exported from the interactive lab (tab: Reflect and submit).
 
 ## Research and report assignment (optional)
 
-**What do benchmarks say intelligence is?.** Analyse how three current AI benchmarks operationalise intelligence and compare them with the formal measures of this week [3, 5]. State which approach in the classification of Russell and Norvig each benchmark follows.
+**What do benchmarks say intelligence is?** How do current AI benchmarks turn intelligence into something that can be measured?
 
-This research assignment is optional and supports self-learning. When the related weeks are followed within the course during an active semester, the report can be sent to utkukose@sdu.edu.tr or utkukose@gmail.com for evaluation. Unless the assignment states otherwise, a report has 1500 to 2500 words, follows the structure of an academic paper, cites at least six scholarly or official sources in square brackets and ends with a reference list.
+**What to do.** Choose three current AI benchmarks. Analyse how each one operationalises intelligence, and compare it with the formal measures of this week [3, 5]. State which approach in the classification of Russell and Norvig each benchmark follows [1].
+
+**Where to start.** Lecture sections "A field defined by an ambition" and "Measuring intelligence". Part A of the interactive lab practises the four approaches of Russell and Norvig. Part B of the interactive lab and Section 3 of the Colab notebook show how the weighting of environments changes a ranking.
+
+**Example focus.** A benchmark of exam questions rewards human-like performance on fixed tasks. A benchmark of novel puzzles, such as the Abstraction and Reasoning Corpus proposed by Chollet, tries to measure skill-acquisition efficiency instead [5].
+
+This research assignment is optional and supports self-learning. In an active semester, students who follow these weeks with the instructor can send the report for evaluation to utkukose@sdu.edu.tr or utkukose@gmail.com. The report has 1500 to 2500 words and follows the structure of an academic paper. It cites at least six scholarly or official sources in square brackets and ends with a reference list. The [report template](https://github.com/utkukose/philosophy-of-ai-NB-lecture/blob/main/exams/REPORT_TEMPLATE.md) shows a suitable structure.
 
 ## References
 
@@ -172,4 +184,4 @@ This research assignment is optional and supports self-learning. When the relate
 
 ---
 
-<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. Last update: September 2026.</sub>
+<sub>Philosophy of Artificial Intelligence. Prof. Dr. Utku Kose, Süleyman Demirel University. ORCID [0000-0002-9652-6415](https://orcid.org/0000-0002-9652-6415). Content licensed under CC BY 4.0. This course is updated in line with current developments in the field. First version: September 2026. Last update: October 2026.</sub>
